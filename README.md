@@ -1,7 +1,9 @@
 # Masterpaint: Creating from astro's blog
 
 Masterpaint's website
+
 > ⚠️ Warning: This document might not be zero-error.
+
 ## Prerequisites
 
 Please install the following.
@@ -95,7 +97,7 @@ Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page
 
 `src/components/` = where we like to put any Astro/React/Vue/Svelte/Preact components.
 
->⚠️ Important: Above this messages are the necessary informations.
+> ⚠️ Important: Above this messages are the necessary informations.
 
 The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
 
@@ -107,8 +109,8 @@ All commands are run from the root of the project, from a terminal:
 
 using `pnpm` for node pkg manager.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
+| Command                    | Action                                           |
+| :------------------------- | :----------------------------------------------- |
 | `pnpm install`             | Installs dependencies                            |
 | `pnpm run dev`             | Starts local dev server at `localhost:4321`      |
 | `pnpm run build`           | Build your production site to `./dist/`          |
@@ -116,7 +118,7 @@ using `pnpm` for node pkg manager.
 | `pnpm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `pnpm run astro -- --help` | Get help using the Astro CLI                     |
 | `pnpm lint`                | Lint checked                                     |
-| `pnpm format`              | Prettier formatting                              | 
+| `pnpm format`              | Prettier formatting                              |
 
 ## 👀 Want to learn more?
 
