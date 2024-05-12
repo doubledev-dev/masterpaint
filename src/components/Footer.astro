@@ -7,8 +7,8 @@ import { Icon } from "astro-icon/components";
   <div class="flex flex-row gap-x-[72px] px-9 text-base">
     <div>
       <div class="contact-container">
-        <div>Q</div>
-        <div>
+        <div><Icon name="zondicons:location" class="icon-style" /></div>
+        <div class="place-content-center">
           Northtech Limited Partnership 71/5 หมู่ที่ 13 ถนนบางนา-ตราด
           ตำบลบางแก้ว อำเภอบางพลี จังหวัดสมุทรปราการ 10540
         </div>
@@ -17,20 +17,23 @@ import { Icon } from "astro-icon/components";
     <div>
       <div class="flex flex-col gap-y-6">
         <div class="contact-container">
-          <div></div>
-          <div>masterpaint2548@gmail.com</div>
+          <Icon name="ic:baseline-email" class="icon-style" />
+          <div class="place-content-center">masterpaint2548@gmail.com</div>
         </div>
         <div class="contact-container">
-          <div></div>
-          <div>masterpaint2548</div>
+          <Icon name="fe:facebook" class="icon-style" />
+          <div class="place-content-center">masterpaint2548</div>
         </div>
         <div class="contact-container">
-          <div></div>
-          <div>0891123192 027625855</div>
+          <Icon name="bxs:phone-call" class="icon-style" />
+          <div>
+            <div>0891123192</div>
+            <div>027625855</div>
+          </div>
         </div>
         <div class="contact-container">
-          <div></div>
-          <div>@masterpaint2548</div>
+          <Icon name="uim:line" class="icon-style" />
+          <span class="place-content-center">@masterpaint2548</span>
         </div>
       </div>
     </div>
@@ -43,5 +46,11 @@ import { Icon } from "astro-icon/components";
     flex-direction: row;
     justify-content: start;
     column-gap: 3rem /* 48px */;
+  }
+
+  .icon-style {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
   }
 </style>
