@@ -37,6 +37,9 @@ dependencies:
     version: 5.4.5
 
 devDependencies:
+  '@iconify-json/zondicons':
+    specifier: ^1.1.8
+    version: 1.1.8
   '@typescript-eslint/eslint-plugin':
     specifier: ^7.8.0
     version: 7.8.0(@typescript-eslint/parser@7.8.0)(eslint@8.57.0)(typescript@5.4.5)
@@ -778,6 +781,12 @@ packages:
 
   /@humanwhocodes/object-schema@2.0.3:
     resolution: {integrity: sha512-93zYdMES/c1D69yZiKDBj0V24vqNzB/koF26KPaagAfd3P/4gUlh3Dys5ogAK+Exi9QyzlD8x/08Zt7wIKcDcA==}
+    dev: true
+
+  /@iconify-json/zondicons@1.1.8:
+    resolution: {integrity: sha512-zT824sPnuPqL0iYx4Ru2ZzaZA74BF0hPEayAH/hMPesOsEEEA7zrcJ/Rbdfc2haV8a6d9Qrf6La6Mr2NyIgC7g==}
+    dependencies:
+      '@iconify/types': 2.0.0
     dev: true
 
   /@iconify/tools@3.0.7:

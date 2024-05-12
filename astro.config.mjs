@@ -1,5 +1,6 @@
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
+import icon from "astro-icon";
 import { defineConfig } from "astro/config";
 
 import tailwind from "@astrojs/tailwind";
@@ -7,14 +8,5 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   site: "https://example.com",
-  integrations: [
-    mdx(),
-    sitemap(),
-    tailwind(),
-    // icon({
-    //   include: {
-    //     mdi: ["*"], // (Default) Loads entire Material Design Icon set
-    //   },
-    // }),
-  ],
+  integrations: [mdx(), sitemap(), icon(), tailwind()],
 });
