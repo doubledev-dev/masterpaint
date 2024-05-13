@@ -1,0 +1,14 @@
+---
+// import NavBar from "@/components/NavBar.astro";
+import Footer from "@/components/Footer.astro";
+---
+
+<body>
+  <!-- <NavBar/> -->
+  <main>
+    <div class="my-6 space-y-6 xl:my-10 xl:space-y-10">
+      <slot name="content" />
+    </div>
+  </main>
+  <Footer />
+</body>
