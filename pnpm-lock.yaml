@@ -37,6 +37,18 @@ dependencies:
     version: 5.4.5
 
 devDependencies:
+  '@iconify-json/bxs':
+    specifier: ^1.1.10
+    version: 1.1.10
+  '@iconify-json/fe':
+    specifier: ^1.1.10
+    version: 1.1.10
+  '@iconify-json/ic':
+    specifier: ^1.1.17
+    version: 1.1.17
+  '@iconify-json/uim':
+    specifier: ^1.1.9
+    version: 1.1.9
   '@iconify-json/zondicons':
     specifier: ^1.1.8
     version: 1.1.8
@@ -781,6 +793,30 @@ packages:
 
   /@humanwhocodes/object-schema@2.0.3:
     resolution: {integrity: sha512-93zYdMES/c1D69yZiKDBj0V24vqNzB/koF26KPaagAfd3P/4gUlh3Dys5ogAK+Exi9QyzlD8x/08Zt7wIKcDcA==}
+    dev: true
+
+  /@iconify-json/bxs@1.1.10:
+    resolution: {integrity: sha512-USVukTRq5PDT3KVVePYzHgYBtO9PYi4oNFuBpMf/Q1BFHAiwyP8zVewgXR1a6w/XMDIiQ3gVuTX7upkXv7cjgw==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify-json/fe@1.1.10:
+    resolution: {integrity: sha512-ePFSmtnDTk+PtsmGsPtmLXPQNV/V3iC/Kr7E/yv0PANiwVwqY5JJcaAVyWlVIvB7qaLEhncVhvXp7TwcM9bPpw==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify-json/ic@1.1.17:
+    resolution: {integrity: sha512-EvAjZzVESmN36zlyefylePUNaU2BQ3eRKVZ6KQSQ2bG01ppoZaiFZRri74VTyvp5Mlv2yn68ux1fgCoT+etGmA==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify-json/uim@1.1.9:
+    resolution: {integrity: sha512-mV9Ps5WkLbPsk/Nztxye2TBCpEDIkeMtXXgYRgtfQve8kY0DkMF/je+YCvfd59IzXACZ6JwNAsPeF7fCYzPP+w==}
+    dependencies:
+      '@iconify/types': 2.0.0
     dev: true
 
   /@iconify-json/zondicons@1.1.8:

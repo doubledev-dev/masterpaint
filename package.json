@@ -24,6 +24,10 @@
     "typescript": "^5.4.5"
   },
   "devDependencies": {
+    "@iconify-json/bxs": "^1.1.10",
+    "@iconify-json/fe": "^1.1.10",
+    "@iconify-json/ic": "^1.1.17",
+    "@iconify-json/uim": "^1.1.9",
     "@iconify-json/zondicons": "^1.1.8",
     "@typescript-eslint/eslint-plugin": "^7.8.0",
     "@typescript-eslint/parser": "^7.8.0",
