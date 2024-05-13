@@ -1,25 +1,19 @@
 ---
-import { Image } from "astro:assets";
-import Sample from "@/assets/sample.jpg";
+import HeroImage from "@/assets/hero/hero.png";
 ---
 
-<div>
-  <div class="relative">
-    <Image
-      src={Sample}
-      alt="sample"
-      class="absolute z-0 h-96 w-full object-cover"
-    />
-    <div class="absolute z-10 p-10 text-sm text-white">
-      <h1 class="text-5xl text-white">Master paint</h1>
-      <p>รับบริการงานทาสีโดยทีมช่าง</p>
-      <p>ผู้ชำนาญงานเฉพาะด้านและมีประสบการณ์</p>
-      <p>โดยตรงเชี่ยวชาญด้านงานสีโดยเฉพาะ</p>
-      <button
-        class="items-center rounded-3xl bg-white p-2 px-4 text-center text-base text-accent-dark-blue hover:bg-red-400"
-        >Contact Us!</button
-      >
-    </div>
-    <!-- Button -->
+<article
+  class="min-w-screen flex h-[70vh] overflow-y-scroll bg-cover bg-center bg-no-repeat items-end bg-black"
+  style={{ backgroundImage: `url(${HeroImage.src})` }}
+>
+  <div class="p-24">
+    <h1 class="text-5xl text-white mb-6">Master paint</h1>
+    <p class="text-sm leading-3 text-white">รับบริการงานทาสีโดยทีมช่าง</p>
+    <p class="text-sm leading-3 text-white">ผู้ชำนาญงานเฉพาะด้านและมีประสบการณ์</p>
+    <p class="text-sm leading-3 text-white">โดยตรงเชี่ยวชาญด้านงานสีโดยเฉพาะ</p>
+    <button
+      class="items-center rounded-3xl bg-white p-2 px-4 text-center text-base text-accent-dark-blue mt-12 hover:bg-accent-dark-blue hover:text-white transition-colors duration-300 ease-in-out"
+      >Contact Us!</button
+    >
   </div>
-</div>
+</article>
