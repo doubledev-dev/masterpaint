@@ -1,0 +1,33 @@
+---
+import SmallServicesBlock from "./SmallServicesBlock.astro";
+import Container from "@/components/Container.astro";
+
+const services = [
+  {
+    Icon: "ion:calculator-outline",
+    colorIcon: "bg-accent-dark-blue",
+    colorBlock: "bg-white",
+    title: "ให้คำปรึกษาและประเมินราคางานสีทุกชนิด",
+    description: "วางแผนตามงบประมาณที่ต้องการ",
+  },
+];
+---
+
+<Container>
+  <div class="grid grid-cols-2">
+    {
+      services.map((service) => (
+        <SmallServicesBlock
+          iconName={service.Icon}
+          colorIcon={service.colorIcon}
+          colorBlock={service.colorBlock}
+          title={service.title}
+          description={service.description}
+        />
+      ))
+    }
+    <div></div>
+
+    <Container />
+  </div></Container
+>

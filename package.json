@@ -28,6 +28,7 @@
     "@iconify-json/bxs": "^1.1.10",
     "@iconify-json/fe": "^1.1.10",
     "@iconify-json/ic": "^1.1.17",
+    "@iconify-json/ion": "^1.1.18",
     "@iconify-json/uim": "^1.1.9",
     "@iconify-json/zondicons": "^1.1.8",
     "@typescript-eslint/eslint-plugin": "^7.8.0",

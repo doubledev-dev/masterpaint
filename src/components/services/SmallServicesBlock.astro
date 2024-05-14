@@ -1,0 +1,12 @@
+---
+import { Icon } from 'astro-icon/components';
+const { iconName, colorIcon, colorBlock, title, description } = Astro.props;
+---
+
+<article>
+    <div class=`${colorBlock} cols-span-1 items-center text-center flex flex-col justify-center shadow rounded-2xl `>
+        <Icon name={iconName} color={colorIcon} />
+        <p class="text-xl">{title}</p>
+        <p class="text-base">{description}</p>
+    </div>
+</article>
