@@ -4,13 +4,14 @@ import { Image } from "astro:assets";
 import Logo from "../assets/navbar/logo.svg";
 ---
 
-<header class="px-8 text-primary-800">
+<!-- <header class="px-8 text-primary-800"> -->
+<header class="px-8">
   <nav class="flex h-[74px] w-full flex-row items-center justify-between">
     <div class="flex flex-row items-center gap-[15px] text-base">
       <div>
         <Image src={Logo} alt="Master Paint Logo" />
       </div>
-      <div>MASTER PAINT 2548</div>
+      <div class="text-primary-800">MASTER PAINT 2548</div>
     </div>
     <div class="flex flex-row items-center gap-x-9 text-base">
       <NavbarLink href="/">Home</NavbarLink>
@@ -23,12 +24,3 @@ import Logo from "../assets/navbar/logo.svg";
     </div>
   </nav>
 </header>
-<style>
-  nav a {
-    color: #0c1a66;
-  }
-
-  nav a.active {
-    text-decoration: none;
-  }
-</style>
