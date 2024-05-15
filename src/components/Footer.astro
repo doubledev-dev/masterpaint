@@ -6,8 +6,13 @@ import { Icon } from "astro-icon/components";
   <div class="border-b-2 border-white pb-2 text-5xl">CONTACT US</div>
   <div class="flex flex-row gap-x-[72px] px-9 text-base">
     <div>
-      <div class="contact-container">
-        <div><Icon name="zondicons:location" class="icon-style" /></div>
+      <div class="flex w-[300px] flex-row justify-start gap-x-12">
+        <div>
+          <Icon
+            name="zondicons:location"
+            class="h-[30px] w-[30px] align-middle"
+          />
+        </div>
         <div class="place-content-center">
           Northtech Limited Partnership 71/5 หมู่ที่ 13 ถนนบางนา-ตราด
           ตำบลบางแก้ว อำเภอบางพลี จังหวัดสมุทรปราการ 10540
@@ -16,41 +21,29 @@ import { Icon } from "astro-icon/components";
     </div>
     <div>
       <div class="flex flex-col gap-y-6">
-        <div class="contact-container">
-          <Icon name="ic:baseline-email" class="icon-style" />
+        <div class="flex w-[300px] flex-row justify-start gap-x-12">
+          <Icon
+            name="ic:baseline-email"
+            class="h-[30px] w-[30px] align-middle"
+          />
           <div class="place-content-center">masterpaint2548@gmail.com</div>
         </div>
-        <div class="contact-container">
-          <Icon name="fe:facebook" class="icon-style" />
+        <div class="flex w-[300px] flex-row justify-start gap-x-12">
+          <Icon name="fe:facebook" class="h-[30px] w-[30px] align-middle" />
           <div class="place-content-center">masterpaint2548</div>
         </div>
-        <div class="contact-container">
-          <Icon name="bxs:phone-call" class="icon-style" />
+        <div class="flex w-[300px] flex-row justify-start gap-x-12">
+          <Icon name="bxs:phone-call" class="h-[30px] w-[30px] align-middle" />
           <div>
             <div>0891123192</div>
             <div>027625855</div>
           </div>
         </div>
-        <div class="contact-container">
-          <Icon name="uim:line" class="icon-style" />
+        <div class="flex w-[300px] flex-row justify-start gap-x-12">
+          <Icon name="uim:line" class="h-[30px] w-[30px] align-middle" />
           <span class="place-content-center">@masterpaint2548</span>
         </div>
       </div>
     </div>
   </div>
 </footer>
-<style>
-  .contact-container {
-    width: 300px;
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    column-gap: 3rem /* 48px */;
-  }
-
-  .icon-style {
-    width: 30px;
-    height: 30px;
-    vertical-align: middle;
-  }
-</style>
