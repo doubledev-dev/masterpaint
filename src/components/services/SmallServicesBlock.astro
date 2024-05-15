@@ -1,12 +1,20 @@
 ---
-import { Icon } from 'astro-icon/components';
-const { iconName, colorIcon, colorBlock, title, description } = Astro.props;
+import { Icon } from "astro-icon/components";
+const {
+  iconName,
+  colorIcon = "#0C1A66",
+  colorBlock,
+  title,
+  description,
+} = Astro.props;
 ---
 
 <article>
-    <div class=`${colorBlock} cols-span-1 items-center text-center flex flex-col justify-center shadow rounded-2xl `>
-        <Icon name={iconName} color={colorIcon} />
-        <p class="text-xl">{title}</p>
-        <p class="text-base">{description}</p>
-    </div>
+  <div
+    class=`bg-${colorBlock} h-full w-full cols-span-1 items-center text-center flex flex-col justify-center shadow rounded-2xl p-8 max-content`
+  >
+    <Icon name={iconName} color={colorIcon} size={50} class="m-4 mb-8" />
+    <p class=`text-xl max-w-[70%] text-${colorIcon}`>{title}</p>
+    <p class="text-base text-primary-600">{description}</p>
+  </div>
 </article>
