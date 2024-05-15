@@ -17,6 +17,7 @@ const subpath = pathname.match(/[^\/]+/g);
 const isActive = href === pathname || href === "/" + subpath?.[0];
 ---
 
+<!-- wait for font Inter -> text-medium aria-checked:text-bold -->
 <a
   href={href}
   aria-checked={isActive}
