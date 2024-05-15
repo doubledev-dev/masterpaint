@@ -1,0 +1,52 @@
+---
+import SmallServicesBlock from "./SmallServicesBlock.astro";
+import Container from "@/components/Container.astro";
+
+const services = [
+  {
+    Icon: "ion:calculator",
+    colorBlock: "bg-white",
+    title: "ให้คำปรึกษาและประเมินราคางานสีทุกชนิด",
+    description: "วางแผนตามงบประมาณที่ต้องการ",
+  },
+  {
+    Icon: "vaadin:paint-roll",
+    colorBlock: "bg-white",
+    title: "ทาสี",
+    description: "ทาสีอาคาร โรงงาน ที่พักอาศัย เครื่องจักร ฯ",
+  },
+  {
+    Icon: "ic:twotone-construction",
+    colorIcon: "white",
+    colorText: "text-white",
+    colorBlock: "bg-primary-800",
+    title: "รับซ่อมแซมและปรับปรุง",
+    description: "เพื่อยืดอายุการใช้งานและให้ดูดีทันสมัยมากขึ้น",
+  },
+  {
+    Icon: "clarity:design-solid",
+    colorBlock: "bg-white",
+    title: "รับออกแบบและต่อเติม",
+    description: "ให้ตรงกับความต้องการของลูกค้า ในราคาที่เหมาะสม",
+  },
+];
+---
+
+<Container>
+  <h2 class="mb-12 text-start text-3xl font-bold uppercase">all services</h2>
+  <div class="grid grid-cols-2 gap-4">
+    {
+      services.map((service) => (
+        <SmallServicesBlock
+          iconName={service.Icon}
+          colorIcon={service.colorIcon}
+          colorText={service.colorText}
+          colorBlock={service.colorBlock}
+          title={service.title}
+          description={service.description}
+        />
+      ))
+    }
+    <Container />
+  </div></Container
+>
