@@ -3,13 +3,6 @@ import type { HTMLAttributes } from "astro/types";
 
 type Props = HTMLAttributes<"a">;
 
-// console.log(Astro.props);
-// console.log(Astro.url);
-// <div
-// className={`bg-white w-60 rounded-2xl border shadow-md hover:shadow-lg ${
-//         hasButton ? "h-[370px]" : "h-[320px]"
-//       }`}
-//     >
 const { href, class: className, ...props } = Astro.props;
 
 const { pathname } = Astro.url;
