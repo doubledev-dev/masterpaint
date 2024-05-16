@@ -33,6 +33,7 @@
     "@iconify-json/fe": "^1.1.10",
     "@iconify-json/ic": "^1.1.17",
     "@iconify-json/ion": "^1.1.18",
+    "@iconify-json/radix-icons": "^1.1.14",
     "@iconify-json/uim": "^1.1.9",
     "@iconify-json/vaadin": "^1.1.9",
     "@iconify-json/zondicons": "^1.1.8",
