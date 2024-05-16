@@ -40,9 +40,18 @@ dependencies:
     version: 5.4.5
 
 devDependencies:
+  '@iconify-json/ant-design':
+    specifier: ^1.1.16
+    version: 1.1.16
+  '@iconify-json/bi':
+    specifier: ^1.1.23
+    version: 1.1.23
   '@iconify-json/bxs':
     specifier: ^1.1.10
     version: 1.1.10
+  '@iconify-json/carbon':
+    specifier: ^1.1.33
+    version: 1.1.33
   '@iconify-json/clarity':
     specifier: ^1.1.12
     version: 1.1.12
@@ -811,8 +820,26 @@ packages:
     resolution: {integrity: sha512-93zYdMES/c1D69yZiKDBj0V24vqNzB/koF26KPaagAfd3P/4gUlh3Dys5ogAK+Exi9QyzlD8x/08Zt7wIKcDcA==}
     dev: true
 
+  /@iconify-json/ant-design@1.1.16:
+    resolution: {integrity: sha512-DJ2BDf/XNuYu0p0zDQh3RM8FkPsp9GwZ7WytkVwU7cn73AgpNfOGc2P5zvZzgejx5YK0otG9MYi/cHI4qvfnVQ==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify-json/bi@1.1.23:
+    resolution: {integrity: sha512-1te+g9ZzI+PU1Lv6Xerd3XPXf4DE6g3TvDL2buIopTAfrauPHyXCHPFQMrzoQVNrVPCpN3rv3vBtJMPyBwJ9IA==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
   /@iconify-json/bxs@1.1.10:
     resolution: {integrity: sha512-USVukTRq5PDT3KVVePYzHgYBtO9PYi4oNFuBpMf/Q1BFHAiwyP8zVewgXR1a6w/XMDIiQ3gVuTX7upkXv7cjgw==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify-json/carbon@1.1.33:
+    resolution: {integrity: sha512-TsjyOqhqMhIEdUnteGPMoKvbY1SIsM8A4sASHIg+YiKoDGWqlwD/g4pLXoAoVj3NL3E1hRxoTIY1oqpndXIxvg==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: true
