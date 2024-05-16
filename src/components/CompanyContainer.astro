@@ -19,12 +19,12 @@ const works = [
       class="flex w-[450px] flex-col gap-y-12 bg-green-300 text-primary-800"
     >
       <h1 class="text-2xl font-semibold">AT MASTERPAINT</h1>
-      <p class="">
+      <p class="indent-9">
         หจก.นอร์ธเทค ก่อตั้งขึ้นเมื่อวันที่ 18 สิงหาคม 2548
         มีวัตถุประสงค์เพื่อให้บริการเกี่ยวกับงานสีต่างๆ
         โดยทีมช่างคุณภาพที่มีประสบการณ์และความ เชี่ยวชาญด้านงานสีโดยเฉพาะ
       </p>
-      <p>
+      <p class="indent-9">
         เราได้มุ่งมั่นที่จะสร้างความพึงพอใจให้แก่ลูกค้าในการนำ
         เสนอสินค้าพร้อมบริการที่มีคุณภาพในราคาที่เหมาะสม
         ดังนั้นเมื่อท่านได้รับบริการจากเรา จะไม่เพียงแต่การให้บริการเท่านั้น
@@ -45,7 +45,7 @@ const works = [
         works.map((w) => (
           <div class="flex h-48 w-72 flex-col justify-between rounded-xl bg-primary-100 p-6 text-primary-800">
             <Icon name={w.icon} size={w.size} />
-            <p class="text-nowrap text-sm font-semibold">{w.desc}</p>
+            <p class="text-nowrap text-sm font-bold">{w.desc}</p>
           </div>
         ))
       }
