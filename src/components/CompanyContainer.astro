@@ -3,9 +3,13 @@ import { Icon } from "astro-icon/components";
 import Container from "@/components/Container.astro";
 
 const works = [
-  { icon: "ant-design:schedule-outlined", desc: "Flexible scheduling options" },
-  { icon: "bi:people-fill", desc: "Free consultation" },
-  { icon: "carbon:clean", desc: "Maintain a clean work area" },
+  {
+    icon: "ant-design:schedule-outlined",
+    desc: "Flexible scheduling options",
+    size: 45,
+  },
+  { icon: "bi:people-fill", desc: "Free consultation", size: 42 },
+  { icon: "carbon:clean", desc: "Maintain a clean work area", size: 56 },
 ];
 ---
 
@@ -40,7 +44,7 @@ const works = [
       {
         works.map((w) => (
           <div class="flex h-48 w-72 flex-col justify-between rounded-xl bg-primary-100 p-6 text-primary-800">
-            <Icon name={w.icon} class="h-14 w-14" />
+            <Icon name={w.icon} size={w.size} />
             <p class="text-nowrap text-sm font-semibold">{w.desc}</p>
           </div>
         ))
