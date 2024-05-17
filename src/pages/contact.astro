@@ -1,8 +1,14 @@
 ---
 import MainLayout from "@/layouts/MainLayout.astro";
-import Contacts from "@/components/Contact";
+import Contacts from "@/components/ContactForm.tsx";
 ---
 
 <MainLayout>
-  <Contacts />
+  <Contacts slot="after-main"/>
 </MainLayout>
+
+<style lang="css">
+    main {
+        padding: 0rem 0rem;
+    }
+</style>

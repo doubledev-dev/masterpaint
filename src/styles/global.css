@@ -5,9 +5,7 @@
  */
 main {
   width: 1280px;
-  max-width: calc(100% - 24em);
   margin: auto;
-  padding: 3em 1em;
 }
 /* :root {
   --accent: #2337ff;
