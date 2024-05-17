@@ -1,0 +1,41 @@
+---
+import Container from "./Container.astro";
+import { Image } from "astro:assets";
+
+import img1 from "@/assets/logo/img1.svg";
+import img2 from "@/assets/logo/img2.svg";
+import img3 from "@/assets/logo/img3.svg";
+import img4 from "@/assets/logo/img4.svg";
+import img5 from "@/assets/logo/img5.svg";
+import img6 from "@/assets/logo/img6.svg";
+import img7 from "@/assets/logo/img7.svg";
+import img8 from "@/assets/logo/img8.svg";
+import img9 from "@/assets/logo/img9.svg";
+import img10 from "@/assets/logo/img10.svg";
+// import img10 from "@/assets/logo/img10.png";
+
+const images = [
+  { src: img1, alt: "Bangkok Air Catering" },
+  { src: img2, alt: "Novotel" },
+  { src: img3, alt: "Isuzu Thailand" },
+  { src: img4, alt: "PEA" },
+  { src: img5, alt: "Pathumwan Princess Hotel" },
+  { src: img6, alt: "Bangkok Flight Services" },
+  { src: img7, alt: "Suzuyo" },
+  { src: img8, alt: "Thai Parkerizing" },
+  { src: img9, alt: "TGI" },
+  { src: img10, alt: "Iron Mountain" },
+];
+---
+
+<Container>
+  <div class="grid grid-cols-5 items-center gap-4 bg-secondary">
+    {
+      images.map((img) => (
+        <div class="flex aspect-auto items-center justify-center ">
+          <Image src={img.src} alt={img.alt} class=" max-h-20 object-contain" />
+        </div>
+      ))
+    }
+  </div>
+</Container>
