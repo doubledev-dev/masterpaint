@@ -89,7 +89,7 @@ const Contacts = () => {
                     key={form.name}
                     name={form.name}
                     placeholder="Write your message"
-                    className="mt-1 block w-full resize-none border-b-2 p-2"
+                    className="mt-1 block w-full resize-none border-b-2 border-gray-700 p-2"
                     onChange={handleChange}
                   />
                 </div>
@@ -100,19 +100,19 @@ const Contacts = () => {
                     key={form.name}
                     type={form.type}
                     name={form.name}
-                    className="mt-1 block w-full border-b-2 p-2"
+                    className="mt-1 block w-full border-b-2 border-gray-700 p-2"
                     onChange={handleChange}
                   />
                 </div>
               )
             )}
           </div>
-          <button className="ml-auto mt-8 rounded-full bg-primary-800 p-4 px-8 text-white hover:bg-primary-600">
+          <button className="ml-auto mt-8 flex justify-items-end rounded-full bg-primary-800 p-4 px-8 align-baseline text-white hover:bg-primary-600">
             Send Message
           </button>
         </form>
         <div className="p-8 text-primary-800">
-          <h1 className="text-3xl font-semibold italic">Reach Us</h1>
+          <h1 className="font-Inter text-3xl font-semibold italic">Reach Us</h1>
           <h2 className="mt-2 text-xl font-thin">
             Feel free to send us a message!
           </h2>

@@ -1,7 +1,7 @@
 ---
 import MainLayout from "@/layouts/MainLayout.astro";
 import Hero from "@/components/Hero.astro";
-import SmallServices from "@/components/services/SmallServicesContainer.astro";
+import SmallServices from "@/components/Service/SmallServicesContainer.astro";
 import Contact from "@/components/ContactForm.tsx";
 import Achievements from "@/components/AchievementContainer.astro";
 import Logo from "@/components/LogoHomePage.astro";
@@ -12,5 +12,5 @@ import Logo from "@/components/LogoHomePage.astro";
   <SmallServices />
   <Logo />
   <Achievements />
-  <Contact slot="after-main"/>
+  <Contact slot="after-main" />
 </MainLayout>

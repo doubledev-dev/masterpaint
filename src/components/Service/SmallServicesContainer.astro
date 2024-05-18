@@ -1,6 +1,6 @@
 ---
 import SmallServicesBlock from "./SmallServicesBlock.astro";
-import Container from "@/components/Container.astro";
+import Container from "@/components/Container/ContentContainer.astro";
 
 const services = [
   {
@@ -17,9 +17,7 @@ const services = [
   },
   {
     Icon: "ic:twotone-construction",
-    colorIcon: "white",
-    colorText: "text-white",
-    colorBlock: "bg-primary-800",
+    colorBlock: "bg-white",
     title: "รับซ่อมแซมและปรับปรุง",
     description: "เพื่อยืดอายุการใช้งานและให้ดูดีทันสมัยมากขึ้น",
   },
@@ -33,7 +31,9 @@ const services = [
 ---
 
 <Container>
-  <h2 class="mb-12 text-start text-3xl font-bold uppercase text-primary-800">
+  <h2
+    class="mb-12 text-start font-Inter text-3xl font-semibold uppercase text-primary-800"
+  >
     all services
   </h2>
   <div class="grid grid-cols-2 gap-4">
@@ -41,14 +41,11 @@ const services = [
       services.map((service) => (
         <SmallServicesBlock
           iconName={service.Icon}
-          colorIcon={service.colorIcon}
-          colorText={service.colorText}
           colorBlock={service.colorBlock}
           title={service.title}
           description={service.description}
         />
       ))
     }
-    <Container />
   </div></Container
 >

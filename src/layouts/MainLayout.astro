@@ -1,11 +1,18 @@
 ---
-import Navbar from "@/components/Navbar.astro";
+import Navbar from "@/components/Navbar/index.astro";
 import Footer from "@/components/Footer.astro";
 import BaseHead from "@/components/BaseHead.astro";
 import "@fontsource/bai-jamjuree";
 import "@fontsource/bai-jamjuree/400.css";
 import "@fontsource/bai-jamjuree/400-italic.css";
 import { SITE_TITLE, SITE_DESCRIPTION } from "@/consts";
+
+interface Props {
+  pageTitle?: string;
+  withMain?: boolean;
+}
+
+const { pageTitle = "Masterpaint", withMain = true } = Astro.props;
 ---
 
 <!doctype html>
@@ -13,14 +20,18 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "@/consts";
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body
-    class="flex min-h-screen flex-col overflow-y-scroll bg-secondary font-baijam"
-  >
+  <body class="flex min-h-screen flex-col overflow-y-scroll bg-secondary">
     <Navbar />
     <slot name="before-main" />
-    <main>
-      <div class="my-6 space-y-6 xl:my-10 xl:space-y-10"><slot /></div>
-    </main>
+    {
+      withMain && (
+        <main>
+          <div class="my-6 space-y-6 xl:my-10 xl:space-y-10">
+            <slot />
+          </div>
+        </main>
+      )
+    }
     <slot name="after-main" />
     <Footer />
   </body>
