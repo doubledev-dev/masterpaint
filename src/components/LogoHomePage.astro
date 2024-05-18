@@ -1,5 +1,5 @@
 ---
-import Container from "./Container.astro";
+import ContentContainer from "@/components/Container/ContentContainer.astro";
 import { Image } from "astro:assets";
 
 import img1 from "@/assets/logo/img1.svg";
@@ -28,7 +28,7 @@ const images = [
 ];
 ---
 
-<Container>
+<ContentContainer>
   <div class="grid grid-cols-5 items-center gap-4 bg-secondary">
     {
       images.map((img) => (
@@ -38,4 +38,4 @@ const images = [
       ))
     }
   </div>
-</Container>
+</ContentContainer>
