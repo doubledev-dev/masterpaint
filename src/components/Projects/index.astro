@@ -1,0 +1,26 @@
+---
+import ContentContainer from "@/components/Container/ContentContainer.astro";
+import ProjectCard from "./ProjectCard.astro";
+import { PROJECTS } from "@/data/Project.ts";
+---
+
+<ContentContainer className="mx-auto max-w-7xl p-6">
+  <h2
+    class="mb-12 text-center font-Inter text-[40px] font-semibold uppercase text-primary-800"
+  >
+    our Projects
+  </h2>
+  <div class="grid grid-cols-3 gap-4">
+    {
+      PROJECTS.map((company) => (
+        <ProjectCard title={company.name} image={company.image} />
+      ))
+    }
+  </div>
+  <button
+    class="mx-auto mt-8 flex rounded-full border border-primary-800 bg-white px-[13px] py-[10px] lowercase transition duration-300 ease-in-out hover:bg-primary-800 hover:text-white"
+    onclick="window.location.href = '/project'"
+  >
+    See More
+  </button>
+</ContentContainer>
