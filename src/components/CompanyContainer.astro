@@ -1,6 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
-import Container from "@/components/Container.astro";
+import Container from "@/components/Container/ContentContainer.astro";
 
 const works = [
   {
@@ -13,7 +13,7 @@ const works = [
 ];
 ---
 
-<Container>
+<Container className="mx-auto max-w-7xl p-6">
   <div class="flex flex-row justify-center gap-x-12">
     <article class="flex w-[450px] flex-col gap-y-12 p-0 text-primary-800">
       <h1 class="text-2xl font-semibold">AT MASTERPAINT</h1>
