@@ -1,0 +1,52 @@
+---
+import { Icon } from "astro-icon/components";
+import Container from "@/components/Container.astro";
+
+const works = [
+  {
+    icon: "ant-design:schedule-outlined",
+    desc: "Flexible scheduling options",
+    size: 45,
+  },
+  { icon: "bi:people-fill", desc: "Free consultation", size: 42 },
+  { icon: "carbon:clean", desc: "Maintain a clean work area", size: 56 },
+];
+---
+
+<Container>
+  <div class="flex flex-row justify-center gap-x-12">
+    <article class="flex w-[450px] flex-col gap-y-12 p-0 text-primary-800">
+      <h1 class="text-2xl font-semibold">AT MASTERPAINT</h1>
+      <p class="text-pretty indent-10">
+        หจก.นอร์ธเทค ก่อตั้งขึ้นเมื่อวันที่ 18 สิงหาคม 2548
+        มีวัตถุประสงค์เพื่อให้บริการเกี่ยวกับงานสีต่างๆ
+        โดยทีมช่างคุณภาพที่มีประสบการณ์และความ เชี่ยวชาญด้านงานสีโดยเฉพาะ
+      </p>
+      <p class="text-pretty indent-10">
+        เราได้มุ่งมั่นที่จะสร้างความพึงพอใจให้แก่ลูกค้าในการนำ
+        เสนอสินค้าพร้อมบริการที่มีคุณภาพในราคาที่เหมาะสม
+        ดังนั้นเมื่อท่านได้รับบริการจากเรา จะไม่เพียงแต่การให้บริการเท่านั้น
+        แต่จะเป็นการเริ่มต้นความสัมพันธ์ที่ดีต่อกันในระยะเวลาอันยาวไกล
+      </p>
+      <button
+        class="flex flex-row gap-x-2 self-end rounded-full border border-primary-800 bg-white px-[13px] py-[10px]"
+        >more about us <span class="self-center justify-self-center"
+          ><Icon
+            name="radix-icons:arrow-top-right"
+            class="h-full w-full"
+          /></span
+        >
+      </button>
+    </article>
+    <div class="grid grid-cols-2 gap-4">
+      {
+        works.map((w) => (
+          <div class="flex h-48 w-72 flex-col justify-between rounded-xl bg-primary-100 p-6 text-primary-800">
+            <Icon name={w.icon} size={w.size} />
+            <p class="text-nowrap text-sm font-bold">{w.desc}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</Container>

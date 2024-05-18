@@ -4,13 +4,15 @@ import Hero from "@/components/Hero.astro";
 import SmallServices from "@/components/Service/SmallServicesContainer.astro";
 import Contact from "@/components/ContactForm.tsx";
 import Achievements from "@/components/AchievementContainer.astro";
-import Logo from "@/components/LogoHomePage.astro";
+import Logos from "@/components/LogoHomePage.astro";
+import Companies from "@/components/CompanyContainer.astro";
 ---
 
 <MainLayout>
   <Hero slot="before-main" />
   <SmallServices />
-  <Logo />
+  <Logos />
   <Achievements />
   <Contact slot="after-main" />
+  <Companies />
 </MainLayout>
