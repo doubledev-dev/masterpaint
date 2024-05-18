@@ -14,10 +14,8 @@ const works = [
 ---
 
 <Container>
-  <div class="flex flex-row justify-between gap-x-12 bg-red-300">
-    <article
-      class="flex w-[450px] flex-col gap-y-12 bg-green-300 text-primary-800"
-    >
+  <div class="flex flex-row justify-center gap-x-12">
+    <article class="flex w-[450px] flex-col gap-y-12 p-0 text-primary-800">
       <h1 class="text-2xl font-semibold">AT MASTERPAINT</h1>
       <p class="indent-9">
         หจก.นอร์ธเทค ก่อตั้งขึ้นเมื่อวันที่ 18 สิงหาคม 2548
@@ -40,7 +38,7 @@ const works = [
         >
       </button>
     </article>
-    <div class="grid grid-cols-2 gap-4 bg-blue-300">
+    <div class="grid grid-cols-2 gap-4">
       {
         works.map((w) => (
           <div class="flex h-48 w-72 flex-col justify-between rounded-xl bg-primary-100 p-6 text-primary-800">
