@@ -1,5 +1,5 @@
 ---
-import Container from "@/components/Container.astro";
+import Container from "@/components/Container/ContentContainer.astro";
 
 const achievements = [
   { title: "Years of experience", amount: "18" },
@@ -12,7 +12,7 @@ const achievements = [
   <section class="flex flex-row justify-center gap-x-4">
     {
       achievements.map((ach) => (
-        <div class="h-15 flex flex-row justify-between gap-x-14 rounded-xl bg-primary-100 p-3 font-baijam text-primary-600">
+        <div class="h-15 font-baijam flex flex-row justify-between gap-x-14 rounded-xl bg-primary-100 p-3 text-primary-600">
           <p class="mb-0 text-5xl font-semibold">{ach.amount}</p>
           <p class="mb-0 self-end text-nowrap text-base">{ach.title}</p>
         </div>

@@ -4,9 +4,12 @@ import defaultTheme from "tailwindcss/defaultTheme";
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
+    fontFamily: {
+      sans: ["Bai Jamjuree", ...defaultTheme.fontFamily.serif],
+    },
     extend: {
       fontFamily: {
-        baijam: ["Bai Jamjuree", ...defaultTheme.fontFamily.serif],
+        Inter: ["Inter", ...defaultTheme.fontFamily.sans],
       },
       colors: {
         primary: {
