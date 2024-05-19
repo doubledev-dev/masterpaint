@@ -26,6 +26,9 @@ dependencies:
   astro:
     specifier: ^4.7.1
     version: 4.7.1(typescript@5.4.5)
+  astro-carousel:
+    specifier: ^2.0.8
+    version: 2.0.8(astro@4.7.1)
   prettier-plugin-organize-imports:
     specifier: ^3.2.4
     version: 3.2.4(prettier@3.2.5)(typescript@5.4.5)
@@ -1852,6 +1855,14 @@ packages:
   /astring@1.8.6:
     resolution: {integrity: sha512-ISvCdHdlTDlH5IpxQJIex7BWBywFWgjJSVdwst+/iQCoEYnyOaQ95+X1JGshuBjGp6nxKUy1jMgE3zPqN7fQdg==}
     hasBin: true
+    dev: false
+
+  /astro-carousel@2.0.8(astro@4.7.1):
+    resolution: {integrity: sha512-QV812jOT3LbIk8qlcpeN6T+UeVmqYGXnSreYJRU50Y/hESr7xUugJ4VqwtDRVahhASpprKkv7NYvNi4NAo/0Mg==}
+    peerDependencies:
+      astro: ^4.5.0
+    dependencies:
+      astro: 4.7.1(typescript@5.4.5)
     dev: false
 
   /astro-eslint-parser@1.0.2(typescript@5.4.5):
