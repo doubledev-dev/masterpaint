@@ -29,6 +29,9 @@ dependencies:
   astro:
     specifier: ^4.7.1
     version: 4.7.1(typescript@5.4.5)
+  nanostores:
+    specifier: ^0.10.3
+    version: 0.10.3
   prettier-plugin-organize-imports:
     specifier: ^3.2.4
     version: 3.2.4(prettier@3.2.5)(typescript@5.4.5)
@@ -67,6 +70,9 @@ devDependencies:
   '@iconify-json/fe':
     specifier: ^1.1.10
     version: 1.1.10
+  '@iconify-json/gridicons':
+    specifier: ^1.1.14
+    version: 1.1.14
   '@iconify-json/ic':
     specifier: ^1.1.17
     version: 1.1.17
@@ -907,6 +913,12 @@ packages:
 
   /@iconify-json/fe@1.1.10:
     resolution: {integrity: sha512-ePFSmtnDTk+PtsmGsPtmLXPQNV/V3iC/Kr7E/yv0PANiwVwqY5JJcaAVyWlVIvB7qaLEhncVhvXp7TwcM9bPpw==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify-json/gridicons@1.1.14:
+    resolution: {integrity: sha512-N5AghmFtUPvbvts3Yu/lDJxUq00rULo/oyVhJepEpILzN9CJVk2VY8MLLq8mdJWLpLFnpC9VyeLjOaeEqwkOTg==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: true
@@ -4801,6 +4813,11 @@ packages:
     resolution: {integrity: sha512-eSRppjcPIatRIMC1U6UngP8XFcz8MQWGQdt1MTBQ7NaAmvXDfvNxbvWV3x2y6CdEUciCSsDHDQZbhYaB8QEo2g==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
+
+  /nanostores@0.10.3:
+    resolution: {integrity: sha512-Nii8O1XqmawqSCf9o2aWqVxhKRN01+iue9/VEd1TiJCr9VT5XxgPFbF1Edl1XN6pwJcZRsl8Ki+z01yb/T/C2g==}
+    engines: {node: ^18.0.0 || >=20.0.0}
+    dev: false
 
   /natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
