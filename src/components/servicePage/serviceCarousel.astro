@@ -1,3 +1,36 @@
 ---
-// import Carousel from "astro-carousel";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+
+import Container from "@/components/Container/ContentContainer.astro";
+import { Image } from "astro:assets";
+
+import img1 from "@/assets/service/carousel/notext/img1.svg";
+import img2 from "@/asst6ets/service/carousel/notext/img2.svg";
+import img3 from "@/assets/service/carousel/notext/img3.svg";
+import img4 from "@/assets/service/carousel/notext/img4.svg";
+
+import img11 from "@/assets/service/carousel/text/img1.svg";
+import img22 from "@/assets/service/carousel/text/img2.svg";
+import img33 from "@/assets/service/carousel/text/img3.svg";
+import img44 from "@/assets/service/carousel/text/img4.svg";
 ---
+
+<Container>
+  <Carousel>
+    <CarouselContent>
+      <CarouselItem>
+        <Image src={img1} alt="hihi" class="" />
+      </CarouselItem>
+      <!-- <CarouselItem>...</CarouselItem>
+      <CarouselItem>...</CarouselItem> -->
+    </CarouselContent>
+    <CarouselPrevious />
+    <CarouselNext />
+  </Carousel>
+</Container>

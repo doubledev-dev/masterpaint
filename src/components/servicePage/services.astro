@@ -4,65 +4,61 @@ import tempImg from "@/assets/service/serviceImg.svg";
 import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
 
+const tempDesc1 =
+  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, quae rem illo magnam amet exercitationem?";
+const tempDesc2 =
+  "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum dolorem aperiam nesciunt, ad tenetur ex impedit non reiciendis ipsum!";
+
 const services = [
   {
     src: tempImg,
     alt: "temp image",
     icon: "ion:calculator",
     title: "ให้คำปรึกษาและประเมินราคางานสีทุกชนิด",
-    desc1:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum expedita natus voluptatem recusandae excepturi quaerat reprehenderit dolor rem esse molestiae quidem omnis et quia commodi officiis, delectus ipsum veritatis suscipit.Quas debitis in suscipit iste tempora dolore provident et tempore. Minus eos numquam officiis cum vitae eius, sit voluptatibus autem temporibus amet quidem suscipit, dolor quasi est fugit corporis voluptate?",
-    desc2:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis at nulla sed cumque quas officiis? Nostrum repudiandae qui reiciendis quae, molestiae hic? Quae illo rem maxime dolorem, iusto eum ipsa?",
+    desc1: tempDesc1,
+    desc2: tempDesc2,
   },
   {
     src: tempImg,
     alt: "temp image",
     icon: "vaadin:paint-roll",
     title: "ทาสี",
-    desc1:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum expedita natus voluptatem recusandae excepturi quaerat reprehenderit dolor rem esse molestiae quidem omnis et quia commodi officiis, delectus ipsum veritatis suscipit.Quas debitis in suscipit iste tempora dolore provident et tempore. Minus eos numquam officiis cum vitae eius, sit voluptatibus autem temporibus amet quidem suscipit, dolor quasi est fugit corporis voluptate?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum expedita natus voluptatem recusandae excepturi quaerat reprehenderit dolor rem esse molestiae quidem omnis et quia commodi officiis, delectus ipsum veritatis suscipit.Quas debitis in suscipit iste tempora dolore provident et tempore. Minus eos numquam officiis cum vitae eius, sit voluptatibus autem temporibus amet quidem suscipit, dolor quasi est fugit corporis voluptate?",
-    desc2:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis at nulla sed cumque quas officiis? Nostrum repudiandae qui reiciendis quae, molestiae hic? Quae illo rem maxime dolorem, iusto eum ipsa?",
+    desc1: tempDesc1,
+    desc2: tempDesc2,
   },
   {
     src: tempImg,
     alt: "temp image",
     icon: "ic:twotone-construction",
     title: "รับซ่อมแซมและปรับปรุง",
-    desc1:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum expedita natus voluptatem recusandae excepturi quaerat reprehenderit dolor rem esse molestiae quidem omnis et quia commodi officiis, delectus ipsum veritatis suscipit.Quas debitis in suscipit iste tempora dolore provident et tempore. Minus eos numquam officiis cum vitae eius, sit voluptatibus autem temporibus amet quidem suscipit, dolor quasi est fugit corporis voluptate?",
-    desc2:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis at nulla sed cumque quas officiis? Nostrum repudiandae qui reiciendis quae, molestiae hic? Quae illo rem maxime dolorem, iusto eum ipsa?",
+    desc1: tempDesc1,
+    desc2: tempDesc2,
   },
   {
     src: tempImg,
     alt: "temp image",
     icon: "clarity:design-solid",
     title: "รับออกแบบและต่อเติม",
-    desc1:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum expedita natus voluptatem recusandae excepturi quaerat reprehenderit dolor rem esse molestiae quidem omnis et quia commodi officiis, delectus ipsum veritatis suscipit.Quas debitis in suscipit iste tempora dolore provident et tempore. Minus eos numquam officiis cum vitae eius, sit voluptatibus autem temporibus amet quidem suscipit, dolor quasi est fugit corporis voluptate?",
-    desc2:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis at nulla sed cumque quas officiis? Nostrum repudiandae qui reiciendis quae, molestiae hic? Quae illo rem maxime dolorem, iusto eum ipsa?",
+    desc1: tempDesc1,
+    desc2: tempDesc2,
   },
 ];
 ---
 
-<Container>
-  <div class="flex flex-col">
-    {
-      services.map((service) => (
-        <div class="flex flex-row ">
-          <Image src={service.src} alt={service.alt} class="" />
-          <article>
-            <div />
-            <Icon name={service.icon} />
-            <h1>{service.title}</h1>
-            <p>{service.desc1}</p>
-            <p>{service.desc2}</p>
+<Container className="mx-auto mt-[72px] max-w-7xl">
+  {
+    services.map((service) => (
+      <div class="flex h-[230px] flex-row justify-center">
+        <Image src={service.src} alt={service.alt} class="object-cover" />
+        <div class="w-[690px] border-b-[1px] border-primary-800 px-8 py-6">
+          <article class="text-primary-800">
+            <Icon name={service.icon} size={24} />
+            <h1 class="mb-5 mt-4">{service.title}</h1>
+            <p class="mb-4 indent-10 text-sm">{service.desc1}</p>
+            <p class="indent-10 text-sm	">{service.desc2}</p>
           </article>
         </div>
-      ))
-    }
-  </div>
+      </div>
+    ))
+  }
 </Container>
