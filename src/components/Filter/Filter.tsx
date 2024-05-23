@@ -7,25 +7,27 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
+import type { FilterOptions } from "@/types/Filters";
 import * as React from "react";
 
 interface Props {
   title: string;
-  option: string[];
+  options: FilterOptions[];
 }
 
-const Filter = ({ title, option }: Props) => {
+const Filter = ({ title, options }: Props) => {
   return (
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger>{title}</NavigationMenuTrigger>
           <NavigationMenuContent>
+            {
+              
+            }
             <ul className="grid w-[300px] list-disc grid-cols-1 gap-3 p-4">
-              {option.map((item, index) => (
-                <ListItem key={index} title={item}>
-                  {item}
-                </ListItem>
+              {options.map((item, index) => (
+                 <ListItem key={index} title={item.option}></ListItem>
               ))}
             </ul>
           </NavigationMenuContent>
