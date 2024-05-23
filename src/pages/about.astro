@@ -6,6 +6,7 @@ import topImg from "../assets/about/Img1.svg";
 import midImg from "../assets/about/Img2.svg";
 import bottomImg from "../assets/about/Img3.svg";
 import MainLayout from "@/layouts/MainLayout.astro";
+import ContentContainer from "@/components/Container/ContentContainer.astro";
 ---
 
 <html lang="en">
@@ -27,7 +28,7 @@ import MainLayout from "@/layouts/MainLayout.astro";
       </article>
     </section>
     <section
-      class="flex flex-col items-center gap-y-16 bg-secondary py-16 text-primary-800"
+      class="flex flex-col items-center gap-y-16 bg-secondary-100 py-16 text-primary-800"
     >
       <div class="flex w-[600px] flex-row gap-x-20">
         <div class="mb-0 w-[100px] text-center text-base">ประวัติของเรา</div>
@@ -53,10 +54,12 @@ import MainLayout from "@/layouts/MainLayout.astro";
         </p>
       </div>
     </section>
-    <section class="bg-secondary">
+    <section class="mx-auto max-w-5xl bg-secondary-100">
       <Image src={midImg} alt="Middle Image" class="w-full" />
     </section>
-    <section class="flex flex-row items-center gap-x-[72px] bg-secondary py-16">
+    <section
+      class="mx-auto flex max-w-5xl flex-row items-center gap-x-[72px] bg-secondary-100 py-16"
+    >
       <Image src={bottomImg} alt="Bottom Image" class="" />
       <div class="flex flex-col gap-y-3 text-primary-800">
         <div class="text-6xl">“</div>

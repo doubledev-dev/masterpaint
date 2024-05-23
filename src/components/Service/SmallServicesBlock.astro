@@ -18,14 +18,15 @@ const {
   title = "",
   description = "",
 } = Astro.props;
----
 
-<article>
+
+---
+<a href="/service">
   <div
-    class=`${colorBlock} h-full w-full cols-span-1 items-center text-center flex flex-col justify-center shadow rounded-2xl p-8 max-content`
+    class=`${colorBlock} h-full w-full cols-span-1 items-center text-center flex flex-col justify-center shadow rounded-2xl p-8 max-content hover:bg-primary-800 hover:text-white transition-all duration-300 ease-in-out ${colorText}`
   >
-    <Icon name={iconName} color={colorIcon} size={50} class="m-4 mb-8" />
-    <p class={"text-xl max-w-[70%] " + colorText}>{title}</p>
+    <Icon name={iconName} size={50} class="m-4 mb-8" />
+    <p class={"text-xl max-w-[70%] "}>{title}</p>
     <p class="text-base text-primary-600">{description}</p>
   </div>
-</article>
+</a>
