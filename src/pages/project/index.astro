@@ -1,7 +1,7 @@
 ---
 import MainLayout from "@/layouts/MainLayout.astro";
 import Projects from "@/components/Projects/index.astro";
-import Filter from "@/components/Projects/Filter";
+import FilterContainer from "@/components/Filter/FilterContainer.astro";
 import { atom } from "nanostores";
 
 export const isTypeOpen = atom(true);
@@ -9,16 +9,12 @@ export const isLocationOpen = atom(true);
 ---
 
 <MainLayout>
-  <div class="mx-auto space-y-8">
+  <div class="mx-auto max-w-5xl space-y-8">
     <div class="space-y-8">
-      <h1 class="font-Inter text-[40px] font-bold text-primary-800">
-        Projects
-      </h1>
-      <div class="flex flex-row space-x-4">
-        <Filter open={isTypeOpen} title="type" client:load />
-        <Filter open={isLocationOpen} title="location" client:load />
-      </div>
+        <h1 class="font-Inter text-[40px] font-bold text-primary-800">
+          Projects
+        </h1>
     </div>
-    <!-- <Projects slice={false} withTitle={false} withButton={false} /> -->
   </div>
+  <!-- <Projects slice={false} withTitle={false} withButton={false} /> -->
 </MainLayout>
