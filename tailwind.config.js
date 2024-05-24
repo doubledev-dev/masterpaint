@@ -43,6 +43,8 @@ export default {
           foreground: "hsl(var(--secondary-foreground))",
           100: "#F9FAFC",
         },
+        "accent-dark-blue": "#021024",
+
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
