@@ -8,11 +8,10 @@ import "@fontsource/bai-jamjuree/400-italic.css";
 import { SITE_TITLE, SITE_DESCRIPTION } from "@/consts";
 
 interface Props {
-  pageTitle?: string;
   withMain?: boolean;
 }
 
-const { pageTitle = "Masterpaint", withMain = true } = Astro.props;
+const { withMain = true } = Astro.props;
 ---
 
 <!doctype html>
@@ -20,7 +19,7 @@ const { pageTitle = "Masterpaint", withMain = true } = Astro.props;
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body class="flex min-h-screen flex-col overflow-y-scroll bg-secondary">
+  <body class="flex min-h-screen flex-col overflow-y-scroll bg-secondary-100">
     <Navbar />
     <slot name="before-main" />
     {
