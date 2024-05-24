@@ -3,30 +3,23 @@ import { Icon } from "astro-icon/components";
 
 interface Props {
   iconName: string;
-  colorIcon?: string;
-  colorText?: string;
-  colorBlock: string;
   title: string;
   description: string;
 }
 
 const {
-  iconName = "",
-  colorIcon = "#0C1A66",
-  colorText = "text-primary-800",
-  colorBlock = "",
+  iconName = "Unknown",
   title = "",
   description = "",
 } = Astro.props;
-
-
 ---
-<a href="/service">
+
+<a href="/services">
   <div
-    class=`${colorBlock} h-full w-full cols-span-1 items-center text-center flex flex-col justify-center shadow rounded-2xl p-8 max-content hover:bg-primary-800 hover:text-white transition-all duration-300 ease-in-out ${colorText}`
+    class="h-full w-full cols-span-1 items-center text-center flex flex-col justify-center shadow rounded-2xl p-8 max-content hover:bg-primary-800 hover:text-white transition-all duration-300 ease-in-out text-primary-800"
   >
     <Icon name={iconName} size={50} class="m-4 mb-8" />
-    <p class={"text-xl max-w-[70%] "}>{title}</p>
+    <p class="text-xl max-w-[70%]">{title}</p>
     <p class="text-base text-primary-600">{description}</p>
   </div>
 </a>

@@ -23,6 +23,9 @@ dependencies:
   '@astrojs/tailwind':
     specifier: ^5.1.0
     version: 5.1.0(astro@4.7.1)(tailwindcss@3.4.3)
+  '@astrojs/ts-plugin':
+    specifier: ^1.8.0
+    version: 1.8.0
   '@fontsource/bai-jamjuree':
     specifier: ^5.0.13
     version: 5.0.13
@@ -350,6 +353,17 @@ packages:
       which-pm-runs: 1.1.0
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /@astrojs/ts-plugin@1.8.0:
+    resolution: {integrity: sha512-SXbMemCjA66eHXLon2uDGkLAdbIRS+EzSBKPqBuOcQ4XzU/o+oTTp12cXBIQTOtP/zsnuJPYA6gc36Ylic196g==}
+    dependencies:
+      '@astrojs/compiler': 2.8.0
+      '@jridgewell/sourcemap-codec': 1.4.15
+      '@volar/language-core': 2.2.5
+      '@volar/typescript': 2.2.5
+      semver: 7.6.1
+      vscode-languageserver-textdocument: 1.0.11
     dev: false
 
   /@babel/code-frame@7.24.2:
@@ -2049,6 +2063,12 @@ packages:
       '@volar/source-map': 2.2.1
     dev: false
 
+  /@volar/language-core@2.2.5:
+    resolution: {integrity: sha512-2htyAuxRrAgETmFeUhT4XLELk3LiEcqoW/B8YUXMF6BrGWLMwIR09MFaZYvrA2UhbdAeSyeQ726HaWSWkexUcQ==}
+    dependencies:
+      '@volar/source-map': 2.2.5
+    dev: false
+
   /@volar/language-server@2.2.1:
     resolution: {integrity: sha512-29j2owXGUd9nk9+vuRbasoRp5XcRQSbzHUwBUh9Yhf9zkctTZZJDT+Q1wjBKI+5XohR7UVQCBEvmLp4L+WirwA==}
     dependencies:
@@ -2087,10 +2107,23 @@ packages:
       muggle-string: 0.4.1
     dev: false
 
+  /@volar/source-map@2.2.5:
+    resolution: {integrity: sha512-wrOEIiZNf4E+PWB0AxyM4tfhkfldPsb3bxg8N6FHrxJH2ohar7aGu48e98bp3pR9HUA7P/pR9VrLmkTrgCCnWQ==}
+    dependencies:
+      muggle-string: 0.4.1
+    dev: false
+
   /@volar/typescript@2.2.1:
     resolution: {integrity: sha512-Z/tqluR7Hz5/5dCqQp7wo9C/6tSv/IYl+tTzgzUt2NjTq95bKSsuO4E+V06D0c+3aP9x5S9jggLqw451hpnc6Q==}
     dependencies:
       '@volar/language-core': 2.2.1
+      path-browserify: 1.0.1
+    dev: false
+
+  /@volar/typescript@2.2.5:
+    resolution: {integrity: sha512-eSV/n75+ppfEVugMC/salZsI44nXDPAyL6+iTYCNLtiLHGJsnMv9GwiDMujrvAUj/aLQyqRJgYtXRoxop2clCw==}
+    dependencies:
+      '@volar/language-core': 2.2.5
       path-browserify: 1.0.1
     dev: false
 

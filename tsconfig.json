@@ -5,12 +5,21 @@
     "paths": {
       "@/*": ["src/*"]
     },
+    "strictNullChecks": true,
+    "allowJs": true,
     "plugins": [
       {
         "name": "@astrojs/ts-plugin"
       }
     ]
   },
-  "include": ["src/**/*"],
+  "include": [
+    "src/**/*",
+    "src/**/*.astro",
+    "src/**/*.mdx",
+    "src/**/*.md",
+    "src/**/*.tsx",
+    "src/**/*.ts"
+  ],
   "exclude": ["node_modules", "dist"]
 }
