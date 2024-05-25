@@ -22,7 +22,6 @@ const Filter = ({ title, options }: Props) => {
         <NavigationMenuItem>
           <NavigationMenuTrigger>{title}</NavigationMenuTrigger>
           <NavigationMenuContent>
-            {}
             <ul className="grid w-[300px] list-disc grid-cols-1 gap-3 p-4">
               {options.map((item, index) => (
                 <ListItem key={index} title={item.option}></ListItem>

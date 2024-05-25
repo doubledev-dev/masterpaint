@@ -1,4 +1,5 @@
-import { PROJECTS } from "@/data/Projects.ts";
+// import { PROJECTS } from "@/data/Projects.ts";
+import type { CollectionEntry } from "astro:content";
 import ProjectCard from "./ProjectCard.tsx";
 
 // import { React, useState, useEffect } from "react";
@@ -6,10 +7,10 @@ import ProjectCard from "./ProjectCard.tsx";
 interface Props {
   slice?: boolean;
   withTitle?: boolean;
-  withButton?: boolean;
+  slugItems: CollectionEntry<"projects">[];
 }
 
-const Projects = ({ slice, withTitle = true, withButton = true }: Props) => {
+const Projects = ({ slice, withTitle = true, slugItems }: Props) => {
   return (
     <section className="mx-auto max-w-7xl p-6">
       {withTitle && (
@@ -18,15 +19,29 @@ const Projects = ({ slice, withTitle = true, withButton = true }: Props) => {
         </h1>
       )}
       <div className="grid grid-cols-3 gap-4">
-        {slice && PROJECTS != undefined
-          ? PROJECTS?.slice(0, 9).map((company) => (
-              <ProjectCard title={company.name} image={company.image} />
-            ))
-          : PROJECTS?.map((company) => (
-              <ProjectCard title={company.name} image={company.image} />
-            ))}
+        {slice
+          ? slugItems?.slice(0, 9).map((item, index) => {
+              return (
+                <ProjectCard
+                  key={index}
+                  slugRef={item.slug}
+                  title={item.data.title}
+                  thumbnail={item.data.heroImage}
+                />
+              );
+            })
+          : slugItems?.map((item, index) => {
+              return (
+                <ProjectCard
+                  key={index}
+                  slugRef={item.slug}
+                  title={item.data.title}
+                  thumbnail={item.data.heroImage}
+                />
+              );
+            })}
       </div>
-      {withButton && (
+      {slice && (
         <button className="mx-auto mt-8 flex rounded-full border border-primary-800 bg-white px-[13px] py-[10px] lowercase transition duration-300 ease-in-out hover:bg-primary-800 hover:text-white">
           <a href="/project">See More</a>
         </button>

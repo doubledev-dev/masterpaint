@@ -1,11 +1,10 @@
 ---
 import MainLayout from "@/layouts/MainLayout.astro";
-// import Projects from "@/components/Projects"
 import FilterContainer from "@/components/Filter/FilterContainer.tsx";
-import { atom } from "nanostores";
+import { getCollection } from "astro:content";
+import Projects from "@/components/Projects";
 
-export const isTypeOpen = atom(true);
-export const isLocationOpen = atom(true);
+const projects = (await getCollection("projects"));
 ---
 
 <MainLayout>
@@ -17,5 +16,5 @@ export const isLocationOpen = atom(true);
       <FilterContainer client:load />
     </div>
   </div>
-  <!-- <Projects slice={false} withTitle={false} withButton={false} /> -->
+  <Projects slice={false} withTitle={false} slugItems={projects} client:only/>
 </MainLayout>

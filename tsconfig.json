@@ -16,8 +16,8 @@
   "include": [
     "src/**/*",
     "src/**/*.astro",
-    "src/**/*.mdx",
-    "src/**/*.md",
+    "src/**/**/*.mdx",
+    "src/**/**/*.md",
     "src/**/*.tsx",
     "src/**/*.ts"
   ],
