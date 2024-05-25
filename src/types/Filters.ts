@@ -1,10 +1,9 @@
-
 export interface FilterData {
-    title: string;
-    options: FilterOptions[];
+  title: string;
+  options: FilterOptions[];
 }
 
 export interface FilterOptions {
-    option: string;
-    extends?: string[];
+  option: string;
+  extends?: string[];
 }
