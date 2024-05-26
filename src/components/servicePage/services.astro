@@ -1,46 +1,67 @@
 ---
 import Container from "@/components/Container/ContentContainer.astro";
-import tempImg from "@/assets/service/serviceImg.svg";
 import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
-
-const tempDesc1 =
-  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, quae rem illo magnam amet exercitationem?";
-const tempDesc2 =
-  "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum dolorem aperiam nesciunt, ad tenetur ex impedit non reiciendis ipsum!";
+import img1 from "@/assets/service/allService/img1.svg";
+import img2 from "@/assets/service/allService/img2.svg";
+import img3 from "@/assets/service/allService/img3.svg";
+import img4 from "@/assets/service/allService/img4.svg";
 
 const services = [
   {
-    src: tempImg,
-    alt: "temp image",
+    src: img1,
+    alt: "ให้คำปรึกษาและประเมินราคางานสีทุกชนิด",
     icon: "ion:calculator",
     title: "ให้คำปรึกษาและประเมินราคางานสีทุกชนิด",
-    desc1: tempDesc1,
-    desc2: tempDesc2,
+    p: "บริการให้คำปรึกษาและประเมินราคางานสีทุกชนิด ลูกค้าที่สนใจเกี่ยวกับการทาสีสามารถติดต่อเพื่อขอคำปรึกษาและประเมินราคาได้ฟรีไม่มีค่าใช้จ่ายเราพร้อมให้คำปรึกษาแนะนำเพื่อให้งานอยู่ในงบประมาณที่ต้องการลูกค้าสนใจรับบริการจะมีใบเสนอราคาที่มีรายละเอียดต่างฯ ที่ชัดเจนเพื่อให้ลูกค้าพิจารณา",
+    list: [],
   },
   {
-    src: tempImg,
-    alt: "temp image",
+    src: img2,
+    alt: "ทาสี",
     icon: "vaadin:paint-roll",
     title: "ทาสี",
-    desc1: tempDesc1,
-    desc2: tempDesc2,
+    p: "รับบริการงานทาสี ภายใน - ภายนอก อาคารสำนักงาน งานบ้าน งานคอนโด งานโลหะทุกชนิด งานพ่น งานสีไม้เฟอร์นิเจอร์ และงานอื่นๆที่เกี่ยวกับการทาสี โดยทีมช่างผู้ชำนาญงานเฉพาะด้านและมีประสบการณ์โดยตรง",
+    list: [
+      "งานทาสีน้ำ ภายนอก ภายใน",
+      "งานทาสีน้ำมัน โครงเหล็ก โลหะทุกชนิด",
+      "งานสี อีพ๊อกซี่ พื้น และโลหะทุกชนิด",
+      "งานสีหลังคาทุกชนิด",
+      "งานทาสีไม้ สีย้อมไม้",
+      "งานทา และพ่นสีเฟอร์นิเจอร์ ไม้ โละหะ",
+      "งานทา และพ่นพื้นไม้ เคลือบแข็งยูรีเทน",
+      "งานขัดพื้นไม้งานลอกสีเก่าพื้นไม้และเฟอร์นิเจอร์ ทำสีใหม่",
+      "งานทำความสะอาดอาคารสำนักงาน งานกระจก ",
+      "งานผนัง",
+      "งานซีลอาคารป้องกันน้ำ",
+    ],
   },
   {
-    src: tempImg,
-    alt: "temp image",
+    src: img3,
+    alt: "รับซ่อมแซมและปรับปรุง",
     icon: "ic:twotone-construction",
     title: "รับซ่อมแซมและปรับปรุง",
-    desc1: tempDesc1,
-    desc2: tempDesc2,
+    p: "",
+    list: [
+      "ลูกค้าที่สนใจเกี่ยวกับการซ่อมแซมและปรับปรุงสามารถติดต่อเพื่อขอคำปรึกษาได้ฟรีไม่มีค่าใช้จ่าย",
+      "เราพร้อมให้คำปรึกษาแนะนำเพื่อให้ทุกงานซ่อมถูกแก้ไขได้ตรงจุด",
+      "เรามีทีมช่างที่มีประสบการณ์ในงานซ่อมแซมและปรับปรุงให้งานออกมาอย่างมีคุณภาพ",
+      "ลูกค้าสนใจรับบริการจะมีใบเสนอราคาที่มีรายละเอียดต่างฯที่ชัดเจนเพื่อให้ลูกค้าพิจารณา",
+      ,
+    ],
   },
   {
-    src: tempImg,
-    alt: "temp image",
+    src: img4,
+    alt: "รับออกแบบและต่อเติม",
     icon: "clarity:design-solid",
     title: "รับออกแบบและต่อเติม",
-    desc1: tempDesc1,
-    desc2: tempDesc2,
+    p: "",
+    list: [
+      "ลูกค้าที่สนใจเกี่ยวกับการต่อเติมสามารถติดต่อเพื่อขอคำปรึกษาได้ฟรีไม่มีค่าใช้จ่าย",
+      "เราพร้อมให้คำปรึกษาแนะนำเพื่อให้ทุกงานต่อเติมให้ตรงกับความต้องการของลูกค้า",
+      "เรามีทีมงานออกแบบและทีมช่างที่มีประสบการณ์ให้งานออกมาอย่างมีคุณภาพ",
+      "ลูกค้าสนใจรับบริการจะมีใบเสนอราคาที่มีรายละเอียดต่างฯที่ชัดเจนเพื่อให้ลูกค้าพิจารณา",
+    ],
   },
 ];
 ---
@@ -48,14 +69,27 @@ const services = [
 <Container className="mx-auto mt-[72px] max-w-7xl">
   {
     services.map((service) => (
-      <div class="flex h-[230px] flex-row justify-center">
+      <div class="flex h-[300px] flex-row justify-center">
         <Image src={service.src} alt={service.alt} class="object-cover" />
-        <div class="w-[690px] border-b-[1px] border-primary-800 px-8 py-6">
-          <article class="text-primary-800">
+        <div class="w-[690px] border-b-[1px] border-primary-800 px-8 pt-6">
+          <article class="font-sans text-primary-800">
             <Icon name={service.icon} size={24} />
-            <h1 class="mb-5 mt-4">{service.title}</h1>
-            <p class="mb-4 indent-10 text-sm">{service.desc1}</p>
-            <p class="indent-10 text-sm	">{service.desc2}</p>
+            <h1 class="my-3 text-xl font-bold">{service.title}</h1>
+            <p class:list={service.p ? "pb-6 indent-5 text-sm" : ""}>
+              {service.p}
+            </p>
+            <ul
+              class="text-sm"
+              class:list={
+                service.list.length <= 8 ? "" : "grid grid-cols-2 text-nowrap"
+              }
+            >
+              {service.list.map((l, idx) => (
+                <li>
+                  {idx + 1}. {l}
+                </li>
+              ))}
+            </ul>
           </article>
         </div>
       </div>
