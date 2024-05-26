@@ -10,11 +10,10 @@ const subpath = pathname.match(/[^\/]+/g);
 const isActive = href === pathname || href === "/" + subpath?.[0];
 ---
 
-<!-- wait for font Inter -> text-medium aria-checked:text-bold -->
 <a
   href={href}
   aria-checked={isActive}
-  class="aria-checked:text-bold inline-block text-primary-800 no-underline hover:text-primary-800 aria-checked:underline"
+  class="text-medium inline-block font-Inter text-primary-800 no-underline hover:text-primary-800 aria-checked:font-bold aria-checked:font-bold"
   {...props}
 >
   <slot />
