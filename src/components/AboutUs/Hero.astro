@@ -3,13 +3,13 @@ import heroImg from "@/assets/about/heroImg.svg";
 ---
 
 <article
-  class="min-w-screen flex h-[414px] items-end overflow-y-scroll bg-cover bg-center bg-no-repeat"
+  class="min-w-screen flex h-[414px] items-end overflow-y-scroll bg-contain bg-center bg-no-repeat lg:bg-cover"
   style={{ backgroundImage: `url(${heroImg.src})` }}
 >
   <div
-    class="absolute right-[90px] top-[330px] flex flex-col gap-y-2 text-white"
+    class="absolute left-10 top-72 flex flex-col gap-y-2 text-white lg:right-[90px] lg:top-[330px]"
   >
-    <div class="font text-6xl">ABOUT US</div>
-    <div class="text-4xl font-light">MASTER PAINT 2548</div>
+    <div class="text-2xl lg:text-6xl">ABOUT US</div>
+    <div class="hidden text-4xl font-light lg:block">MASTER PAINT 2548</div>
   </div>
 </article>
