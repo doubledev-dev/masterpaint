@@ -1,7 +1,7 @@
 import type { FilterData } from "@/types/Filters";
 
 export const FILTERTYPE: FilterData = {
-  title: "TYPE",
+  title: "Types",
   options: [
     {
       option: "All",
@@ -26,7 +26,7 @@ export const FILTERTYPE: FilterData = {
 };
 
 export const FILTERLOCATION: FilterData = {
-  title: "LOCATION",
+  title: "Location",
   options: [
     {
       option: "All",

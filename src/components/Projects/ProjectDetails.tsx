@@ -6,7 +6,7 @@ interface Props {
 
 export default function ProjectDetail({ images }: Props) {
   return (
-    <div className="grid grid-cols-2 gap-1 lg:grid-cols-3 lg:gap-4">
+    <div className="grid grid-cols-3 gap-4">
       {images?.map((item, index) => {
         return <ProjectCard key={index} thumbnail={item.src} />;
       })}
