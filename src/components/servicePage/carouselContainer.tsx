@@ -62,7 +62,7 @@ const slides = [
 
 export default function carousel() {
   return (
-    <Carousel className="">
+    <Carousel className="hidden lg:block">
       <CarouselContent className="">
         {slides.map((slide, index) => (
           <CarouselItem key={index} className="basis-1/4">
