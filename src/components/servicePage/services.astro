@@ -2,10 +2,10 @@
 import Container from "@/components/Container/ContentContainer.astro";
 import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
-import img1 from "@/assets/service/allService/img1.svg";
-import img2 from "@/assets/service/allService/img2.svg";
-import img3 from "@/assets/service/allService/img3.svg";
-import img4 from "@/assets/service/allService/img4.svg";
+import img1 from "@/assets/service/allService/img1.png";
+import img2 from "@/assets/service/allService/img2.png";
+import img3 from "@/assets/service/allService/img3.png";
+import img4 from "@/assets/service/allService/img4.png";
 
 const services = [
   {
@@ -13,8 +13,12 @@ const services = [
     alt: "ให้คำปรึกษาและประเมินราคางานสีทุกชนิด",
     icon: "ion:calculator",
     title: "ให้คำปรึกษาและประเมินราคางานสีทุกชนิด",
-    p: "บริการให้คำปรึกษาและประเมินราคางานสีทุกชนิด ลูกค้าที่สนใจเกี่ยวกับการทาสีสามารถติดต่อเพื่อขอคำปรึกษาและประเมินราคาได้ฟรีไม่มีค่าใช้จ่ายเราพร้อมให้คำปรึกษาแนะนำเพื่อให้งานอยู่ในงบประมาณที่ต้องการลูกค้าสนใจรับบริการจะมีใบเสนอราคาที่มีรายละเอียดต่างฯ ที่ชัดเจนเพื่อให้ลูกค้าพิจารณา",
-    list: [],
+    p: "บริการให้คำปรึกษาและประเมินราคางานสีทุกชนิด ",
+    list: [
+      "ลูกค้าที่สนใจเกี่ยวกับการทาสีสามารถติดต่อเพื่อขอคำปรึกษาและประเมินราคาได้ฟรีไม่มีค่าใช้จ่าย",
+      "เราพร้อมให้คำปรึกษาแนะนำเพื่อให้งานอยู่ในงบประมาณที่ต้องการ",
+      "ลูกค้าสนใจรับบริการจะมีใบเสนอราคาที่มีรายละเอียดต่างฯ ที่ชัดเจนเพื่อให้ลูกค้าพิจารณา",
+    ],
   },
   {
     src: img2,
@@ -32,6 +36,7 @@ const services = [
       "งานทา และพ่นพื้นไม้ เคลือบแข็งยูรีเทน",
       "งานขัดพื้นไม้งานลอกสีเก่าพื้นไม้และเฟอร์นิเจอร์ ทำสีใหม่",
       "งานทำความสะอาดอาคารสำนักงาน งานกระจก ",
+      "งานกระจก",
       "งานผนัง",
       "งานซีลอาคารป้องกันน้ำ",
     ],
@@ -66,22 +71,33 @@ const services = [
 ];
 ---
 
-<Container className="mx-auto mt-[72px] max-w-7xl">
-  {
+<Container className="mx-auto mt-[72px] max-w-7xl"
+  >{
     services.map((service) => (
-      <div class="flex h-[300px] flex-row justify-center">
-        <Image src={service.src} alt={service.alt} class="object-cover" />
-        <div class="w-[690px] border-b-[1px] border-primary-800 px-8 pt-6">
+      <div class="flex w-full flex-col-reverse lg:h-[300px] lg:flex-row lg:justify-center">
+        <Image
+          src={service.src}
+          alt={service.alt}
+          class="h-40 w-full object-cover pt-5 lg:h-[300px] lg:w-[350px] lg:p-0"
+        />
+        <div class="w-full border-primary-800 px-8 pt-6 lg:w-[690px] lg:border-b-[1px]">
           <article class="font-sans text-primary-800">
-            <Icon name={service.icon} size={24} />
-            <h1 class="my-3 text-xl font-bold">{service.title}</h1>
-            <p class:list={service.p ? "pb-6 indent-5 text-sm" : ""}>
+            <div class="flex flex-row items-center gap-x-3 lg:flex-col lg:items-start">
+              <Icon
+                name={service.icon}
+                class=" h-8 w-8 shrink-0 lg:h-6 lg:w-6"
+              />
+              <h1 class="my-3 text-xl font-bold">{service.title}</h1>
+            </div>
+            <p class:list={service.p ? "pb-3 indent-5 text-sm lg:pb-6" : ""}>
               {service.p}
             </p>
             <ul
-              class="text-sm"
+              class="px-4 text-sm lg:p-0"
               class:list={
-                service.list.length <= 8 ? "" : "grid grid-cols-2 text-nowrap"
+                service.list.length <= 8
+                  ? ""
+                  : "lg:grid lg:grid-cols-2 lg:text-nowrap"
               }
             >
               {service.list.map((l, idx) => (
