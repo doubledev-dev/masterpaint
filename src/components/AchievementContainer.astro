@@ -3,18 +3,24 @@ import Container from "@/components/Container/ContentContainer.astro";
 
 const achievements = [
   { title: "Years of experience", amount: "18" },
-  { title: "Completed projects", amount: "202" },
-  { title: "Trusted customers", amount: "72" },
+  { title: "Completed projects", amount: "200+" },
+  { title: "Trusted customers", amount: "70+" },
 ];
 ---
 
 <Container>
-  <section class="flex flex-row justify-center gap-x-4">
+  <section
+    class="flex flex-col items-center justify-center gap-y-2 lg:flex-row lg:gap-x-4"
+  >
     {
       achievements.map((ach) => (
-        <div class="h-15 font-baijam flex flex-row justify-between gap-x-14 rounded-xl bg-primary-100 p-3 text-primary-600">
-          <p class="mb-0 text-5xl font-semibold">{ach.amount}</p>
-          <p class="mb-0 self-end text-nowrap text-base">{ach.title}</p>
+        <div class="lg:h-15 font-baijam flex flex-row justify-between gap-x-3 rounded-xl bg-primary-100 p-2 text-primary-600 lg:gap-x-14 lg:p-3">
+          <p class="self-center font-sans text-sm font-medium lg:text-5xl lg:font-semibold">
+            {ach.amount}
+          </p>
+          <p class="self-center text-nowrap font-Inter text-base font-light lg:self-end">
+            {ach.title}
+          </p>
         </div>
       ))
     }

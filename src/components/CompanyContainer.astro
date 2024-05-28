@@ -6,17 +6,20 @@ const works = [
   {
     icon: "ant-design:schedule-outlined",
     desc: "Flexible scheduling options",
-    size: 45,
   },
-  { icon: "bi:people-fill", desc: "Free consultation", size: 42 },
-  { icon: "carbon:clean", desc: "Maintain a clean work area", size: 56 },
+  { icon: "bi:people-fill", desc: "Free consultation" },
+  { icon: "carbon:clean", desc: "Maintain a clean work area" },
 ];
 ---
 
-<Container className="mx-auto max-w-7xl p-6">
-  <div class="flex flex-row justify-center gap-x-12">
-    <article class="flex w-[450px] flex-col gap-y-12 p-0 text-primary-800">
-      <h1 class="text-2xl font-semibold">AT MASTERPAINT</h1>
+<Container className="p-6 lg:max-w-7xl">
+  <div class="flex flex-col items-center justify-center gap-x-12 lg:flex-row">
+    <article
+      class="flex w-80 flex-col gap-y-3 p-0 text-primary-800 lg:w-[450px] lg:gap-y-12"
+    >
+      <h1 class="font-Inter text-lg font-semibold lg:text-2xl">
+        AT MASTERPAINT
+      </h1>
       <p class="text-pretty indent-10">
         หจก.นอร์ธเทค ก่อตั้งขึ้นเมื่อวันที่ 18 สิงหาคม 2548
         มีวัตถุประสงค์เพื่อให้บริการเกี่ยวกับงานสีต่างๆ
@@ -28,24 +31,26 @@ const works = [
         ดังนั้นเมื่อท่านได้รับบริการจากเรา จะไม่เพียงแต่การให้บริการเท่านั้น
         แต่จะเป็นการเริ่มต้นความสัมพันธ์ที่ดีต่อกันในระยะเวลาอันยาวไกล
       </p>
-      <a
-        href="/about"
-        class="ml-auto flex flex-row gap-x-2 self-end rounded-full border border-primary-800 bg-white px-[13px] py-[10px] transition-all duration-300 ease-in-out hover:bg-primary-800 hover:text-white"
-        >more about us <span class="self-center justify-self-center"
-          ><Icon
-            name="radix-icons:arrow-top-right"
-            class="size-full"
-            size={25}
-          /></span
-        >
+      <a href="/about">
+        <button
+          class="mt-5 flex flex-row gap-x-2 rounded-full border border-primary-800 bg-white px-[13px] py-[10px] font-Inter transition-all duration-300 ease-in-out hover:bg-primary-800 hover:text-white lg:ml-auto lg:mt-0 lg:self-end"
+          >more about us <span class="self-center justify-self-center"
+            ><Icon
+              name="radix-icons:arrow-top-right"
+              class="h-full w-full"
+            /></span
+          >
+        </button>
       </a>
     </article>
-    <div class="grid grid-cols-2 gap-4">
+    <div class="mt-10 grid grid-cols-2 gap-2 lg:m-0 lg:gap-4">
       {
         works.map((w) => (
-          <div class="flex h-48 w-72 flex-col justify-between rounded-xl bg-primary-100 p-6 text-primary-800">
-            <Icon name={w.icon} size={w.size} />
-            <p class="text-nowrap text-sm font-bold">{w.desc}</p>
+          <div class="my-auto flex h-28 w-48 flex-col items-center justify-center gap-y-2 rounded-xl bg-primary-100 px-5 text-primary-800 lg:h-48  lg:w-72 lg:items-start lg:justify-between lg:p-6">
+            <Icon name={w.icon} class=" size-[30px] lg:h-[42px] lg:w-[42px]" />
+            <p class="text-center font-Inter text-base font-semibold lg:text-nowrap lg:text-sm">
+              {w.desc}
+            </p>
           </div>
         ))
       }

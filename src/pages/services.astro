@@ -1,5 +1,12 @@
 ---
 import MainLayout from "@/layouts/MainLayout.astro";
+import AllServices from "@/components/servicePage/services.astro";
+import ServiceCarousel from "@/components/servicePage/serviceCarousel.astro";
+import Hero from "@/components/servicePage/Hero.astro";
 ---
 
-<MainLayout />
+<MainLayout>
+  <Hero slot="before-main" />
+  <AllServices />
+  <ServiceCarousel client:load />
+</MainLayout>

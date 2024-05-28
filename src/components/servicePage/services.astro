@@ -1,0 +1,114 @@
+---
+import Container from "@/components/Container/ContentContainer.astro";
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+import img1 from "@/assets/service/allService/img1.png";
+import img2 from "@/assets/service/allService/img2.png";
+import img3 from "@/assets/service/allService/img3.png";
+import img4 from "@/assets/service/allService/img4.png";
+
+const services = [
+  {
+    src: img1,
+    alt: "ให้คำปรึกษาและประเมินราคางานสีทุกชนิด",
+    icon: "ion:calculator",
+    title: "ให้คำปรึกษาและประเมินราคางานสีทุกชนิด",
+    p: "บริการให้คำปรึกษาและประเมินราคางานสีทุกชนิด ",
+    list: [
+      "ลูกค้าที่สนใจเกี่ยวกับการทาสีสามารถติดต่อเพื่อขอคำปรึกษาและประเมินราคาได้ฟรีไม่มีค่าใช้จ่าย",
+      "เราพร้อมให้คำปรึกษาแนะนำเพื่อให้งานอยู่ในงบประมาณที่ต้องการ",
+      "ลูกค้าสนใจรับบริการจะมีใบเสนอราคาที่มีรายละเอียดต่างฯ ที่ชัดเจนเพื่อให้ลูกค้าพิจารณา",
+    ],
+  },
+  {
+    src: img2,
+    alt: "ทาสี",
+    icon: "vaadin:paint-roll",
+    title: "ทาสี",
+    p: "รับบริการงานทาสี ภายใน - ภายนอก อาคารสำนักงาน งานบ้าน งานคอนโด งานโลหะทุกชนิด งานพ่น งานสีไม้เฟอร์นิเจอร์ และงานอื่นๆที่เกี่ยวกับการทาสี โดยทีมช่างผู้ชำนาญงานเฉพาะด้านและมีประสบการณ์โดยตรง",
+    list: [
+      "งานทาสีน้ำ ภายนอก ภายใน",
+      "งานทาสีน้ำมัน โครงเหล็ก โลหะทุกชนิด",
+      "งานสี อีพ๊อกซี่ พื้น และโลหะทุกชนิด",
+      "งานสีหลังคาทุกชนิด",
+      "งานทาสีไม้ สีย้อมไม้",
+      "งานทา และพ่นสีเฟอร์นิเจอร์ ไม้ โละหะ",
+      "งานทา และพ่นพื้นไม้ เคลือบแข็งยูรีเทน",
+      "งานขัดพื้นไม้งานลอกสีเก่าพื้นไม้และเฟอร์นิเจอร์ ทำสีใหม่",
+      "งานทำความสะอาดอาคารสำนักงาน งานกระจก ",
+      "งานกระจก",
+      "งานผนัง",
+      "งานซีลอาคารป้องกันน้ำ",
+    ],
+  },
+  {
+    src: img3,
+    alt: "รับซ่อมแซมและปรับปรุง",
+    icon: "ic:twotone-construction",
+    title: "รับซ่อมแซมและปรับปรุง",
+    p: "",
+    list: [
+      "ลูกค้าที่สนใจเกี่ยวกับการซ่อมแซมและปรับปรุงสามารถติดต่อเพื่อขอคำปรึกษาได้ฟรีไม่มีค่าใช้จ่าย",
+      "เราพร้อมให้คำปรึกษาแนะนำเพื่อให้ทุกงานซ่อมถูกแก้ไขได้ตรงจุด",
+      "เรามีทีมช่างที่มีประสบการณ์ในงานซ่อมแซมและปรับปรุงให้งานออกมาอย่างมีคุณภาพ",
+      "ลูกค้าสนใจรับบริการจะมีใบเสนอราคาที่มีรายละเอียดต่างฯที่ชัดเจนเพื่อให้ลูกค้าพิจารณา",
+      ,
+    ],
+  },
+  {
+    src: img4,
+    alt: "รับออกแบบและต่อเติม",
+    icon: "clarity:design-solid",
+    title: "รับออกแบบและต่อเติม",
+    p: "",
+    list: [
+      "ลูกค้าที่สนใจเกี่ยวกับการต่อเติมสามารถติดต่อเพื่อขอคำปรึกษาได้ฟรีไม่มีค่าใช้จ่าย",
+      "เราพร้อมให้คำปรึกษาแนะนำเพื่อให้ทุกงานต่อเติมให้ตรงกับความต้องการของลูกค้า",
+      "เรามีทีมงานออกแบบและทีมช่างที่มีประสบการณ์ให้งานออกมาอย่างมีคุณภาพ",
+      "ลูกค้าสนใจรับบริการจะมีใบเสนอราคาที่มีรายละเอียดต่างฯที่ชัดเจนเพื่อให้ลูกค้าพิจารณา",
+    ],
+  },
+];
+---
+
+<Container className="mx-auto mt-5 max-w-7xl lg:mt-[72px]"
+  >{
+    services.map((service) => (
+      <div class="flex w-full flex-col-reverse lg:h-[300px] lg:flex-row lg:justify-center">
+        <Image
+          src={service.src}
+          alt={service.alt}
+          class="h-40 w-full object-cover pt-5 lg:h-[300px] lg:w-[350px] lg:p-0"
+        />
+        <div class="w-full border-primary-800 px-8 pt-6 lg:w-[690px] lg:border-b-[1px]">
+          <article class="font-sans text-primary-800">
+            <div class="flex flex-row items-center gap-x-3 lg:flex-col lg:items-start">
+              <Icon
+                name={service.icon}
+                class=" h-8 w-8 shrink-0 lg:h-6 lg:w-6"
+              />
+              <h1 class="my-3 text-xl font-bold">{service.title}</h1>
+            </div>
+            <p class:list={service.p ? "pb-3 indent-5 text-sm lg:pb-6" : ""}>
+              {service.p}
+            </p>
+            <ul
+              class="px-4 text-sm lg:p-0"
+              class:list={
+                service.list.length <= 8
+                  ? ""
+                  : "lg:grid lg:grid-cols-2 lg:text-nowrap"
+              }
+            >
+              {service.list.map((l, idx) => (
+                <li>
+                  {idx + 1}. {l}
+                </li>
+              ))}
+            </ul>
+          </article>
+        </div>
+      </div>
+    ))
+  }
+</Container>

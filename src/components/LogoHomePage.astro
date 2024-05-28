@@ -29,11 +29,14 @@ const images = [
 ---
 
 <ContentContainer>
-  <div class="grid grid-cols-5 items-center gap-4">
+  <div class="grid grid-cols-3 gap-3 lg:grid-cols-5 lg:gap-4">
     {
-      images.map((img) => (
-        <div class="flex aspect-auto items-center justify-center ">
-          <Image src={img.src} alt={img.alt} class=" max-h-20 object-contain" />
+      images.map((img, idx) => (
+        <div
+          class="flex aspect-auto items-center justify-center"
+          class:list={idx === 9 ? "col-start-2 mt-4 lg:col-start-auto" : ""}
+        >
+          <Image src={img.src} alt={img.alt} class="object-contain" />
         </div>
       ))
     }
