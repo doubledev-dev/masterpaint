@@ -1,4 +1,6 @@
 ---
+import { getCollection } from "astro:content";
+
 import MainLayout from "@/layouts/MainLayout.astro";
 import Hero from "@/components/Hero.astro";
 import SmallServices from "@/components/Service/SmallServicesContainer.astro";
@@ -7,6 +9,8 @@ import Achievements from "@/components/AchievementContainer.astro";
 import Logos from "@/components/LogoHomePage.astro";
 import Companies from "@/components/CompanyContainer.astro";
 import Projects from "@/components/Projects";
+
+const projects = (await getCollection("projects")).filter((a)=> a.data.parity < 0).sort((a, b) => a.data.parity - b.data.parity);
 ---
 
 <MainLayout>
@@ -14,7 +18,13 @@ import Projects from "@/components/Projects";
   <SmallServices />
   <Logos />
   <Achievements />
-  <Projects />
+  <Projects
+    slice={true}
+    homePage={true}
+    projectsPage={false}
+    slugItems={projects}
+    client:load
+  />
   <Companies />
   <Contact slot="after-main" />
 </MainLayout>
