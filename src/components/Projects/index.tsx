@@ -27,6 +27,10 @@ const Projects = ({
     return slugItems.filter((item) => {
       if (filterTypes === "All" && filterLocation === "All") {
         return true;
+      } else if (filterTypes === "ทาสี" && filterLocation === "All") {
+        return !item.data.tags.includes("งานออกแบบ");
+      } else if (filterTypes === "ทาสี") {
+        return !item.data.tags.includes("งานออกแบบ") && item.data.tags.includes(filterLocation);
       } else if (filterLocation === "All") {
         return item.data.tags.includes(filterTypes);
       } else if (filterTypes === "All") {
@@ -55,8 +59,10 @@ const Projects = ({
           <h1 className="pb-8 font-Inter text-[40px] font-bold text-primary-800">
             Projects
           </h1>
-            <Filter data={FILTERTYPE}  setState={changeType}/>
-            <Filter data={FILTERLOCATION}  setState={changeLocation}/>
+          <div className="flex flex-row space-x-8">
+            <Filter key="filterTypes" data={FILTERTYPE}  setState={changeType}/>
+            <Filter key="filterLocation" data={FILTERLOCATION}  setState={changeLocation}/>
+          </div>
         </div>
       )}
       {homePage && (
