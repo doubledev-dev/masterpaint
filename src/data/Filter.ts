@@ -1,8 +1,8 @@
 import type { FilterData } from "@/types/Filters";
 
-export const FILTERDATA: FilterData[] = [
+export const FILTERTYPE: FilterData = 
   {
-    title: "Type",
+    title: "Types",
     options: [
       {
         option: "All",
@@ -18,14 +18,15 @@ export const FILTERDATA: FilterData[] = [
           "สีงานป้าย",
           "สีโครงเหล็ก",
           "สีเครื่องจักร",
-          "ทาสี",
         ],
       },
       {
-        option: "รับออกแบบ",
+        option: "งานออกแบบ",
       },
     ],
-  },
+  };
+
+export const FILTERLOCATION: FilterData =
   {
     title: "Location",
     options: [
@@ -42,5 +43,4 @@ export const FILTERDATA: FilterData[] = [
         option: "อาคารสำนักงาน",
       },
     ],
-  },
-];
+  };
