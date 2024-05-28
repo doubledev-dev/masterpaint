@@ -3,11 +3,15 @@ import heroImg from "@/assets/service/hero.svg";
 import { Image } from "astro:assets";
 ---
 
-<div class="flex flex-row bg-black lg:justify-between">
-  <p class="ml-16 mt-80 font-Inter text-4xl text-white">SERVICE</p>
+<div class="relative flex bg-black lg:flex-row-reverse">
+  <p
+    class="absolute left-10 top-56 font-Inter text-2xl text-white lg:left-16 lg:top-80 lg:text-4xl"
+  >
+    SERVICE
+  </p>
   <Image
     src={heroImg}
     alt="herp img"
-    class="w-100% lg:w-50% place-self-end bg-black"
+    class="w-100% lg:w-50% place-self-end bg-black object-cover object-center"
   />
 </div>
