@@ -4,30 +4,48 @@ import MainContainer from "@/components/Container/MainContainer.astro";
 
 type Props = CollectionEntry<"projects">["data"];
 
-const { title, designDetails, tags, location, heroImage, pubDate } = Astro.props;
+const { title, designDetails, tags, location, heroImage, pubDate } =
+  Astro.props;
 ---
 
 <MainContainer>
   <section>
-    <img src={heroImage} alt={title} />
-    <h1>{title}</h1>
-    {
-        designDetails && (
-            <p>{designDetails}</p>
-        )
-    }
-    <p>{location}</p>
-    <div>
-        { tags &&
-            tags.map((tag) => (
-                <span>{tag}</span>
-            ))
+    <article class="grid grid-cols-2 gap-8 p-8 text-primary-800">
+      <div>
+        <img
+          class="w-[622px] h-[340px] object-cover object-center"
+          src={heroImage}
+          alt={title}
+        />
+      </div>
+      <div class="space-y-4">
+        <h1 class="text-4xl italic">{title}</h1>
+        {
+          designDetails && (
+            <>
+              <hr />
+              <p>{designDetails}</p>
+            </>
+          )
         }
-    </div>
-    <p>{pubDate}</p>
+        <hr />
+        <p>{location}</p>
+        <div class="space-x-2">
+          {
+            tags &&
+              tags.map((tag) => (
+                <span class="rounded-2xl bg-primary-600 p-2  text-white">
+                  {tag}
+                </span>
+              ))
+          }
+        </div>
+        <hr />
+        <p>{pubDate}</p>
+      </div>
+    </article>
   </section>
   <section>
-    <slot/>
+    <slot />
   </section>
 </MainContainer>
-

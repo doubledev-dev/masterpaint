@@ -1,5 +1,3 @@
-import type { ImageMetadata } from "astro";
-
 interface props {
   slugRef?: string;
   title?: string;
@@ -10,10 +8,10 @@ const ProjectCard = ({ slugRef = "", title = "", thumbnail }: props) => {
   if (title != "" && slugRef != "") {
     return (
       <a href={`/projects/${slugRef}`}>
-        <article className="relative inline-block size-[420px] bg-black duration-300 hover:scale-105">
+        <article className="relative inline-block bg-black duration-300 hover:scale-105">
           <div>
             <img
-              className="z-0 block aspect-square size-[420px] object-cover object-center opacity-70"
+              className="z-0 block aspect-square object-cover object-center opacity-70"
               src={thumbnail}
               alt={title}
             />
@@ -26,10 +24,10 @@ const ProjectCard = ({ slugRef = "", title = "", thumbnail }: props) => {
     );
   } else {
     return (
-      <article className="relative inline-block size-[420px] duration-300 ">
+      <article className="relative inline-block  duration-300 ">
         <div>
           <img
-            className="z-0 block aspect-square size-[420px] object-cover object-center"
+            className="z-0 block aspect-square object-cover object-center"
             src={thumbnail}
             alt="_blank"
           />
