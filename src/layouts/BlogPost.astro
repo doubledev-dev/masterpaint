@@ -8,51 +8,40 @@ const { title, designDetails, tags, location, heroImage, pubDate } =
   Astro.props;
 ---
 
-<MainContainer className="mx-auto max-w-3xl lg:max-w-7xl lg:px-6 xl:px-0">
+<MainContainer>
   <section>
-    <article
-      class="grid grid-cols-1 gap-8 text-primary-800 lg:grid-cols-2 lg:p-8"
-    >
+    <article class="grid grid-cols-2 gap-8 p-8 text-primary-800">
       <div>
         <img
-          class="h-[196px] w-full object-cover object-center lg:h-[340px] lg:w-[622px]"
+          class="h-[340px] w-[622px] object-cover object-center"
           src={heroImage}
           alt={title}
         />
       </div>
-      <div class="mx-5 space-y-5">
+      <div class="space-y-4">
         <h1 class="text-4xl italic">{title}</h1>
         {
           designDetails && (
-            <div class="space-y-5">
-              <hr class="border-primary-800" />
+            <>
+              <hr />
               <p>{designDetails}</p>
-            </div>
+            </>
           )
         }
-
-        {
-          location && (
-            <div class="space-y-5">
-              <hr class="border-primary-800" />
-              <div class="grid grid-cols-3">
-                <h3 class="col-span-1 uppercase">location</h3>
-                <p class="col-span-2">{location}</p>
-              </div>
-            </div>
-          )
-        }
-
-        <div class="space-x-2 pt-5">
+        <hr />
+        <p>{location}</p>
+        <div class="space-x-2">
           {
             tags &&
               tags.map((tag) => (
-                <span class="bg-primary-700 p-2  text-white">{tag}</span>
+                <span class="rounded-2xl bg-primary-600 p-2  text-white">
+                  {tag}
+                </span>
               ))
           }
         </div>
-        <hr class="border-primary-800 pb-5" />
-        {pubDate && <p>{pubDate}</p>}
+        <hr />
+        <p>{pubDate}</p>
       </div>
     </article>
   </section>
