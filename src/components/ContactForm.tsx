@@ -75,7 +75,13 @@ const Contacts = () => {
 
   return (
     <section className="bg-gradient-to-t from-accent-dark-blue via-primary-700 via-20% to-transparent to-85% p-8">
-      <article className="mx-auto grid max-w-7xl grid-cols-3 gap-4">
+      <div className="p-8 text-primary-800 lg:hidden">
+          <h1 className="font-Inter text-3xl font-semibold italic">Reach Us</h1>
+          <h2 className="mt-2 text-xl font-thin">
+            Feel free to send us a message!
+          </h2>
+        </div>
+      <article className="mx-auto grid max-w-7xl lg:grid-cols-3 gap-4">
         <form
           onSubmit={handleSubmit}
           className=" col-span-2 rounded-3xl bg-white p-12 text-gray-700"
@@ -94,7 +100,7 @@ const Contacts = () => {
                   />
                 </div>
               ) : (
-                <div key={form.name} className="col-span-1">
+                <div key={form.name} className="col-span-1 size-full flex justify-between flex-col">
                   <label className="block">{form.label}</label>
                   <input
                     key={form.name}
@@ -111,13 +117,14 @@ const Contacts = () => {
             Send Message
           </button>
         </form>
-        <div className="p-8 text-primary-800">
+        <div className="p-8 text-primary-800 hidden lg:block">
           <h1 className="font-Inter text-3xl font-semibold italic">Reach Us</h1>
           <h2 className="mt-2 text-xl font-thin">
             Feel free to send us a message!
           </h2>
         </div>
       </article>
+
     </section>
   );
 };
