@@ -5,7 +5,7 @@ import Projects from "@/components/Projects";
 
 const projects = (await getCollection("projects")).sort((a, b) => {
   return a.data.parity - b.data.parity;
-})
+});
 ---
 
 <MainLayout>

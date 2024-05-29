@@ -19,13 +19,15 @@ const { withMain = true } = Astro.props;
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body class="flex min-h-screen flex-col overflow-y-scroll bg-secondary-100">
+  <body
+    class="m-0 flex max-w-full flex-col overflow-x-hidden overflow-y-scroll bg-secondary-100 p-0"
+  >
     <Navbar />
     <slot name="before-main" />
     {
       withMain && (
         <main>
-          <div class="my-6 space-y-6 xl:my-10 xl:space-y-10">
+          <div class="mb-6 space-y-6 xl:my-10 xl:space-y-10">
             <slot />
           </div>
         </main>
