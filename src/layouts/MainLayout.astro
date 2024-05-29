@@ -22,7 +22,7 @@ const { withMain = true } = Astro.props;
   <body
     class="m-0 flex max-w-full flex-col overflow-x-hidden overflow-y-scroll bg-secondary-100 p-0"
   >
-    <!-- <Navbar /> -->
+    <Navbar />
     <slot name="before-main" />
     {
       withMain && (
@@ -34,6 +34,6 @@ const { withMain = true } = Astro.props;
       )
     }
     <slot name="after-main" />
-    <!-- <Footer /> -->
+    <Footer />
   </body>
 </html>
