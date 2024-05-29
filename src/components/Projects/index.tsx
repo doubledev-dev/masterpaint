@@ -53,13 +53,13 @@ const Projects = ({
   };
 
   return (
-    <section className="mx-auto max-w-7xl px-6">
+    <section className="mx-auto max-w-7xl md:px-6">
       {projectsPage && (
         <div className="px-6 pb-6">
-          <h1 className="pb-8 font-Inter text-[40px] font-bold text-primary-800">
+          <h1 className="pb-8 font-Inter text-[20px] font-bold text-primary-800 md:text-[40px]">
             Projects
           </h1>
-          <div className="flex flex-row space-x-8">
+          <div className="flex flex-col md:flex-row md:space-x-8">
             <Filter key="filterTypes" data={FILTERTYPE} setState={changeType} />
             <Filter
               key="filterLocation"
@@ -74,7 +74,7 @@ const Projects = ({
           our Projects
         </h1>
       )}
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-2 gap-1 md:grid-cols-3 md:gap-4">
         {slice
           ? slugItems?.slice(0, 9).map((item, index) => {
               return (
