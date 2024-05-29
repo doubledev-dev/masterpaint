@@ -5,14 +5,15 @@ import { useState } from "react";
 interface Props {
   data: FilterData;
   setState: (e: string) => void;
+  zIndex?: number;
 }
 
-function Filter({ data, setState }: Props) {
+function Filter({ data, setState, zIndex }: Props) {
   const [text, setText] = useState<string>(data.title);
   const [openMenu, setOpenMenu] = useState<boolean>(false);
 
   return (
-    <div className="flex flex-col justify-start">
+    <div className="flex flex-col justify-start text-primary-800">
       <button
         onClick={() => setOpenMenu(!openMenu)}
         className={
@@ -27,9 +28,12 @@ function Filter({ data, setState }: Props) {
         />
       </button>
       {openMenu && (
-        <div className="relative inline-block space-x-4">
+        <div className="relative inline-block w-[312px] space-x-4">
           {
-            <div className="absolute z-40 block w-full bg-white ">
+            <div
+              className={`absolute block w-full bg-white`}
+              style={{ zIndex: `${zIndex}` }}
+            >
               <ul className="flex flex-col ">
                 {data.options.map((item, index) => {
                   return item.extends ? (

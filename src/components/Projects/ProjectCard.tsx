@@ -16,8 +16,8 @@ const ProjectCard = ({ slugRef = "", title = "", thumbnail }: props) => {
               alt={title}
             />
           </div>
-          <div className="absolute left-0 top-0 z-10 p-2 lg:p-10">
-            <h3 className="text-base lg:text-3xl text-white">{title}</h3>
+          <div className="absolute left-0 top-[10%] z-10 mx-[10%]">
+            <h3 className="text-base text-white lg:text-3xl">{title}</h3>
           </div>
         </article>
       </a>
@@ -32,8 +32,8 @@ const ProjectCard = ({ slugRef = "", title = "", thumbnail }: props) => {
             alt="_blank"
           />
         </div>
-        <div className="absolute left-0 top-0 z-10 p-2 lg:p-10">
-          <h3 className="text-base lg:text-3xl text-white">{title}</h3>
+        <div className="absolute left-0 top-[10%] z-10 mx-[10%]">
+          <h3 className="text-base text-white lg:text-3xl">{title}</h3>
         </div>
       </article>
     );

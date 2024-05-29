@@ -60,17 +60,23 @@ const Projects = ({
             Projects
           </h1>
           <div className="flex flex-col md:flex-row md:space-x-8">
-            <Filter key="filterTypes" data={FILTERTYPE} setState={changeType} />
+            <Filter
+              key="filterTypes"
+              data={FILTERTYPE}
+              setState={changeType}
+              zIndex={60}
+            />
             <Filter
               key="filterLocation"
               data={FILTERLOCATION}
               setState={changeLocation}
+              zIndex={50}
             />
           </div>
         </div>
       )}
       {homePage && (
-        <h1 className="mb-12 mt-4 text-center font-Inter text-[40px] font-semibold uppercase text-primary-800">
+        <h1 className="mb-12 mt-4 text-center font-Inter text-[20px] font-semibold uppercase text-primary-800 lg:text-[40px]">
           our Projects
         </h1>
       )}
