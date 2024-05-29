@@ -1,3 +1,6 @@
+import Autoplay from "embla-carousel-autoplay";
+import * as React from "react";
+
 import img1 from "@/assets/service/carousel/img1.svg";
 import img10 from "@/assets/service/carousel/img10.svg";
 import img2 from "@/assets/service/carousel/img2.svg";
@@ -61,9 +64,13 @@ const slides = [
 ];
 
 export default function carousel() {
+  const plugin = React.useRef(
+    Autoplay({ delay: 3000, stopOnInteraction: true })
+  );
+
   return (
-    <Carousel className="hidden lg:block">
-      <CarouselContent className="">
+    <Carousel plugins={[plugin.current]} className="hidden lg:block">
+      <CarouselContent>
         {slides.map((slide, index) => (
           <CarouselItem key={index} className="basis-1/4">
             <div className="relative z-0 inline-block size-[217px]">
