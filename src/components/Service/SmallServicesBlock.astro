@@ -7,19 +7,19 @@ interface Props {
   description: string;
 }
 
-const {
-  iconName = "Unknown",
-  title = "",
-  description = "",
-} = Astro.props;
+const { iconName = "Unknown", title = "", description = "" } = Astro.props;
 ---
 
 <a href="/services">
   <div
-    class="h-full w-full cols-span-1 items-center text-center flex flex-col justify-center shadow rounded-2xl p-8 max-content hover:bg-primary-800 hover:text-white transition-all duration-300 ease-in-out text-primary-800"
+    class="cols-span-1 max-content flex h-full w-full flex-row-reverse items-center justify-between space-x-2 rounded-2xl p-2 text-primary-800 shadow transition-all duration-300 ease-in-out hover:bg-primary-800 hover:text-white lg:flex-col lg:justify-center lg:p-8"
   >
-    <Icon name={iconName} size={50} class="m-4 mb-8" />
-    <p class="text-xl max-w-[70%]">{title}</p>
-    <p class="text-base text-primary-600">{description}</p>
+    <Icon name={iconName} size={50} class="lg:m-4 lg:mb-8" />
+    <div
+      class="flex w-[84%] flex-col items-start text-start text-base lg:w-full lg:items-center lg:text-center"
+    >
+      <p class="text-base lg:max-w-[70%] lg:text-xl">{title}</p>
+      <p class="text-[14px] text-primary-600 lg:text-base">{description}</p>
+    </div>
   </div>
 </a>
