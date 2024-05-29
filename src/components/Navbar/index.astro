@@ -1,18 +1,26 @@
 ---
-import NavbarLink from "./NavbarLink.astro";
+import NavbarLink from "@/components/Navbar/NavbarLink.astro";
+import NavbarMenu from "@/components/Navbar/NavbarMenu.astro";
 import { Image } from "astro:assets";
-import Logo from "@/assets/navbar/logo.svg";
+import logo from "@/assets/navbar/logo.png";
 ---
 
-<header class="px-8">
-  <nav class="flex h-[74px] w-full flex-row items-center justify-between">
-    <div class="flex flex-row items-center gap-[15px] text-base">
+<header>
+  <nav
+    class="flex h-[35px] w-full flex-row items-center justify-between px-4 lg:h-[72px] lg:px-8"
+  >
+    <div class="gap-[15px] text-base lg:flex lg:flex-row lg:items-center">
       <div>
-        <Image src={Logo} alt="Master Paint Logo" />
+        <Image
+          src={logo}
+          class="h-7 w-32 object-contain lg:h-8 lg:w-[300px]"
+          alt="Master Paint Logo"
+        />
       </div>
-      <div class="font-Inter text-primary-800">MASTER PAINT 2548</div>
     </div>
-    <div class="flex flex-row items-center gap-x-9 text-base">
+    <div
+      class="hidden lg:flex lg:flex-row lg:items-center lg:gap-x-9 lg:text-base"
+    >
       <NavbarLink href="/">Home</NavbarLink>
       <NavbarLink href="/services">Services</NavbarLink>
       <NavbarLink href="/projects">Projects</NavbarLink>
@@ -25,5 +33,6 @@ import Logo from "@/assets/navbar/logo.svg";
         </p>
       </a>
     </div>
+    <div class="lg:hidden"><NavbarMenu /></div>
   </nav>
 </header>

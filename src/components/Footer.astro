@@ -3,45 +3,49 @@ import { Icon } from "astro-icon/components";
 ---
 
 <footer class="flex flex-col gap-y-8 bg-accent-dark-blue px-8 py-14 text-white">
-  <div class="border-b-2 border-white pb-2 font-Inter text-5xl">CONTACT US</div>
-  <div class="flex flex-row gap-x-[72px] px-9 text-base">
+  <div class="border-b-2 border-white pb-2 font-Inter font-medium lg:text-5xl">
+    CONTACT US
+  </div>
+  <div
+    class="flex flex-col gap-x-20 gap-y-6 px-9 font-Inter text-base lg:flex-row"
+  >
     <div>
-      <div class="flex w-[300px] flex-row justify-start gap-x-12">
-        <div>
-          <Icon
-            name="zondicons:location"
-            class="h-[30px] w-[30px] align-middle"
-          />
-        </div>
-        <div class="place-content-center">
-          Northtech Limited Partnership 71/5 หมู่ที่ 13 ถนนบางนา-ตราด
-          ตำบลบางแก้ว อำเภอบางพลี จังหวัดสมุทรปราการ 10540
-        </div>
+      <div class="flex flex-row justify-start gap-x-12">
+        <Icon
+          name="ion:location-sharp"
+          class="w-[25px] shrink-0 align-middle"
+          size={25}
+        />
+        <article class="w-56 place-content-center overflow-visible">
+          Northtech Limited Partnership 71/5 หมู่ที่ 13 ถนนบางนา-ตราดตำบลบางแก้ว
+          อำเภอบางพลี จังหวัดสมุทรปราการ 10540
+        </article>
       </div>
     </div>
     <div>
       <div class="flex flex-col gap-y-6">
         <div class="flex w-[300px] flex-row justify-start gap-x-12">
-          <Icon
-            name="ic:baseline-email"
-            class="h-[30px] w-[30px] align-middle"
-          />
-          <div class="place-content-center">masterpaint2548@gmail.com</div>
+          <Icon name="ic:baseline-email" class="align-middle" size={25} />
+          <p class="place-content-center">masterpaint2548@gmail.com</p>
         </div>
         <div class="flex w-[300px] flex-row justify-start gap-x-12">
-          <Icon name="fe:facebook" class="h-[30px] w-[30px] align-middle" />
-          <div class="place-content-center">masterpaint2548</div>
+          <a
+            href="https://www.facebook.com/profile.php?id=61559212771849&mibextid=qi2Omg&rdid=U2fqnYXjlcxx0mGJ"
+          >
+            <Icon name="fe:facebook" class="align-middle" size={25} /></a
+          >
+          <p class="place-content-center">masterpaint2548</p>
         </div>
         <div class="flex w-[300px] flex-row justify-start gap-x-12">
-          <Icon name="bxs:phone-call" class="h-[30px] w-[30px] align-middle" />
+          <Icon name="bxs:phone-call" class="align-middle" size={25} />
           <div>
-            <div>0891123192</div>
-            <div>027625855</div>
+            <p>0891123192</p>
+            <p>027625855</p>
           </div>
         </div>
         <div class="flex w-[300px] flex-row justify-start gap-x-12">
-          <Icon name="uim:line" class="h-[30px] w-[30px] align-middle" />
-          <span class="place-content-center">@masterpaint2548</span>
+          <Icon name="uim:line" class="align-middle" size={30} />
+          <p class="place-content-center">@masterpaint2548</p>
         </div>
       </div>
     </div>
