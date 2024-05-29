@@ -1,12 +1,13 @@
 ---
-import NavbarLink from "./NavbarLink.astro";
+import NavbarLink from "@/components/Navbar/NavbarLink.astro";
+import NavbarMenu from "@/components/Navbar/NavbarMenu.astro";
 import { Image } from "astro:assets";
 import logo from "@/assets/navbar/logo.png";
 ---
 
-<header class="px-8">
+<header>
   <nav
-    class="flex h-[35px] w-full flex-row items-center justify-between lg:h-[72px]"
+    class="flex h-[35px] w-full flex-row items-center justify-between px-4 lg:h-[72px] lg:px-8"
   >
     <div class="gap-[15px] text-base lg:flex lg:flex-row lg:items-center">
       <div>
@@ -32,8 +33,6 @@ import logo from "@/assets/navbar/logo.png";
         </p>
       </a>
     </div>
-    <div class="lg:hidden">
-      <!-- <Icon name="basil:menu-outline" /> -->
-    </div>
+    <div class="lg:hidden"><NavbarMenu /></div>
   </nav>
 </header>
