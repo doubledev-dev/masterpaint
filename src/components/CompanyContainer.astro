@@ -1,14 +1,15 @@
 ---
 import { Icon } from "astro-icon/components";
 import Container from "@/components/Container/ContentContainer.astro";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 const works = [
-  {
-    icon: "ant-design:schedule-outlined",
-    desc: "Flexible scheduling options",
-  },
-  { icon: "bi:people-fill", desc: "Free consultation" },
-  { icon: "carbon:clean", desc: "Maintain a clean work area" },
+  { icon: "ant-design:schedule-outlined", desc: t("company.offer1") },
+  { icon: "bi:people-fill", desc: t("company.offer2") },
+  { icon: "carbon:clean", desc: t("company.offer3") },
 ];
 ---
 
@@ -20,21 +21,13 @@ const works = [
       <h1 class="font-Inter text-lg font-semibold lg:text-2xl">
         AT MASTERPAINT
       </h1>
-      <p class="text-pretty indent-10">
-        หจก.นอร์ธเทค ก่อตั้งขึ้นเมื่อวันที่ 18 สิงหาคม 2548
-        มีวัตถุประสงค์เพื่อให้บริการเกี่ยวกับงานสีต่างๆ
-        โดยทีมช่างคุณภาพที่มีประสบการณ์และความ เชี่ยวชาญด้านงานสีโดยเฉพาะ
-      </p>
-      <p class="text-pretty indent-10">
-        เราได้มุ่งมั่นที่จะสร้างความพึงพอใจให้แก่ลูกค้าในการนำ
-        เสนอสินค้าพร้อมบริการที่มีคุณภาพในราคาที่เหมาะสม
-        ดังนั้นเมื่อท่านได้รับบริการจากเรา จะไม่เพียงแต่การให้บริการเท่านั้น
-        แต่จะเป็นการเริ่มต้นความสัมพันธ์ที่ดีต่อกันในระยะเวลาอันยาวไกล
-      </p>
+      <p class="text-pretty indent-10">{t("company.p1")}</p>
+      <p class="text-pretty indent-10">{t("company.p2")}</p>
       <a href="/about">
         <button
           class="mt-5 flex flex-row gap-x-2 rounded-full border border-primary-800 bg-white px-[13px] py-[10px] font-Inter transition-all duration-300 ease-in-out hover:bg-primary-800 hover:text-white lg:ml-auto lg:mt-0 lg:self-end"
-          >more about us <span class="self-center justify-self-center"
+          >{t("company.more")}
+          <span class="self-center justify-self-center"
             ><Icon
               name="radix-icons:arrow-top-right"
               class="h-full w-full"

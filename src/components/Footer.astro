@@ -1,5 +1,9 @@
 ---
 import { Icon } from "astro-icon/components";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <footer class="flex flex-col gap-y-8 bg-accent-dark-blue px-8 py-14 text-white">
@@ -16,10 +20,9 @@ import { Icon } from "astro-icon/components";
           class="w-[25px] shrink-0 align-middle"
           size={25}
         />
-        <article class="w-56 place-content-center overflow-visible">
-          Northtech Limited Partnership 71/5 หมู่ที่ 13 ถนนบางนา-ตราดตำบลบางแก้ว
-          อำเภอบางพลี จังหวัดสมุทรปราการ 10540
-        </article>
+        <p class="w-56 place-content-center overflow-visible">
+          {t("footer.address")}
+        </p>
       </div>
     </div>
     <div>

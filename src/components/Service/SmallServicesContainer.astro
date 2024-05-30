@@ -2,26 +2,31 @@
 import SmallServicesBlock from "./SmallServicesBlock.astro";
 import Container from "@/components/Container/ContentContainer.astro";
 
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 const services = [
   {
     Icon: "ion:calculator",
-    title: "ให้คำปรึกษาและประเมินราคางานสีทุกชนิด",
-    description: "วางแผนตามงบประมาณที่ต้องการ",
+    title: t("services.consult.title"),
+    description: t("services.consult.description"),
   },
   {
     Icon: "vaadin:paint-roll",
-    title: "ทาสี",
-    description: "ทาสีอาคาร โรงงาน ที่พักอาศัย เครื่องจักร ฯ",
+    title: t("services.painting.title"),
+    description: t("services.painting.description"),
   },
   {
     Icon: "ic:twotone-construction",
-    title: "รับซ่อมแซมและปรับปรุง",
-    description: "เพื่อยืดอายุการใช้งานและให้ดูดีทันสมัยมากขึ้น",
+    title: t("services.renovation.title"),
+    description: t("services.renovation.description"),
   },
   {
     Icon: "clarity:design-solid",
-    title: "รับออกแบบและต่อเติม",
-    description: "ให้ตรงกับความต้องการของลูกค้าในราคาที่เหมาะสม",
+    title: t("services.design.title"),
+    description: t("services.design.description"),
   },
 ];
 ---
