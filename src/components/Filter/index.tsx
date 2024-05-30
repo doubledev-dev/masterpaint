@@ -41,7 +41,6 @@ function Filter({ data, setState, zIndex }: Props) {
                       <button
                         key={`${data.title}-${index}`}
                         onClick={() => {
-                          console.log(item.option);
                           setOpenMenu(!openMenu);
                           setText(item.option);
                           setState(item.option);
@@ -58,8 +57,8 @@ function Filter({ data, setState, zIndex }: Props) {
                               className="bg-white p-2 text-start hover:bg-primary-600 hover:text-white"
                               onClick={() => {
                                 setOpenMenu(!openMenu);
-                                setText("ทา" + extend);
-                                setState("ทา" + extend);
+                                setText(extend);
+                                setState(extend);
                               }}
                             >
                               <li className="ml-16 list-[circle]">{extend}</li>
@@ -72,7 +71,6 @@ function Filter({ data, setState, zIndex }: Props) {
                     <button
                       key={index}
                       onClick={() => {
-                        console.log(item.option);
                         setOpenMenu(!openMenu);
                         setText(item.option);
                         setState(item.option);
