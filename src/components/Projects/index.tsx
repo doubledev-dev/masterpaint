@@ -20,10 +20,18 @@ const Projects = ({ slice, withTitle = true, withButton = true }: Props) => {
       <div className="grid grid-cols-3 gap-4">
         {slice && PROJECTS != undefined
           ? PROJECTS?.slice(0, 9).map((company) => (
-              <ProjectCard title={company.name} image={company.image} />
+              <ProjectCard
+                key={company.name}
+                title={company.name}
+                image={company.image}
+              />
             ))
           : PROJECTS?.map((company) => (
-              <ProjectCard title={company.name} image={company.image} />
+              <ProjectCard
+                key={company.name}
+                title={company.name}
+                image={company.image}
+              />
             ))}
       </div>
       {withButton && (
