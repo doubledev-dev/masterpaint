@@ -5,6 +5,7 @@ import { Image } from "astro:assets";
 import logo from "@/assets/navbar/logo.png";
 
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -12,7 +13,7 @@ const t = useTranslations(lang);
 
 <header>
   <nav
-    class="flex h-[35px] w-full flex-row items-center justify-between px-4 lg:h-[72px] lg:px-8"
+    class="flex w-full flex-row items-center justify-between px-4 lg:h-[72px] lg:px-8"
   >
     <div class="gap-[15px] text-base lg:flex lg:flex-row lg:items-center">
       <div>
@@ -23,21 +24,28 @@ const t = useTranslations(lang);
         />
       </div>
     </div>
-    <div
-      class="hidden font-sans lg:flex lg:flex-row lg:items-center lg:gap-x-9 lg:text-base"
-    >
-      <NavbarLink href={`/${lang}`}>{t("navbar.home")}</NavbarLink>
-      <NavbarLink href={`/${lang}/services`}>{t("navbar.services")}</NavbarLink>
-      <NavbarLink href={`/${lang}/projects`}>{t("navbar.projects")}</NavbarLink>
-      <NavbarLink href={`/${lang}/about`}>{t("navbar.about")}</NavbarLink>
-      <a href={`/${lang}/contact`}>
-        <p
-          class="rounded-full bg-primary-500 px-5 py-2 text-base text-white duration-200 hover:scale-105"
+    <div class="flex flex-row-reverse items-center gap-2 lg:flex-row lg:gap-4">
+      <div
+        class="hidden font-sans lg:flex lg:flex-row lg:items-center lg:gap-x-9 lg:text-base"
+      >
+        <NavbarLink href={`/${lang}`}>{t("navbar.home")}</NavbarLink>
+        <NavbarLink href={`/${lang}/services`}
+          >{t("navbar.services")}</NavbarLink
         >
-          {t("navbar.contact")}
-        </p>
-      </a>
+        <NavbarLink href={`/${lang}/projects`}
+          >{t("navbar.projects")}</NavbarLink
+        >
+        <NavbarLink href={`/${lang}/about`}>{t("navbar.about")}</NavbarLink>
+        <a href={`/${lang}/contact`}>
+          <p
+            class="rounded-full bg-primary-500 px-5 py-2 text-base text-white duration-200 hover:scale-105"
+          >
+            {t("navbar.contact")}
+          </p>
+        </a>
+      </div>
+      <div class="lg:hidden"><NavbarMenu /></div>
+      <LanguageSwitcher client:load lang={lang} />
     </div>
-    <div class="lg:hidden"><NavbarMenu /></div>
   </nav>
 </header>

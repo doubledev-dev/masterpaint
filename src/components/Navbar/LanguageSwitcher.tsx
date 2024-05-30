@@ -1,0 +1,32 @@
+import { useMemo } from "react";
+
+const LanguageSwitcher = ({ lang }: { lang: "th" | "en" }) => {
+  const isChecked = useMemo(() => {
+    return lang === "en";
+  }, [lang]);
+
+  return (
+    <a href={lang === "en" ? "/th" : "/en"}>
+      <label className="relative inline-flex cursor-pointer select-none items-center">
+        <div className="flex h-8 items-center justify-center rounded-md bg-transparent shadow-card">
+          <span
+            className={`flex h-6 w-6 items-center justify-center rounded text-sm ${
+              !isChecked ? "bg-primary-500 text-white" : "text-body-color"
+            }`}
+          >
+            <p>th</p>
+          </span>
+          <span
+            className={`flex h-6 w-6 items-center justify-center rounded text-sm ${
+              isChecked ? "bg-primary-500 text-white" : "text-body-color"
+            }`}
+          >
+            <p>en</p>
+          </span>
+        </div>
+      </label>
+    </a>
+  );
+};
+
+export default LanguageSwitcher;
