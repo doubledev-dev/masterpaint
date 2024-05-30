@@ -10,6 +10,7 @@ interface Props {
   homePage?: boolean;
   projectsPage?: boolean;
   slugItems: CollectionEntry<"projects">[];
+  lang: "th" | "en";
 }
 
 const Projects = ({
@@ -17,6 +18,7 @@ const Projects = ({
   homePage = true,
   projectsPage = false,
   slugItems,
+  lang,
 }: Props) => {
   const [filterTypes, setFilterTypes] = useState<string>("All");
   const [filterLocation, setFilterLocation] = useState<string>("All");
@@ -104,7 +106,7 @@ const Projects = ({
             })}
       </div>
       {slice && (
-        <a href="/projects">
+        <a href={`/${lang}/projects`}>
           <button className="mx-auto mt-8 flex rounded-full border border-primary-800 bg-white px-[13px] py-[10px] lowercase transition duration-300 ease-in-out hover:bg-primary-800 hover:text-white">
             See More
           </button>

@@ -1,13 +1,14 @@
 ---
-import BlogPost from "@/layouts/BlogPost.astro";
-import MainLayout from "@/layouts/MainLayout.astro";
-
+import { getCollection } from "astro:content";
+import ProjectDetailPage from "@/components/pages/projects/[..slug].astro";
+export async function getStaticPaths() {
+  const posts = await getCollection("projects");
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: post,
+  }));
+}
 const post = Astro.props;
-const { Content } = await post.render();
 ---
 
-<MainLayout>
-  <BlogPost {...post.data}>
-    <Content />
-  </BlogPost>
-</MainLayout>
+<ProjectDetailPage {...post} />
