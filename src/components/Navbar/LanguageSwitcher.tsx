@@ -12,7 +12,7 @@ const LanguageSwitcher = ({
   }, [lang]);
 
   return (
-    <a href={lang === "en" ? `/th/${currentPath}` : `/en/${currentPath}`}>
+    <a href={lang === "en" ? `/th${currentPath}` : `/en${currentPath}`}>
       <label className="relative inline-flex cursor-pointer select-none items-center">
         <div className="flex h-8 items-center justify-center rounded-md bg-transparent shadow-card">
           <span
@@ -20,14 +20,14 @@ const LanguageSwitcher = ({
               !isChecked ? "bg-primary-500 text-white" : "text-body-color"
             }`}
           >
-            <p>th</p>
+            <p>TH</p>
           </span>
           <span
             className={`flex h-6 w-6 items-center justify-center rounded text-sm ${
               isChecked ? "bg-primary-500 text-white" : "text-body-color"
             }`}
           >
-            <p>en</p>
+            <p>EN</p>
           </span>
         </div>
       </label>
