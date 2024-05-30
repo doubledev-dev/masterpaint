@@ -7,13 +7,18 @@ import img2 from "@/assets/service/allService/img2.webp";
 import img3 from "@/assets/service/allService/img3.webp";
 import img4 from "@/assets/service/allService/img4.webp";
 
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 const services = [
   {
     src: img1,
-    alt: "ให้คำปรึกษาและประเมินราคางานสีทุกชนิด",
+    alt: t("services.consult.title"),
     icon: "ion:calculator",
-    title: "ให้คำปรึกษาและประเมินราคางานสีทุกชนิด",
-    p: "บริการให้คำปรึกษาและประเมินราคางานสีทุกชนิด ",
+    title: t("services.consult.title"),
+    p: t("services.consult.description"),
     list: [
       "ลูกค้าที่สนใจเกี่ยวกับการทาสีสามารถติดต่อเพื่อขอคำปรึกษาและประเมินราคาได้ฟรีไม่มีค่าใช้จ่าย",
       "เราพร้อมให้คำปรึกษาแนะนำเพื่อให้งานอยู่ในงบประมาณที่ต้องการ",
@@ -22,10 +27,10 @@ const services = [
   },
   {
     src: img2,
-    alt: "ทาสี",
+    alt: t("services.painting.title"),
     icon: "vaadin:paint-roll",
-    title: "ทาสี",
-    p: "รับบริการงานทาสี ภายใน - ภายนอก อาคารสำนักงาน งานบ้าน งานคอนโด งานโลหะทุกชนิด งานพ่น งานสีไม้เฟอร์นิเจอร์ และงานอื่นๆที่เกี่ยวกับการทาสี โดยทีมช่างผู้ชำนาญงานเฉพาะด้านและมีประสบการณ์โดยตรง",
+    title: t("services.painting.title"),
+    p: t("services.painting.description"),
     list: [
       "งานทาสีน้ำ ภายนอก ภายใน",
       "งานทาสีน้ำมัน โครงเหล็ก โลหะทุกชนิด",
@@ -43,10 +48,10 @@ const services = [
   },
   {
     src: img3,
-    alt: "รับซ่อมแซมและปรับปรุง",
+    alt: t("services.renovation.title"),
     icon: "ic:twotone-construction",
-    title: "รับซ่อมแซมและปรับปรุง",
-    p: "",
+    title: t("services.renovation.title"),
+    p: t("services.renovation.description"),
     list: [
       "ลูกค้าที่สนใจเกี่ยวกับการซ่อมแซมและปรับปรุงสามารถติดต่อเพื่อขอคำปรึกษาได้ฟรีไม่มีค่าใช้จ่าย",
       "เราพร้อมให้คำปรึกษาแนะนำเพื่อให้ทุกงานซ่อมถูกแก้ไขได้ตรงจุด",
@@ -57,10 +62,10 @@ const services = [
   },
   {
     src: img4,
-    alt: "รับออกแบบและต่อเติม",
+    alt: t("services.design.title"),
     icon: "clarity:design-solid",
-    title: "รับออกแบบและต่อเติม",
-    p: "",
+    title: t("services.design.title"),
+    p: t("services.design.description"),
     list: [
       "ลูกค้าที่สนใจเกี่ยวกับการต่อเติมสามารถติดต่อเพื่อขอคำปรึกษาได้ฟรีไม่มีค่าใช้จ่าย",
       "เราพร้อมให้คำปรึกษาแนะนำเพื่อให้ทุกงานต่อเติมให้ตรงกับความต้องการของลูกค้า",
