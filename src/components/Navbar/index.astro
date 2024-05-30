@@ -8,6 +8,8 @@ import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 const lang = getLangFromUrl(Astro.url);
+const currentPath = Astro.url.pathname.replace(`/${lang}`, "");
+console.log(currentPath);
 const t = useTranslations(lang);
 ---
 
@@ -45,7 +47,7 @@ const t = useTranslations(lang);
         </a>
       </div>
       <div class="lg:hidden"><NavbarMenu /></div>
-      <LanguageSwitcher client:load lang={lang} />
+      <LanguageSwitcher client:load lang={lang} currentPath={currentPath} />
     </div>
   </nav>
 </header>
