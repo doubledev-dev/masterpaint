@@ -26,11 +26,11 @@ const t = useTranslations(lang);
     <div
       class="hidden font-sans lg:flex lg:flex-row lg:items-center lg:gap-x-9 lg:text-base"
     >
-      <NavbarLink href="/">{t("navbar.home")}</NavbarLink>
-      <NavbarLink href="/services">{t("navbar.services")}</NavbarLink>
-      <NavbarLink href="/projects">{t("navbar.projects")}</NavbarLink>
-      <NavbarLink href="/about">{t("navbar.about")}</NavbarLink>
-      <a href="/contact">
+      <NavbarLink href={`/${lang}`}>{t("navbar.home")}</NavbarLink>
+      <NavbarLink href={`/${lang}/services`}>{t("navbar.services")}</NavbarLink>
+      <NavbarLink href={`/${lang}/projects`}>{t("navbar.projects")}</NavbarLink>
+      <NavbarLink href={`/${lang}/about`}>{t("navbar.about")}</NavbarLink>
+      <a href={`/${lang}/contact`}>
         <p
           class="rounded-full bg-primary-500 px-5 py-2 text-base text-white duration-200 hover:scale-105"
         >
