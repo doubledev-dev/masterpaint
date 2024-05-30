@@ -3,6 +3,11 @@ import NavbarLink from "@/components/Navbar/NavbarLink.astro";
 import NavbarMenu from "@/components/Navbar/NavbarMenu.astro";
 import { Image } from "astro:assets";
 import logo from "@/assets/navbar/logo.png";
+
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <header>
@@ -19,17 +24,17 @@ import logo from "@/assets/navbar/logo.png";
       </div>
     </div>
     <div
-      class="hidden lg:flex lg:flex-row lg:items-center lg:gap-x-9 lg:text-base"
+      class="hidden font-sans lg:flex lg:flex-row lg:items-center lg:gap-x-9 lg:text-base"
     >
-      <NavbarLink href="/">Home</NavbarLink>
-      <NavbarLink href="/services">Services</NavbarLink>
-      <NavbarLink href="/projects">Projects</NavbarLink>
-      <NavbarLink href="/about">About Us</NavbarLink>
+      <NavbarLink href="/">{t("navbar.home")}</NavbarLink>
+      <NavbarLink href="/services">{t("navbar.services")}</NavbarLink>
+      <NavbarLink href="/projects">{t("navbar.projects")}</NavbarLink>
+      <NavbarLink href="/about">{t("navbar.about")}</NavbarLink>
       <a href="/contact">
         <p
           class="rounded-full bg-primary-500 px-5 py-2 text-base text-white duration-200 hover:scale-105"
         >
-          Contact Us
+          {t("navbar.contact")}
         </p>
       </a>
     </div>
