@@ -78,7 +78,7 @@ export const en = {
     "With over 10 years of experience, the importance of closely monitoring and overseeing operations has been emphasized by the company. From providing consultation to ensuring that the tasks are executed flawlessly, we have earned the trust and confidence of our customers. This has provided us with opportunities to undertake various types of projects, all based on the principle that customer satisfaction is our top priority.",
 
   "footer.address":
-    "Northtech Limited Partnership 71/5 หมู่ที่ 13 ถนนบางนา-ตราดตำบลบางแก้ว อำเภอบางพลี จังหวัดสมุทรปราการ 10540",
+    "Northtech Limited Partnership 71/5 Moo 13, Bangna-Trat Road, Bangkaew Subdistrict, Bang Phli District, Samut Prakan Province, 10540",
 
   title: "Hello World",
 };
