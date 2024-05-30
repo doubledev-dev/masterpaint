@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import { getLangFromUrl } from "@/i18n/utils";
 
 import MainLayout from "@/layouts/MainLayout.astro";
 import Hero from "@/components/Hero.astro";
@@ -13,6 +14,8 @@ import Projects from "@/components/Projects";
 const projects = (await getCollection("projects"))
   .filter((a) => a.data.parity < 0)
   .sort((a, b) => a.data.parity - b.data.parity);
+
+const lang = getLangFromUrl(Astro.url);
 ---
 
 <MainLayout>
@@ -25,6 +28,7 @@ const projects = (await getCollection("projects"))
     homePage={true}
     projectsPage={false}
     slugItems={projects}
+    lang={lang}
     client:load
   />
   <Companies />
