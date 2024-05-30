@@ -1,0 +1,13 @@
+---
+import BlogPost from "@/layouts/BlogPost.astro";
+import MainLayout from "@/layouts/MainLayout.astro";
+
+const post = Astro.props;
+const { Content } = await post.render();
+---
+
+<MainLayout>
+  <BlogPost {...post.data}>
+    <Content />
+  </BlogPost>
+</MainLayout>

@@ -1,19 +1,5 @@
 ---
-import MainLayout from "@/layouts/MainLayout.astro";
-import { getCollection } from "astro:content";
-import Projects from "@/components/Projects";
-
-const projects = (await getCollection("projects")).sort((a, b) => {
-  return a.data.parity - b.data.parity;
-});
+import ProjectsPage from "@/components/pages/projects/index.astro";
 ---
 
-<MainLayout>
-  <Projects
-    slice={false}
-    homePage={false}
-    projectsPage={true}
-    slugItems={projects}
-    client:load
-  />
-</MainLayout>
+<ProjectsPage />
