@@ -43,11 +43,16 @@ const { title, designDetails, tags, location, heroImage, pubDate } =
           )
         }
 
-        <div class="space-x-2 pt-5">
+        <div class="flex flex-row gap-x-2 pt-5">
           {
             tags &&
               tags.map((tag) => (
-                <span class="bg-primary-700 p-2  text-white">{tag}</span>
+                <div class="flex flex-row">
+                  <div class="arrow-left relative">
+                    <div class="absolute left-3 top-1/2 h-1 w-1 -translate-y-1/2 transform rounded-full bg-white" />
+                  </div>
+                  <div class="bg-primary-700 p-2 text-white">{tag}</div>
+                </div>
               ))
           }
         </div>

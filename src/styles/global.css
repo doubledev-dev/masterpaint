@@ -65,15 +65,24 @@
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
   }
-}
 
-@layer base {
   * {
     @apply border-border;
 
     font-family: "Bai Jamjuree", "Inter", sans-serif;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.arrow-left {
+  position: relative;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+
+  border-right: 20px solid #1d2f99;
 }
