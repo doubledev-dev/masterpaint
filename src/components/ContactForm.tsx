@@ -116,7 +116,7 @@ const Contacts = () => {
               )
             )}
           </div>
-          <button className="mx-auto mt-8 flex justify-items-end rounded-full bg-primary-800 p-2 px-4 align-baseline text-white hover:bg-primary-600 lg:ml-auto lg:p-4 lg:px-8">
+          <button className="mx-auto mt-8 flex justify-items-end rounded-full bg-primary-800 p-2 px-4 align-baseline text-white hover:bg-primary-600 lg:ml-auto lg:mx-0 lg:p-4 lg:px-8">
             Send Message
           </button>
         </form>
