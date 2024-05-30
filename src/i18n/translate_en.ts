@@ -34,5 +34,13 @@ export const en = {
   "company.offer2": "Free consultation",
   "company.offer3": "Maintain a clean work area",
 
+  "about.history.title": "Our History",
+  "about.history.description":
+    "NorthTech was established in 2005 with the aim of providing services related to renovation, refurbishment, and repair of office buildings, factories, and residential accommodations, as well as machinery within factories, to ensure they meet customers' requirements. With experienced and specialized technicians closely overseeing operations, the company consistently delivers high-quality work, resulting in continuous progress and growth of the business.",
+
+  "about.vision.title": "Our Vision",
+  "about.vision.description":
+    "With over 10 years of experience, the importance of closely monitoring and overseeing operations has been emphasized by the company. From providing consultation to ensuring that the tasks are executed flawlessly, we have earned the trust and confidence of our customers. This has provided us with opportunities to undertake various types of projects, all based on the principle that customer satisfaction is our top priority.",
+
   title: "Hello World",
 };
