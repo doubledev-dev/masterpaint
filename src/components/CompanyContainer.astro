@@ -13,7 +13,7 @@ const works = [
 ];
 ---
 
-<Container className="p-6 lg:max-w-7xl">
+<Container className="lg:max-w-7xl lg:p-6">
   <div class="flex flex-col items-center justify-center gap-x-12 lg:flex-row">
     <article
       class="flex w-80 flex-col gap-y-3 p-0 text-primary-800 lg:w-[450px] lg:gap-y-12"
@@ -39,8 +39,8 @@ const works = [
     <div class="mt-10 grid grid-cols-2 gap-2 lg:m-0 lg:gap-4">
       {
         works.map((w) => (
-          <div class="my-auto flex h-28 w-48 flex-col items-center justify-center gap-y-2 rounded-xl bg-primary-100 px-5 text-primary-800 lg:h-48  lg:w-72 lg:items-start lg:justify-between lg:p-6">
-            <Icon name={w.icon} class=" size-[30px] lg:h-[42px] lg:w-[42px]" />
+          <div class="my-auto flex h-28 w-44 flex-col items-center justify-center gap-y-2 rounded-xl bg-primary-100 px-5 text-primary-800 lg:h-48  lg:w-72 lg:items-start lg:justify-between lg:p-6">
+            <Icon name={w.icon} class="size-[30px] lg:size-[42px]" />
             <p class="text-center font-Inter text-base font-semibold lg:text-nowrap lg:text-sm">
               {w.desc}
             </p>
