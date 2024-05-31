@@ -22,6 +22,7 @@ const ProjectCard = ({
               className="z-0 block aspect-square object-cover object-center opacity-70"
               src={thumbnail}
               alt={title}
+              loading="eager"
             />
           </div>
           <div className="absolute left-0 top-[10%] z-10 mx-[10%]">
@@ -38,6 +39,7 @@ const ProjectCard = ({
             className="z-0 block aspect-square object-cover object-center"
             src={thumbnail}
             alt="_blank"
+            loading="eager"
           />
         </div>
         <div className="absolute left-0 top-[10%] z-10 mx-[10%]">

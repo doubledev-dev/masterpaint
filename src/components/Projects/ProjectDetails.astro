@@ -1,0 +1,20 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+  images: ImageMetadata[];
+  title?: string;
+}
+
+const { images, title } = Astro.props;
+---
+
+<div class="grid grid-cols-2 gap-1 lg:grid-cols-3 lg:gap-4">
+  {images?.map((item, index) => (
+    <Image
+      class="aspect-square object-cover object-center"
+      src={item}
+      alt={title + index.toString()}
+    />
+  ))}
+</div>
