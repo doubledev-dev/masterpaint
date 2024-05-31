@@ -4,12 +4,11 @@ import heroImg2 from "@/assets/hero/hero2.webp";
 import heroImg3 from "@/assets/hero/hero3.webp";
 import heroImg4 from "@/assets/hero/hero4.webp";
 import heroImg5 from "@/assets/hero/hero5.webp";
-import heroImg6 from "@/assets/hero/hero6.webp";
 import { getLangFromUrl } from "@/i18n/utils";
 import HeroCarousel from "@/components/HeroCarousel";
 
 const lang = getLangFromUrl(Astro.url);
-const images = [heroImg1, heroImg2, heroImg3, heroImg4, heroImg5, heroImg6];
+const images = [heroImg1, heroImg2, heroImg3, heroImg4, heroImg5];
 ---
 
 <HeroCarousel client:load lang={lang} images={images} />
