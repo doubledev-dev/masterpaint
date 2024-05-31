@@ -1,21 +1,20 @@
 ---
 import NavbarLink from "@/components/Navbar/NavbarLink.astro";
-import NavbarMenu from "@/components/Navbar/NavbarMenu.astro";
 import { Image } from "astro:assets";
 import logo from "@/assets/navbar/logo.png";
 
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import LanguageSwitcher from "./LanguageSwitcher";
+import MenuContainer from "./MenuContainer";
 
 const lang = getLangFromUrl(Astro.url);
 const currentPath = Astro.url.pathname.replace(`/${lang}`, "");
-console.log(currentPath);
 const t = useTranslations(lang);
 ---
 
 <header>
   <nav
-    class="flex w-full flex-row items-center justify-between px-4 py-1 lg:h-[72px] lg:px-8"
+    class="flex w-full flex-row items-center justify-between px-4 py-3 lg:h-[72px] lg:px-8"
   >
     <div class="gap-[15px] text-base lg:flex lg:flex-row lg:items-center">
       <div>
@@ -46,7 +45,9 @@ const t = useTranslations(lang);
           </p>
         </a>
       </div>
-      <div class="lg:hidden"><NavbarMenu lang={lang}/></div>
+      <div class="lg:hidden">
+        <MenuContainer client:load lang={lang} />
+      </div>
       <LanguageSwitcher client:load lang={lang} currentPath={currentPath} />
     </div>
   </nav>

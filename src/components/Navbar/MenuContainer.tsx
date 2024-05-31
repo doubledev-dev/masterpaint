@@ -1,42 +1,55 @@
-import {
-  Menubar,
-  MenubarContent,
-  MenubarItem,
-  MenubarMenu,
-  MenubarTrigger,
-} from "@/components/ui/menubar";
-
-import { Menu } from "lucide-react";
+import { useTranslations } from "@/i18n/utils";
+import type { lang } from "@/types";
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
 
 interface Props {
-  lang: string;
+  lang: lang;
 }
 
 export default function MenuBar({ lang }: Props) {
+  const t = useTranslations(lang);
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <Menubar>
-      <MenubarMenu>
-        <MenubarTrigger>
-          <Menu />
-        </MenubarTrigger>
-        <MenubarContent className="text-primary-800">
-          <a href="/">
-            <MenubarItem>{lang === "en" ? "Home" : "หน้าแรก"}</MenubarItem>
-          </a>
-          <a href="/services">
-            <MenubarItem>{lang === "en" ? "Services" : "บริการ"}</MenubarItem>
-          </a>
-          <a href="/projects">
-            <MenubarItem>{lang === "en" ? "Projects" : "โปรเจค"}</MenubarItem>
-          </a>
-          <a href="/about">
-            <MenubarItem>{lang === "en" ? "About Us" : "เกี่ยวกับเรา"}</MenubarItem>
-          </a>
-          <a href="/contact">
-            <MenubarItem>{lang === "en" ? "Contact" : "ติดต่อเรา"}</MenubarItem>
-          </a>
-        </MenubarContent>
-      </MenubarMenu>
-    </Menubar>
+    <div className="flex flex-col items-center justify-center">
+      <button type="button" onClick={() => setIsOpen(true)}>
+        <Menu className="size-8" />
+      </button>
+
+      {isOpen && (
+        <div className="absolute left-0 top-0 z-10 flex size-full flex-col items-end bg-black/50">
+          <div className="h-full w-64 bg-white ">
+            <div className="flex flex-col items-end px-4 py-3">
+              <button type="button" onClick={() => setIsOpen(false)}>
+                <X className="size-8" />
+              </button>
+            </div>
+            <div className="space-y-4 px-8 py-4">
+              <div>
+                <a href={`/${lang}`} className="hover:font-bold">
+                  {t("navbar.home")}
+                </a>
+              </div>
+              <div>
+                <a href={`/${lang}/services`} className="hover:font-bold">
+                  {t("navbar.services")}
+                </a>
+              </div>
+              <div>
+                <a href={`/${lang}/projects`} className="hover:font-bold">
+                  {t("navbar.projects")}
+                </a>
+              </div>
+              <div>
+                <a href={`/${lang}/contact`} className="hover:font-bold">
+                  {t("navbar.contact")}
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
   );
 }
