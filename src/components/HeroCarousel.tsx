@@ -23,10 +23,10 @@ export default function carousel() {
   );
 
   return (
-    <Carousel plugins={[plugin.current]} className="">
+    <Carousel plugins={[plugin.current]}>
       <CarouselContent>
         {slides.map((slide, index) => (
-          <CarouselItem key={index} className="">
+          <CarouselItem key={index}>
             <div className="relative z-0">
               <img
                 src={slide.src}
