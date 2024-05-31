@@ -89,7 +89,7 @@ const Projects = ({
                 <ProjectCard
                   key={index}
                   slugRef={item.slug}
-                  title={item.data.title}
+                  title={lang === "en" ? item.data.titleEN : item.data.titleTH}
                   thumbnail={item.data.heroImage}
                 />
               );
@@ -99,7 +99,7 @@ const Projects = ({
                 <ProjectCard
                   key={index}
                   slugRef={item.slug}
-                  title={item.data.title}
+                  title={lang === "en" ? item.data.titleEN : item.data.titleTH}
                   thumbnail={item.data.heroImage}
                 />
               );
