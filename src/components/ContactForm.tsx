@@ -137,6 +137,7 @@ const Contacts = ({ lang }: { lang: lang }) => {
                       <div key={form.name} className="lg:col-span-2">
                         <label className="block">{form.label}</label>
                         <textarea
+                          aria-label={form.name}
                           key={form.name}
                           name={form.name}
                           placeholder="Write your message"
@@ -151,6 +152,7 @@ const Contacts = ({ lang }: { lang: lang }) => {
                       >
                         <label className="block">{form.label}</label>
                         <input
+                          aria-label={form.name}
                           key={form.name}
                           type={form.type}
                           name={form.name}
