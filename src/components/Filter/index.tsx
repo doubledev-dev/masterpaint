@@ -41,6 +41,7 @@ function Filter({ data, setState, zIndex }: Props) {
                       <button
                         key={`${data.title}-${index}`}
                         onClick={() => {
+                          console.log(item.option + "1");
                           setOpenMenu(!openMenu);
                           setText(item.option);
                           setState(item.option);
@@ -56,6 +57,7 @@ function Filter({ data, setState, zIndex }: Props) {
                               key={index}
                               className="bg-white p-2 text-start hover:bg-primary-600 hover:text-white"
                               onClick={() => {
+                                console.log(item.option + "2");
                                 setOpenMenu(!openMenu);
                                 setText(extend);
                                 setState(extend);
@@ -71,6 +73,7 @@ function Filter({ data, setState, zIndex }: Props) {
                     <button
                       key={index}
                       onClick={() => {
+                        console.log(item.option + "3");
                         setOpenMenu(!openMenu);
                         setText(item.option);
                         setState(item.option);

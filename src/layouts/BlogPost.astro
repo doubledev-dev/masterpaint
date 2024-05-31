@@ -2,6 +2,8 @@
 import type { CollectionEntry } from "astro:content";
 import MainContainer from "@/components/Container/MainContainer.astro";
 import { getLangFromUrl } from "@/i18n/utils";
+import { mappingTags } from "@/lib/utils";
+import type { Tags } from "@/lib/utils";
 
 const lang = getLangFromUrl(Astro.url);
 type Props = CollectionEntry<"projects">["data"];
@@ -59,12 +61,14 @@ const {
         <div class="flex flex-row gap-x-2 pt-5">
           {
             tags &&
-              tags.map((tag) => (
+              (tags as Tags[]).map((tag) => (
                 <div class="flex flex-row">
                   <div class="arrow-left relative">
                     <div class="absolute left-3 top-1/2 h-1 w-1 -translate-y-1/2 transform rounded-full bg-white" />
                   </div>
-                  <div class="bg-primary-700 p-2 text-white">{tag}</div>
+                  <div class="bg-primary-700 p-2 text-white">
+                    {mappingTags(tag, lang)}
+                  </div>
                 </div>
               ))
           }
