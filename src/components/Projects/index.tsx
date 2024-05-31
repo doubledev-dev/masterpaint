@@ -113,7 +113,7 @@ const Projects = ({
       {slice && (
         <a href={`/${lang}/projects`}>
           <button className="mx-auto mt-8 flex rounded-full border border-primary-800 bg-white px-[13px] py-[10px] lowercase transition duration-300 ease-in-out hover:bg-primary-800 hover:text-white">
-            See More
+            More Projects
           </button>
         </a>
       )}
