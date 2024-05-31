@@ -19,7 +19,7 @@ const ProjectCard = ({
         <article className="relative inline-block bg-black duration-300 hover:scale-105">
           <div>
             <img
-              className="z-0 block aspect-square object-cover object-center opacity-70"
+              className="z-0 block aspect-square object-cover object-center opacity-70 h-full"
               src={thumbnail}
               alt={title}
               loading="eager"

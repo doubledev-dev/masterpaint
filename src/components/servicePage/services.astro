@@ -83,7 +83,7 @@ const services = [
           alt={service.alt}
           class="aspect-[18/9] object-cover pt-5 lg:h-[300px] lg:w-[350px] lg:p-0"
         />
-        <div class="w-full border-primary-800 px-8 pt-6 lg:w-[690px] lg:border-b">
+        <div class="w-full border-primary-800 px-8 py-6 lg:w-[690px] lg:border-b">
           <article class="font-sans text-primary-800">
             <div class="flex flex-row items-center gap-x-3 lg:flex-col lg:items-start">
               <Icon name={service.icon} class="size-8 shrink-0 lg:size-6" />
@@ -97,7 +97,7 @@ const services = [
               class:list={
                 service.list.length <= 8
                   ? ""
-                  : "lg:grid lg:grid-cols-2 lg:text-nowrap"
+                  : "lg:grid lg:grid-cols-2 lg:text-wrap lg:gap-x-4"
               }
             >
               {service.list.map((l, idx) => (
