@@ -12,7 +12,7 @@ export default function MenuBar() {
   return (
     <Menubar>
       <MenubarMenu>
-        <MenubarTrigger className="px-0">
+        <MenubarTrigger>
           <Menu />
         </MenubarTrigger>
         <MenubarContent className="text-primary-800">
