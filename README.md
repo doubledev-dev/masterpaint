@@ -119,6 +119,9 @@ using `pnpm` for node pkg manager.
 | `pnpm run astro -- --help` | Get help using the Astro CLI                     |
 | `pnpm lint`                | Lint checked                                     |
 | `pnpm format`              | Prettier formatting                              |
+| `pnpm sync`                | Astro Syncing                                    |
+
+> ⚠️ Remark: Encounter Astro problem? Try `pnpm sync`.
 
 ## 👀 Want to learn more?
 
