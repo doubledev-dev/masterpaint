@@ -8,16 +8,17 @@ import "@fontsource/bai-jamjuree/400-italic.css";
 import { SITE_TITLE, SITE_DESCRIPTION } from "@/consts";
 
 interface Props {
+  title?: string;
   withMain?: boolean;
 }
 
-const { withMain = true } = Astro.props;
+const { title, withMain = true } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <BaseHead title={SITE_TITLE} titleTab={title} description={SITE_DESCRIPTION} />
   </head>
   <body
     class="m-0 flex max-w-full flex-col overflow-x-hidden overflow-y-scroll bg-secondary-100 p-0"

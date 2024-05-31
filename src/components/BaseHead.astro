@@ -2,42 +2,87 @@
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
 import "../styles/global.css";
+import { SEO } from "astro-seo";
 
 interface Props {
   title: string;
+  titleTab?: string;
   description: string;
   image?: string;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description, image = "/blog-placeholder-1.jpg" } = Astro.props;
+//change default image but I don't know what should I use, this is default image from astro
+const { title, titleTab, description, image = "/blog-placeholder-1.jpg" } = Astro.props;
 ---
-
 <!-- Global Metadata -->
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<meta name="generator" content={Astro.generator} />
+<!-- adding languageAlternates -->
+<SEO 
+  extend={{
+    link: [
+      {rel: "icon", href: "/favicon.svg"}
+    ],
+    meta: [
+      {name: "viewport", content: "width=device-width,initial-scale=1"},
+      {name: "generator", content: Astro.generator},
+    ]
+  }
+  }
+  charset="UTF-8"
+  title={titleTab}
+  titleTemplate="%s | MasterPaint 2548"
+  titleDefault=""
+  description={description}
+  openGraph={
+    {
+      basic: {
+        title : title,
+        type: "website",
+        image: image,
+        url: Astro.url,
+      },
+      optional: {
+        siteName: "MasterPaint 2548",
+        description: description,
+        locale: "en",
+    }
+  }
+},
+  twitter={
+    {
+      card: "summary_large_image",
+      site: "@masterpaint2548",
+      title: title,
+      description: description,
+      image: image,
+    }
+  }
+  languageAlternates={[
+    {hrefLang: "th", href: Astro.url},
+    {hrefLang: "en", href: Astro.url + "/en"},
+  ]}
+/>
+
 
 <!-- Canonical URL -->
-<link rel="canonical" href={canonicalURL} />
+<!-- <link rel="canonical" href={canonicalURL} /> -->
 
 <!-- Primary Meta Tags -->
-<title>{title}</title>
+<!-- <title>{title}</title>
 <meta name="title" content={title} />
-<meta name="description" content={description} />
+<meta name="description" content={description} /> -->
 
 <!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
+<!-- <meta property="og:type" content="website" />
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={new URL(image, Astro.url)} />
+<meta property="og:image" content={new URL(image, Astro.url)} /> -->
 
 <!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image" />
+<!-- <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={Astro.url} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={new URL(image, Astro.url)} />
+<meta property="twitter:image" content={new URL(image, Astro.url)} /> -->

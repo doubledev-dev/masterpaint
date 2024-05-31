@@ -6,7 +6,7 @@ const post = Astro.props;
 const { Content } = await post.render();
 ---
 
-<MainLayout>
+<MainLayout title={post.data.titleEN}>
   <BlogPost {...post.data}>
     <Content />
   </BlogPost>
