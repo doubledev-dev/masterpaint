@@ -97,5 +97,8 @@ export const en = {
   "location.factory": "Factory",
   "location.office": "Office",
 
+  "contact.success": "Your message has been sent successfully!",
+  "contact.fail": "Failed to send your message. Please try again.",
+
   title: "Hello World",
 };

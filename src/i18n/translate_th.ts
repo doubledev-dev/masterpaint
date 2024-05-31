@@ -96,5 +96,8 @@ export const th = {
   "location.factory": "โรงงาน",
   "location.office": "อาคารสำนักงาน",
 
+  "contact.success": "ส่งข้อความของคุณสำเร็จแล้ว!",
+  "contact.fail": "ไม่สามารถส่งข้อความของคุณได้ โปรดลองอีกครั้ง",
+
   title: "สวัสดีชาวโลก",
 };

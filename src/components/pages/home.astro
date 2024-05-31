@@ -32,5 +32,5 @@ const lang = getLangFromUrl(Astro.url);
     client:load
   />
   <Companies />
-  <Contact slot="after-main" />
+  <Contact client:visible slot="after-main" lang={lang} />
 </MainLayout>

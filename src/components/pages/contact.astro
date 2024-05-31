@@ -1,8 +1,11 @@
 ---
 import MainLayout from "@/layouts/MainLayout.astro";
 import Contacts from "@/components/ContactForm.tsx";
+import { getLangFromUrl } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
 ---
 
 <MainLayout title="Contact" withMain={false}>
-  <Contacts slot="after-main" />
+  <Contacts client:load slot="after-main" lang={lang} />
 </MainLayout>
