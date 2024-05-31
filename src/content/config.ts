@@ -5,8 +5,8 @@ const projectCollection = defineCollection({
   schema: z.object({
     titleTH: z.string(),
     titleEN: z.string(),
-    locationTH: z.string(),
-    locationEN: z.string(),
+    locationTH: z.string().optional(),
+    locationEN: z.string().optional(),
     tags: z.array(z.string()),
     heroImage: z.string(),
     designDetailsTH: z.string().optional(),
