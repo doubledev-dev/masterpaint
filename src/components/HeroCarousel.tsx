@@ -33,7 +33,7 @@ export default function carousel({
               <div className="relative z-0 bg-black">
                 <img
                   src={slide.src}
-                  alt={`slide-${index}`}
+                  alt={`HeroImage-${index}`}
                   className="z-0 flex h-[50vh] min-w-full items-end object-cover opacity-80 lg:h-[70vh]"
                 />
               </div>
