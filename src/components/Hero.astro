@@ -7,7 +7,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<article
+<!-- <article
   class="flex h-[50vh] min-w-full items-end bg-black bg-cover bg-center bg-no-repeat lg:h-[70vh]"
   style={{ backgroundImage: `url(${HeroImage.src})` }}
 >
@@ -22,5 +22,5 @@ const t = useTranslations(lang);
       >
     </a>
   </div>
-</article>
+</article> -->
 <HeroCarousel client:load />
