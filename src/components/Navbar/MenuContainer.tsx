@@ -42,6 +42,11 @@ export default function MenuBar({ lang }: Props) {
                 </a>
               </div>
               <div>
+                <a href={`/${lang}/about`} className="hover:font-bold">
+                  {t("navbar.about")}
+                </a>
+              </div>
+              <div>
                 <a href={`/${lang}/contact`} className="hover:font-bold">
                   {t("navbar.contact")}
                 </a>
