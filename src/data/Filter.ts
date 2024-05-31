@@ -7,7 +7,7 @@ export const FILTERTYPE: FilterData = {
       option: "All",
     },
     {
-      option: "ทาสี",
+      option: "painting",
       extends: [
         "interior_painting",
         "exterior_painting",
