@@ -1,5 +1,6 @@
+import { mappingTags } from "@/lib/utils";
 import type { lang } from "@/types";
-import type { FilterData } from "@/types/Filters";
+import type { FilterData, Tags } from "@/types/Filters";
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 
@@ -10,7 +11,7 @@ interface Props {
   lang: lang;
 }
 
-function Filter({ data, setState, zIndex }: Props) {
+function Filter({ data, setState, zIndex, lang }: Props) {
   const [text, setText] = useState<string>(data.title);
   const [openMenu, setOpenMenu] = useState<boolean>(false);
 
@@ -23,7 +24,9 @@ function Filter({ data, setState, zIndex }: Props) {
           (openMenu ? "  border-primary-800" : " border-transparent")
         }
       >
-        <h3 className="text-base font-semibold">{text}</h3>
+        <h3 className="text-left text-base font-semibold">
+          {mappingTags(text as Tags, lang)}
+        </h3>
         <ChevronDown
           size={20}
           className={openMenu ? "rotate-180 duration-300" : "duration-300"}
@@ -50,7 +53,7 @@ function Filter({ data, setState, zIndex }: Props) {
                         }}
                         className={`list-disc px-8 py-2 text-start hover:bg-primary-600 hover:text-white`}
                       >
-                        <li>{item.option}</li>
+                        <li>{mappingTags(item.option as Tags, lang)}</li>
                       </button>
                       <ul className="grid grid-cols-1">
                         {item.extends.map((extend, index) => {
@@ -65,7 +68,9 @@ function Filter({ data, setState, zIndex }: Props) {
                                 setState(extend);
                               }}
                             >
-                              <li className="ml-16 list-[circle]">{extend}</li>
+                              <li className="ml-16 list-[circle]">
+                                {mappingTags(extend as Tags, lang)}
+                              </li>
                             </button>
                           );
                         })}
@@ -82,7 +87,7 @@ function Filter({ data, setState, zIndex }: Props) {
                       }}
                       className={`list-disc px-8 py-2 text-start hover:bg-primary-600 hover:text-white`}
                     >
-                      <li>{item.option + "3"}</li>
+                      <li>{mappingTags(item.option as Tags, lang)}</li>
                     </button>
                   );
                 })}
