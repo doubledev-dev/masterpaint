@@ -1,3 +1,4 @@
+import type { lang } from "@/types";
 import type { FilterData } from "@/types/Filters";
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
@@ -6,6 +7,7 @@ interface Props {
   data: FilterData;
   setState: (e: string) => void;
   zIndex?: number;
+  lang: lang;
 }
 
 function Filter({ data, setState, zIndex }: Props) {
@@ -80,7 +82,7 @@ function Filter({ data, setState, zIndex }: Props) {
                       }}
                       className={`list-disc px-8 py-2 text-start hover:bg-primary-600 hover:text-white`}
                     >
-                      <li>{item.option}</li>
+                      <li>{item.option + "3"}</li>
                     </button>
                   );
                 })}

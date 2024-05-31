@@ -1,4 +1,6 @@
 import { useTranslations } from "@/i18n/utils";
+import type { lang } from "@/types";
+import type { Tags } from "@/types/Filters";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 
@@ -6,28 +8,14 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export type Tags =
-  | "exterior_painting"
-  | "interior_painting"
-  | "epoxy_painting"
-  | "traffic_painting"
-  | "wood_painting"
-  | "sign_painting"
-  | "steel_painting"
-  | "machinery_painting"
-  | "design"
-  | "house"
-  | "factory"
-  | "office";
-
-export function mappingTags(tags: Tags, lang: "en" | "th" = "th") {
+export function mappingTags(tags: Tags, lang: lang = "th") {
   const t = useTranslations(lang);
 
   switch (tags) {
-    case "exterior_painting":
-      return t("type.painting.exterior");
     case "interior_painting":
       return t("type.painting.interior");
+    case "exterior_painting":
+      return t("type.painting.exterior");
     case "epoxy_painting":
       return t("type.painting.epoxy");
     case "traffic_painting":

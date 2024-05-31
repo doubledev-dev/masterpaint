@@ -1,8 +1,10 @@
+import type { lang } from "@/types";
+
 interface props {
   slugRef?: string;
   title?: string;
   thumbnail: string;
-  lang?: "en" | "th";
+  lang?: lang;
 }
 
 const ProjectCard = ({

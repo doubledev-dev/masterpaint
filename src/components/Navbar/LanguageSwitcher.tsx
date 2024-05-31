@@ -1,10 +1,11 @@
+import type { lang } from "@/types";
 import { useMemo } from "react";
 
 const LanguageSwitcher = ({
   lang,
   currentPath,
 }: {
-  lang: "th" | "en";
+  lang: lang;
   currentPath: string;
 }) => {
   const isChecked = useMemo(() => {

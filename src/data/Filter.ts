@@ -9,18 +9,18 @@ export const FILTERTYPE: FilterData = {
     {
       option: "ทาสี",
       extends: [
-        "สีภายใน",
-        "สีภายนอก",
-        "สีพื้นอีพ๊อกซี่งานตีเส้นพื้น",
-        "สีจราจร",
-        "สีงานไม้",
-        "สีงานป้าย",
-        "สีโครงเหล็ก",
-        "สีเครื่องจักร",
+        "interior_painting",
+        "exterior_painting",
+        "epoxy_painting",
+        "traffic_painting",
+        "wood_painting",
+        "sign_painting",
+        "steel_painting",
+        "machinery_painting",
       ],
     },
     {
-      option: "งานออกแบบ",
+      option: "design",
     },
   ],
 };
@@ -32,13 +32,13 @@ export const FILTERLOCATION: FilterData = {
       option: "All",
     },
     {
-      option: "บ้าน",
+      option: "house",
     },
     {
-      option: "โรงงาน",
+      option: "factory",
     },
     {
-      option: "อาคารสำนักงาน",
+      option: "office",
     },
   ],
 };

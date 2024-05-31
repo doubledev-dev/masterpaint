@@ -3,6 +3,7 @@ import { FILTERLOCATION, FILTERTYPE } from "@/data/Filter.ts";
 import type { CollectionEntry } from "astro:content";
 import ProjectCard from "./ProjectCard.tsx";
 
+import type { lang } from "@/types/index.ts";
 import { useMemo, useState } from "react";
 
 interface Props {
@@ -10,7 +11,7 @@ interface Props {
   homePage?: boolean;
   projectsPage?: boolean;
   slugItems: CollectionEntry<"projects">[];
-  lang: "th" | "en";
+  lang: lang;
 }
 
 const Projects = ({
@@ -67,12 +68,14 @@ const Projects = ({
               data={FILTERTYPE}
               setState={changeType}
               zIndex={60}
+              lang={lang}
             />
             <Filter
               key="filterLocation"
               data={FILTERLOCATION}
               setState={changeLocation}
               zIndex={50}
+              lang={lang}
             />
           </div>
         </div>
