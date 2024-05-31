@@ -1,5 +1,6 @@
 ---
 import MenuContainer from "@/components/Navbar/MenuContainer";
+const { lang } = Astro.props;
 ---
 
-<MenuContainer client:load />
+<MenuContainer lang={lang} client:load />

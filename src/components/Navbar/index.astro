@@ -46,7 +46,7 @@ const t = useTranslations(lang);
           </p>
         </a>
       </div>
-      <div class="lg:hidden"><NavbarMenu /></div>
+      <div class="lg:hidden"><NavbarMenu lang={lang}/></div>
       <LanguageSwitcher client:load lang={lang} currentPath={currentPath} />
     </div>
   </nav>

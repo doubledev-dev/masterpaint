@@ -8,7 +8,11 @@ import {
 
 import { Menu } from "lucide-react";
 
-export default function MenuBar() {
+interface Props {
+  lang: string;
+}
+
+export default function MenuBar({ lang }: Props) {
   return (
     <Menubar>
       <MenubarMenu>
@@ -17,19 +21,19 @@ export default function MenuBar() {
         </MenubarTrigger>
         <MenubarContent className="text-primary-800">
           <a href="/">
-            <MenubarItem>Home</MenubarItem>
+            <MenubarItem>{lang === "en" ? "Home" : "หน้าแรก"}</MenubarItem>
           </a>
           <a href="/services">
-            <MenubarItem>Services</MenubarItem>
+            <MenubarItem>{lang === "en" ? "Services" : "บริการ"}</MenubarItem>
           </a>
           <a href="/projects">
-            <MenubarItem>Projects</MenubarItem>
+            <MenubarItem>{lang === "en" ? "Projects" : "โปรเจค"}</MenubarItem>
           </a>
           <a href="/about">
-            <MenubarItem>About Us</MenubarItem>
+            <MenubarItem>{lang === "en" ? "About Us" : "เกี่ยวกับเรา"}</MenubarItem>
           </a>
           <a href="/contact">
-            <MenubarItem>Contact</MenubarItem>
+            <MenubarItem>{lang === "en" ? "Contact" : "ติดต่อเรา"}</MenubarItem>
           </a>
         </MenubarContent>
       </MenubarMenu>
