@@ -18,7 +18,7 @@ const projects = (await getCollection("projects"))
 const lang = getLangFromUrl(Astro.url);
 ---
 
-<MainLayout>
+<MainLayout title="Home">
   <Hero slot="before-main" />
   <SmallServices />
   <Logos />
