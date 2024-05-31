@@ -40,8 +40,6 @@ export function mappingTags(tags: TagsMapping, lang: lang = "th") {
       return t("location.factory");
     case "office":
       return t("location.office");
-    case "painting":
-      return t("type.painting");
     default:
       return t("type.all");
   }

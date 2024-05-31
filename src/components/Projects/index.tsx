@@ -27,9 +27,12 @@ const Projects = ({
     return slugItems.filter((item) => {
       if (filterTypes === "All" && filterLocation === "All") {
         return true;
-      } else if ((filterTypes === "ทาสี" || filterTypes === "painting") && filterLocation === "All") {
+      } else if (
+        (filterTypes === "ทาสี" || filterTypes === "painting") &&
+        filterLocation === "All"
+      ) {
         return !item.data.tags.includes("design");
-      } else if ((filterTypes === "ทาสี" || filterTypes === "painting")) {
+      } else if (filterTypes === "ทาสี" || filterTypes === "painting") {
         return (
           !item.data.tags.includes("design") &&
           item.data.tags.includes(filterLocation)
