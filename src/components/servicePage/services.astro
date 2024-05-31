@@ -83,13 +83,10 @@ const services = [
           alt={service.alt}
           class="aspect-[18/9] object-cover pt-5 lg:h-[300px] lg:w-[350px] lg:p-0"
         />
-        <div class="w-full border-primary-800 px-8 pt-6 lg:w-[690px] lg:border-b-[1px]">
+        <div class="w-full border-primary-800 px-8 pt-6 lg:w-[690px] lg:border-b">
           <article class="font-sans text-primary-800">
             <div class="flex flex-row items-center gap-x-3 lg:flex-col lg:items-start">
-              <Icon
-                name={service.icon}
-                class=" h-8 w-8 shrink-0 lg:h-6 lg:w-6"
-              />
+              <Icon name={service.icon} class="size-8 shrink-0 lg:size-6" />
               <h1 class="my-3 text-xl font-bold">{service.title}</h1>
             </div>
             <p class:list={service.p ? "pb-3 indent-5 text-sm lg:pb-6" : ""}>

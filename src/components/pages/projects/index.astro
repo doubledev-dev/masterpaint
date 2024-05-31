@@ -3,7 +3,7 @@ import MainLayout from "@/layouts/MainLayout.astro";
 import { getCollection } from "astro:content";
 import Projects from "@/components/Projects";
 
-import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import { getLangFromUrl } from "@/i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const projects = (await getCollection("projects")).sort((a, b) => {
