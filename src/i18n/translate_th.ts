@@ -79,5 +79,22 @@ export const th = {
   "footer.address":
     "Northtech Limited Partnership 71/5 หมู่ที่ 13 ถนนบางนา-ตราดตำบลบางแก้ว อำเภอบางพลี จังหวัดสมุทรปราการ 10540",
 
+  "type.all": "ทั้งหมด",
+  "type.painting": "ทาสี",
+  "type.painting.interior": "สีภายใน",
+  "type.painting.exterior": "สีภายนอก",
+  "type.painting.epoxy": "สีพื้นอีพ๊อกซี่งานตีเส้นพื้น",
+  "type.painting.traffic": "สีจราจร",
+  "type.painting.wood": "สีงานไม้",
+  "type.painting.sign": "สีงานป้าย",
+  "type.painting.steel": "สีโครงเหล็ก",
+  "type.painting.machinery": "สีเครื่องจักร",
+  "type.design": "งานออกแบบ",
+
+  "location.all": "ทั้งหมด",
+  "location.home": "บ้าน",
+  "location.factory": "โรงงาน",
+  "location.office": "อาคารสำนักงาน",
+
   title: "สวัสดีชาวโลก",
 };
