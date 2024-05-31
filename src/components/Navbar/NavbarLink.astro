@@ -9,13 +9,14 @@ const { href, ...props } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
 const { pathname } = Astro.url;
 const subpath = pathname.split("/").slice(2);
-const isActive = href === pathname || href === `/${lang}` + subpath?.[0];
+const isActive = href === pathname || href === `/${lang}/` + subpath?.[0];
+console.log({ isActive });
 ---
 
 <a
   href={href}
   aria-checked={isActive}
-  class="inline-block font-Inter text-primary-800 no-underline hover:text-primary-800 aria-checked:font-bold"
+  class="inline-block font-Inter text-primary-800 no-underline aria-checked:font-bold"
   {...props}
 >
   <slot />

@@ -3,8 +3,16 @@ import heroImg from "@/assets/service/hero.svg";
 import { Image } from "astro:assets";
 ---
 
-<div class="relative h-[45vh] w-full bg-accent-dark-blue">
-  <div class="uppercase absolute z-10 text-5xl bottom-[10%] left-[10%] text-white">services</div>
-  <div class="absolute top-0 left-0 size-full bg-accent-dark-blue opacity-40"></div>
-  <Image src={heroImg} alt="Hero Image" class="object-cover h-full w-full lg:w-[50%] ml-auto font-semibold  border-0 z-0" />
+<div class="relative h-[45vh] w-full bg-primary-900">
+  <div
+    class="absolute bottom-[10%] left-[10%] z-10 text-5xl uppercase text-white"
+  >
+    services
+  </div>
+  <div class="absolute left-0 top-0 size-full bg-primary-900 opacity-40"></div>
+  <Image
+    src={heroImg}
+    alt="Hero Image"
+    class="z-0 ml-auto size-full border-0 object-cover font-semibold lg:w-1/2"
+  />
 </div>
