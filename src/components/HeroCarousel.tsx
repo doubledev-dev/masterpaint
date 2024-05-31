@@ -21,7 +21,7 @@ export default function carousel({
 }) {
   const t = useTranslations(lang);
   const plugin = React.useRef(
-    Autoplay({ delay: 3000, stopOnInteraction: true })
+    Autoplay({ delay: 4000, stopOnInteraction: true })
   );
 
   return (
@@ -33,6 +33,7 @@ export default function carousel({
               <div className="relative z-0 bg-black">
                 <img
                   src={slide.src}
+                  alt={`slide-${index}`}
                   className="z-0 flex h-[50vh] min-w-full items-end object-cover opacity-80 lg:h-[70vh]"
                 />
               </div>
@@ -42,8 +43,8 @@ export default function carousel({
         <CarouselPrevious variant="ghost" size="ghost" />
         <CarouselNext variant="ghost" size="ghost" />
       </Carousel>
-
-      <div className="absolute bottom-0 z-10 p-[10%]">
+      <div className="absolute bottom-0 z-10 size-full bg-black opacity-40"></div>
+      <div className="absolute bottom-0 z-20 p-[10%]">
         <h1 className="mb-6 font-Inter text-5xl text-white">
           {t("hero.title")}
         </h1>
