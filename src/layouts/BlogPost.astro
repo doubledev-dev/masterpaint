@@ -1,11 +1,22 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import MainContainer from "@/components/Container/MainContainer.astro";
+import { getLangFromUrl } from "@/i18n/utils";
 
+const lang = getLangFromUrl(Astro.url);
 type Props = CollectionEntry<"projects">["data"];
 
-const { title, designDetails, tags, location, heroImage, pubDate } =
-  Astro.props;
+const {
+  titleTH,
+  titleEN,
+  designDetailsTH,
+  designDetailsEN,
+  tags,
+  locationTH,
+  locationEN,
+  heroImage,
+  pubDate,
+} = Astro.props;
 ---
 
 <MainContainer className="mx-auto max-w-3xl lg:max-w-7xl lg:px-6 xl:px-0">
@@ -17,27 +28,29 @@ const { title, designDetails, tags, location, heroImage, pubDate } =
         <img
           class="h-[196px] w-full object-cover object-center lg:h-[340px] lg:w-[622px]"
           src={heroImage}
-          alt={title}
+          alt={lang === "en" ? titleEN : titleTH}
         />
       </div>
       <div class="mx-5 space-y-5">
-        <h1 class="text-4xl italic">{title}</h1>
+        <h1 class="text-4xl italic">{lang === "en" ? titleEN : titleTH}</h1>
         {
-          designDetails && (
+          designDetailsTH && designDetailsEN && (
             <div class="space-y-5">
               <hr class="border-primary-800" />
-              <p>{designDetails}</p>
+              <p>{lang === "en" ? designDetailsEN : designDetailsTH}</p>
             </div>
           )
         }
 
         {
-          location && (
+          locationTH && locationEN && (
             <div class="space-y-5">
               <hr class="border-primary-800" />
               <div class="grid grid-cols-3">
                 <h3 class="col-span-1 uppercase">location</h3>
-                <p class="col-span-2">{location}</p>
+                <p class="col-span-2">
+                  {lang === "en" ? locationEN : locationTH}
+                </p>
               </div>
             </div>
           )
