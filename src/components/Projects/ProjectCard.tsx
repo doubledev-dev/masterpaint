@@ -2,12 +2,18 @@ interface props {
   slugRef?: string;
   title?: string;
   thumbnail: string;
+  lang?: "en" | "th";
 }
 
-const ProjectCard = ({ slugRef = "", title = "", thumbnail }: props) => {
+const ProjectCard = ({
+  slugRef = "",
+  title = "",
+  thumbnail,
+  lang = "th",
+}: props) => {
   if (title != "" && slugRef != "") {
     return (
-      <a href={`/projects/${slugRef}`}>
+      <a href={`/${lang}/projects/${slugRef}`}>
         <article className="relative inline-block bg-black duration-300 hover:scale-105">
           <div>
             <img

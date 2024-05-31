@@ -88,6 +88,7 @@ const Projects = ({
               return (
                 <ProjectCard
                   key={index}
+                  lang={lang}
                   slugRef={item.slug}
                   title={lang === "en" ? item.data.titleEN : item.data.titleTH}
                   thumbnail={item.data.heroImage}
@@ -98,6 +99,7 @@ const Projects = ({
               return (
                 <ProjectCard
                   key={index}
+                  lang={lang}
                   slugRef={item.slug}
                   title={lang === "en" ? item.data.titleEN : item.data.titleTH}
                   thumbnail={item.data.heroImage}
