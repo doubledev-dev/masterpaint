@@ -115,7 +115,7 @@ const Projects = ({
       </div>
       {slice && (
         <a href={`/${lang}/projects`}>
-          <button className="mx-auto mt-8 flex rounded-full border text-primary-800  border-primary-800 bg-white px-[13px] py-[10px] lowercase transition duration-300 ease-in-out hover:bg-primary-800 hover:text-white">
+          <button className="mx-auto mt-8 flex rounded-full border border-primary-800  bg-white px-[13px] py-[10px] lowercase text-primary-800 transition duration-300 ease-in-out hover:bg-primary-800 hover:text-white">
             {lang === "en" ? "More Projects" : "ดูเพิ่มเติม"}
           </button>
         </a>
