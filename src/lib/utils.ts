@@ -37,6 +37,6 @@ export function mappingTags(tags: Tags, lang: lang = "th") {
     case "office":
       return t("location.office");
     default:
-      return "ทั้งหมด";
+      return t("type.all");
   }
 }
