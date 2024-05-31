@@ -12,13 +12,13 @@ export default function MenuBar({ lang }: Props) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className=" flex flex-col items-center justify-center">
       <button type="button" aria-label="menu" onClick={() => setIsOpen(true)}>
         <Menu className="size-8" />
       </button>
 
       {isOpen && (
-        <div className="absolute left-0 top-0 z-10 flex size-full flex-col items-end bg-black/50">
+        <div className="absolute left-0 top-0 z-30 flex size-full flex-col items-end bg-black/50">
           <div className="h-full w-64 bg-white ">
             <div className="flex flex-col items-end px-4 py-3">
               <button type="button" onClick={() => setIsOpen(false)}>
