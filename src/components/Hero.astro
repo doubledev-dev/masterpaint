@@ -1,6 +1,7 @@
 ---
-import HeroImage from "@/assets/hero/hero.webp";
+import HeroImage from "@/assets/hero/hero1.webp";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import HeroCarousel from "@/components/HeroCarousel";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -22,3 +23,4 @@ const t = useTranslations(lang);
     </a>
   </div>
 </article>
+<HeroCarousel client:load />
