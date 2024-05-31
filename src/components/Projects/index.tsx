@@ -27,11 +27,11 @@ const Projects = ({
     return slugItems.filter((item) => {
       if (filterTypes === "All" && filterLocation === "All") {
         return true;
-      } else if (filterTypes === "ทาสี" && filterLocation === "All") {
-        return !item.data.tags.includes("งานออกแบบ");
-      } else if (filterTypes === "ทาสี") {
+      } else if ((filterTypes === "ทาสี" || filterTypes === "painting") && filterLocation === "All") {
+        return !item.data.tags.includes("design");
+      } else if ((filterTypes === "ทาสี" || filterTypes === "painting")) {
         return (
-          !item.data.tags.includes("งานออกแบบ") &&
+          !item.data.tags.includes("design") &&
           item.data.tags.includes(filterLocation)
         );
       } else if (filterLocation === "All") {
@@ -113,7 +113,7 @@ const Projects = ({
       {slice && (
         <a href={`/${lang}/projects`}>
           <button className="mx-auto mt-8 flex rounded-full border border-primary-800 bg-white px-[13px] py-[10px] lowercase transition duration-300 ease-in-out hover:bg-primary-800 hover:text-white">
-            More Projects
+            {lang === "en" ? "More Projects" : "ดูโครงการเพิ่มเติม"}
           </button>
         </a>
       )}

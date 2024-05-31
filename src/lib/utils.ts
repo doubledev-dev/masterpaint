@@ -14,6 +14,8 @@ export function mappingTags(tags: TagsMapping, lang: lang = "th") {
   const t = useTranslations(lang);
 
   switch (tags) {
+    case "painting":
+      return t("type.painting");
     case "interior_painting":
       return t("type.painting.interior");
     case "exterior_painting":
