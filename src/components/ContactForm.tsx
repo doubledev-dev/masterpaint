@@ -93,6 +93,7 @@ const Contacts = () => {
                   <label className="block">{form.label}</label>
                   <textarea
                     key={form.name}
+                    aria-label={form.name} 
                     name={form.name}
                     placeholder="Write your message"
                     className="mt-1 block w-full resize-none border-b-2 border-gray-700 p-2"
@@ -107,6 +108,7 @@ const Contacts = () => {
                   <label className="block">{form.label}</label>
                   <input
                     key={form.name}
+                    aria-label={form.name} 
                     type={form.type}
                     name={form.name}
                     className="mt-1 block w-full border-b-2 border-gray-700 p-2"
