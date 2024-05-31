@@ -117,7 +117,7 @@ const Contacts = ({ lang }: { lang: lang }) => {
         </h2>
       </div>
       <article className="mx-auto grid max-w-7xl gap-4 lg:grid-cols-3">
-        <div className="col-span-2 min-h-[60vh] rounded-3xl bg-white p-8 text-gray-700 lg:p-12">
+        <div className="col-span-2 min-h-[60vh] rounded-3xl bg-white p-4 text-gray-700">
           {status === null ? (
             loading ? (
               <div className="flex size-full flex-col items-center justify-center text-black">
@@ -129,9 +129,9 @@ const Contacts = ({ lang }: { lang: lang }) => {
             ) : (
               <form
                 onSubmit={handleSubmit}
-                className="col-span-2 rounded-3xl bg-white p-8 text-gray-700 lg:p-12"
+                className="col-span-2 rounded-3xl bg-white p-4 text-gray-700 lg:p-8"
               >
-                <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+                <div className="grid grid-cols-1 gap-x-4 gap-y-12 lg:grid-cols-2">
                   {contactForm.map((form) =>
                     form.type === "textarea" ? (
                       <div key={form.name} className="lg:col-span-2">
