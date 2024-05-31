@@ -14,28 +14,16 @@ interface Props {
 // const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 //change default image but I don't know what should I use, this is default image from astro
-const {
-  title,
-  titleTab,
-  description,
-  image = "/blog-placeholder-1.jpg",
-} = Astro.props;
+const { title, titleTab, description, image = "/thumbnail.webp" } = Astro.props;
 ---
 
 <!-- Global Metadata --><!-- adding languageAlternates -->
 <SEO
-  extend={{
-    link: [{ rel: "icon", href: "/favicon.svg" }],
-    meta: [
-      { name: "viewport", content: "width=device-width,initial-scale=1" },
-      { name: "generator", content: Astro.generator },
-    ],
-  }}
-  charset="UTF-8"
   title={titleTab}
   titleTemplate="%s | MasterPaint 2548"
-  titleDefault=""
+  titleDefault="MasterPaint 2548"
   description={description}
+  charset="UTF-8"
   openGraph={{
     basic: {
       title: title,
@@ -43,44 +31,44 @@ const {
       image: image,
       url: Astro.url,
     },
-    optional: {
-      siteName: "MasterPaint 2548",
-      description: description,
-      locale: "en",
+    // optional: {
+    //   siteName: "MasterPaint 2548",
+    //   description: description,
+    //   locale: "en",
+    // },
+    image: {
+      type: "image/webp",
+      secureUrl: "/thumbnail.webp",
+      alt: title,
+      width: 1200,
+      height: 630,
     },
   }}
-  ,
   twitter={{
     card: "summary_large_image",
     site: "@masterpaint2548",
     title: title,
     description: description,
     image: image,
+    imageAlt: title,
+  }}
+  extend={{
+    link: [{ rel: "icon", href: "/favicon.svg", type: "image/svg+xml" }],
+    meta: [
+      {
+        httpEquiv: "X-UA-Compatible",
+        content: "IE=edge",
+      },
+      { name: "viewport", content: "width=device-width,initial-scale=1" },
+      { name: "generator", content: Astro.generator },
+      {
+        name: "theme-color",
+        content: "#0C1A66",
+      },
+    ],
   }}
   languageAlternates={[
     { hrefLang: "th", href: Astro.url },
     { hrefLang: "en", href: Astro.url + "/en" },
   ]}
 />
-
-<!-- Canonical URL -->
-<!-- <link rel="canonical" href={canonicalURL} /> -->
-
-<!-- Primary Meta Tags -->
-<!-- <title>{title}</title>
-<meta name="title" content={title} />
-<meta name="description" content={description} /> -->
-
-<!-- Open Graph / Facebook -->
-<!-- <meta property="og:type" content="website" />
-<meta property="og:url" content={Astro.url} />
-<meta property="og:title" content={title} />
-<meta property="og:description" content={description} />
-<meta property="og:image" content={new URL(image, Astro.url)} /> -->
-
-<!-- Twitter -->
-<!-- <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={Astro.url} />
-<meta property="twitter:title" content={title} />
-<meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={new URL(image, Astro.url)} /> -->
