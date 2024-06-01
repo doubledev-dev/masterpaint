@@ -115,5 +115,5 @@ export const th = {
   "contact.form.message.desc": "พิมพ์ข้อความของคุณ",
   "contact.form.button": "ส่งข้อความ",
 
-  "project.page.title": "โปรเจ็ค",
+  "project.page.title": "โครงการ",
 };

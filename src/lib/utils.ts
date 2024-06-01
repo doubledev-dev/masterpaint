@@ -8,7 +8,7 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-type TagsMapping = Tags | "painting";
+type TagsMapping = Tags | "painting" | "TYPE" | "LOCATION" | "All";
 
 export function mappingTags(tags: TagsMapping, lang: lang = "th") {
   const t = useTranslations(lang);
@@ -46,8 +46,6 @@ export function mappingTags(tags: TagsMapping, lang: lang = "th") {
       return t("location.factory");
     case "office":
       return t("location.office");
-    case "all":
-      return t("type.all");
     default:
       return tags;
   }

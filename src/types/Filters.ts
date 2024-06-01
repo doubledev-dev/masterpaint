@@ -9,7 +9,7 @@ export interface FilterOptions {
 }
 
 export type Tags =
-  | "all"
+  | "All"
   | "interior_painting"
   | "exterior_painting"
   | "epoxy_painting"
