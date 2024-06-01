@@ -33,7 +33,7 @@ function Filter({ data, setState, zIndex, lang }: Props) {
         />
       </button>
       {openMenu && (
-        <div className="relative inline-block w-[312px] space-x-4">
+        <div className="relative inline-block w-[312px] space-x-4 text-base lg:text-lg">
           {
             <div
               className={`absolute block w-full bg-white`}

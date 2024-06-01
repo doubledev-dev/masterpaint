@@ -43,7 +43,7 @@ export default function carousel({
         <CarouselPrevious variant="ghost" size="ghost" />
         <CarouselNext variant="ghost" size="ghost" />
       </Carousel>
-      <div className="absolute bottom-0 z-10 size-full bg-black opacity-40"></div>
+      <div className="absolute bottom-0 z-10 size-full bg-black opacity-30"></div>
       <div className="absolute bottom-0 z-20 p-[10%]">
         <h1 className="mb-6 font-Inter text-5xl text-white">
           {t("hero.title")}

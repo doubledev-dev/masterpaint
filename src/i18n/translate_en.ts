@@ -5,7 +5,7 @@ export const en = {
   "navbar.about": "About Us",
   "navbar.contact": "Contact Us",
 
-  "hero.title": "Master Paint",
+  "hero.title": "Master Paint 2548",
   "hero.description":
     "We offer painting services provided by a team of specialized and experienced professionals, who are experts specifically in painting work.",
   "hero.contact": "Contact Us",

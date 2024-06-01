@@ -5,7 +5,7 @@ export const th = {
   "navbar.about": "เกี่ยวกับเรา",
   "navbar.contact": "ติดต่อเรา",
 
-  "hero.title": "Master Paint",
+  "hero.title": "Master Paint 2548",
   "hero.description":
     "รับบริการงานทาสีโดยทีมช่าง ผู้ชำนาญงานเฉพาะด้านและมีประสบการณ์ โดยตรงเชี่ยวชาญด้านงานสีโดยเฉพาะ",
   "hero.contact": "ติดต่อเรา",
