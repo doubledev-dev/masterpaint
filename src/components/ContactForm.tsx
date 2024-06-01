@@ -13,46 +13,7 @@ interface messageData {
   message: string;
 }
 
-const contactForm = [
-  {
-    label: "First Name",
-    type: "text",
-    name: "firstName",
-  },
-  {
-    label: "Last Name",
-    type: "text",
-    name: "lastName",
-  },
-  {
-    label: "Email",
-    type: "email",
-    name: "email",
-  },
-  {
-    label: "Phone Number",
-    type: "tel",
-    name: "phoneNumber",
-  },
-  {
-    label: "Company",
-    type: "text",
-    name: "company",
-  },
-  {
-    label: "Address",
-    type: "text",
-    name: "address",
-  },
-  {
-    label: "Message",
-    type: "textarea",
-    name: "message",
-  },
-];
-
 const Contacts = ({ lang }: { lang: lang }) => {
-  const t = useTranslations(lang);
   const [message, setMessage] = useState<messageData>({
     firstName: "",
     lastName: "",
@@ -64,6 +25,45 @@ const Contacts = ({ lang }: { lang: lang }) => {
   });
   const [loading, setLoading] = useState<boolean>(false);
   const [status, setStatus] = useState<"success" | "fail" | null>(null);
+
+  const t = useTranslations(lang);
+  const contactForm = [
+    {
+      label: t("contact.form.name"),
+      type: "text",
+      name: "firstName",
+    },
+    {
+      label: t("contact.form.surname"),
+      type: "text",
+      name: "lastName",
+    },
+    {
+      label: t("contact.form.email"),
+      type: "email",
+      name: "email",
+    },
+    {
+      label: t("contact.form.phone"),
+      type: "tel",
+      name: "phoneNumber",
+    },
+    {
+      label: t("contact.form.company"),
+      type: "text",
+      name: "company",
+    },
+    {
+      label: t("contact.form.address"),
+      type: "text",
+      name: "address",
+    },
+    {
+      label: t("contact.form.message"),
+      type: "textarea",
+      name: "message",
+    },
+  ];
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -111,10 +111,10 @@ const Contacts = ({ lang }: { lang: lang }) => {
   return (
     <section className="bg-gradient-to-t from-accent-dark-blue via-primary-700 via-20% to-transparent to-85% p-8">
       <div className="p-8 text-primary-800 lg:hidden">
-        <h1 className="font-Inter text-3xl font-semibold italic">Reach Us</h1>
-        <h2 className="mt-2 text-xl font-thin">
-          Feel free to send us a message!
-        </h2>
+        <h1 className="font-Inter text-3xl font-semibold italic">
+          {t("contact.form.title")}
+        </h1>
+        <h2 className="mt-2 text-xl font-thin">{t("contact.form.desc")}</h2>
       </div>
       <article className="mx-auto grid max-w-7xl gap-4 lg:grid-cols-3">
         <div className="col-span-2 min-h-[60vh] rounded-3xl bg-white p-4 text-gray-700">
@@ -140,7 +140,7 @@ const Contacts = ({ lang }: { lang: lang }) => {
                           aria-label={form.name}
                           key={form.name}
                           name={form.name}
-                          placeholder="Write your message"
+                          placeholder={t("contact.form.message.desc")}
                           className="mt-1 block w-full resize-none border-b-2 border-gray-700 p-2"
                           onChange={handleChange}
                         />
@@ -164,7 +164,7 @@ const Contacts = ({ lang }: { lang: lang }) => {
                   )}
                 </div>
                 <button className="mx-auto mt-8 flex justify-items-end rounded-full bg-primary-800 p-2 px-4 align-baseline text-white hover:bg-primary-600 lg:mx-0 lg:ml-auto lg:p-4 lg:px-8">
-                  Send Message
+                  {t("contact.form.button")}
                 </button>
               </form>
             )

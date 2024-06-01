@@ -100,4 +100,16 @@ export const th = {
   "contact.fail": "ไม่สามารถส่งข้อความของคุณได้ โปรดลองอีกครั้ง",
 
   title: "สวัสดีชาวโลก",
+
+  "contact.form.title": "ติดต่อเรา",
+  "contact.form.desc": "สามารถส่งข้อความถึงเราได้เสมอ",
+  "contact.form.name": "ชื่อ",
+  "contact.form.surname": "นามสกุล",
+  "contact.form.email": "อีเมล",
+  "contact.form.phone": "เบอร์โทรศัพท์",
+  "contact.form.company": "บริษัท",
+  "contact.form.address": "ที่อยู่",
+  "contact.form.message": "ข้อความ",
+  "contact.form.message.desc": "พิมพ์ข้อความของคุณ",
+  "contact.form.button": "ส่งข้อความ",
 };
