@@ -80,6 +80,7 @@ export const en = {
   "footer.address":
     "Northtech Limited Partnership 71/5 Moo 13, Bangna-Trat Road, Bangkaew Subdistrict, Bang Phli District, Samut Prakan Province, 10540",
 
+  "type.title": "TYPE",
   "type.all": "All",
   "type.painting": "Painting",
   "type.painting.interior": "Interior",
@@ -92,6 +93,7 @@ export const en = {
   "type.painting.machinery": "Machinery",
   "type.design": "Design",
 
+  "location.title": "LOCATION",
   "location.all": "All",
   "location.home": "Home",
   "location.factory": "Factory",
