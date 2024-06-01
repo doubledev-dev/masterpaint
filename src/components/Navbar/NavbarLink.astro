@@ -9,7 +9,7 @@ const { href, ...props } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
 const { pathname } = Astro.url;
 const subpath = pathname.split("/").slice(2);
-const isActive = href === pathname || href === `/${lang}` + `/${subpath?.[0]}`;
+const isActive = href === pathname || href === `/${lang}` + `/${subpath?.[0]}` || href === `/${lang}/`;
 ---
 
 <a
