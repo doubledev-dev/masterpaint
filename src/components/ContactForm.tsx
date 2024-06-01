@@ -189,10 +189,10 @@ const Contacts = ({ lang }: { lang: lang }) => {
         </div>
 
         <div className="hidden p-8 text-primary-800 lg:block">
-          <h1 className="font-Inter text-3xl font-semibold italic">Reach Us</h1>
-          <h2 className="mt-2 text-xl font-thin">
-            Feel free to send us a message!
-          </h2>
+          <h1 className="font-Inter text-3xl font-semibold italic">
+            {t("contact.form.title")}
+          </h1>
+          <h2 className="mt-2 text-xl font-thin">{t("contact.form.desc")}</h2>
         </div>
       </article>
     </section>

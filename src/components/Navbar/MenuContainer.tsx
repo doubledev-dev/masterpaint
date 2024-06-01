@@ -12,7 +12,7 @@ export default function MenuBar({ lang }: Props) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className=" flex flex-col items-center justify-center">
+    <div className=" flex flex-col items-center justify-center text-xl text-primary-800">
       <button type="button" aria-label="menu" onClick={() => setIsOpen(true)}>
         <Menu className="size-8" />
       </button>

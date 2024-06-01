@@ -3,7 +3,6 @@ import * as React from "react";
 
 import img1 from "@/assets/service/carousel/img1.svg";
 import img10 from "@/assets/service/carousel/img10.svg";
-import img2 from "@/assets/service/carousel/img2.svg";
 import img3 from "@/assets/service/carousel/img3.svg";
 import img4 from "@/assets/service/carousel/img4.svg";
 import img5 from "@/assets/service/carousel/img5.svg";
@@ -24,10 +23,6 @@ const slides = [
   {
     img: img1,
     desc: "การไฟฟ้าส่วนภูมิภาค(สำนักงานใหญ่)",
-  },
-  {
-    img: img2,
-    desc: "บริษัท ลิกมัน ไลท์ติ้ง จำกัด",
   },
   {
     img: img3,
