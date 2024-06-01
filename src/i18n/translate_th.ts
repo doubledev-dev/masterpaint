@@ -79,6 +79,7 @@ export const th = {
   "footer.address":
     "Northtech Limited Partnership 71/5 หมู่ที่ 13 ถนนบางนา-ตราดตำบลบางแก้ว อำเภอบางพลี จังหวัดสมุทรปราการ 10540",
 
+  "type.title": "ประเภท",
   "type.all": "ทั้งหมด",
   "type.painting": "ทาสี",
   "type.painting.interior": "สีภายใน",
@@ -91,6 +92,7 @@ export const th = {
   "type.painting.machinery": "สีเครื่องจักร",
   "type.design": "งานออกแบบ",
 
+  "location.title": "สถานที่",
   "location.all": "ทั้งหมด",
   "location.home": "บ้าน",
   "location.factory": "โรงงาน",
@@ -100,4 +102,18 @@ export const th = {
   "contact.fail": "ไม่สามารถส่งข้อความของคุณได้ โปรดลองอีกครั้ง",
 
   title: "สวัสดีชาวโลก",
+
+  "contact.form.title": "ติดต่อเรา",
+  "contact.form.desc": "สามารถส่งข้อความถึงเราได้เสมอ",
+  "contact.form.name": "ชื่อ",
+  "contact.form.surname": "นามสกุล",
+  "contact.form.email": "อีเมล",
+  "contact.form.phone": "เบอร์โทรศัพท์",
+  "contact.form.company": "บริษัท",
+  "contact.form.address": "ที่อยู่",
+  "contact.form.message": "ข้อความ",
+  "contact.form.message.desc": "พิมพ์ข้อความของคุณ",
+  "contact.form.button": "ส่งข้อความ",
+
+  "project.page.title": "โปรเจ็ค",
 };

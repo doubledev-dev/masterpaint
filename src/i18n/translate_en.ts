@@ -101,4 +101,18 @@ export const en = {
   "contact.fail": "Failed to send your message. Please try again.",
 
   title: "Hello World",
+
+  "contact.form.title": "Reach Us",
+  "contact.form.desc": "Feel free to send us a message!",
+  "contact.form.name": "First Name",
+  "contact.form.surname": "Last name",
+  "contact.form.email": "Email",
+  "contact.form.phone": "Phone Number",
+  "contact.form.company": "Company",
+  "contact.form.address": "Address",
+  "contact.form.message": "Message",
+  "contact.form.message.desc": "Write your message",
+  "contact.form.button": "Send Message",
+
+  "project.page.title": "Projects",
 };
