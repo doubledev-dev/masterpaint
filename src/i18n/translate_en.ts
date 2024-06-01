@@ -113,4 +113,6 @@ export const en = {
   "contact.form.message": "Message",
   "contact.form.message.desc": "Write your message",
   "contact.form.button": "Send Message",
+
+  "project.page.title": "Projects",
 };

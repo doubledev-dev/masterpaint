@@ -14,6 +14,12 @@ export function mappingTags(tags: TagsMapping, lang: lang = "th") {
   const t = useTranslations(lang);
 
   switch (tags) {
+    case "TYPE":
+      return t("type.title");
+    case "LOCATION":
+      return t("location.title");
+    case "All":
+      return t("type.all");
     case "painting":
       return t("type.painting");
     case "interior_painting":

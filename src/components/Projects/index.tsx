@@ -1,5 +1,6 @@
 import Filter from "@/components/Filter";
 import { FILTERLOCATION, FILTERTYPE } from "@/data/Filter.ts";
+import { useTranslations } from "@/i18n/utils";
 import type { CollectionEntry } from "astro:content";
 import ProjectCard from "./ProjectCard.tsx";
 
@@ -23,13 +24,17 @@ const Projects = ({
 }: Props) => {
   const [filterTypes, setFilterTypes] = useState<string>("All");
   const [filterLocation, setFilterLocation] = useState<string>("All");
+  const t = useTranslations(lang);
   const filteredItems = useMemo(() => {
     return slugItems.filter((item) => {
-      if (filterTypes === "All" && filterLocation === "All") {
+      if (
+        (filterTypes === "All" || filterTypes === "ทั้งหมด") &&
+        (filterLocation === "All" || filterLocation === "ทั้งหมด")
+      ) {
         return true;
       } else if (
         (filterTypes === "ทาสี" || filterTypes === "painting") &&
-        filterLocation === "All"
+        (filterLocation === "All" || filterLocation === "ทั้งหมด")
       ) {
         return !item.data.tags.includes("design");
       } else if (filterTypes === "ทาสี" || filterTypes === "painting") {
@@ -37,9 +42,9 @@ const Projects = ({
           !item.data.tags.includes("design") &&
           item.data.tags.includes(filterLocation)
         );
-      } else if (filterLocation === "All") {
+      } else if (filterLocation === "All" || filterLocation === "ทั้งหมด") {
         return item.data.tags.includes(filterTypes);
-      } else if (filterTypes === "All") {
+      } else if (filterTypes === "All" || filterTypes === "ทั้งหมด") {
         return item.data.tags.includes(filterLocation);
       } else {
         return (
@@ -63,7 +68,7 @@ const Projects = ({
       {projectsPage && (
         <div className="px-6 pb-6">
           <h1 className="pb-8 font-Inter text-[20px] font-bold text-primary-800 md:text-[40px]">
-            Projects
+            {t("project.page.title")}
           </h1>
           <div className="flex flex-col md:flex-row md:space-x-8">
             <Filter
