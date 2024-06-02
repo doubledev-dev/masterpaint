@@ -1,8 +1,10 @@
+import { useTranslations } from "@/i18n/utils";
+import type { lang } from "@/types";
 import Autoplay from "embla-carousel-autoplay";
 import * as React from "react";
 
 import img1 from "@/assets/service/carousel/img1.svg";
-import img10 from "@/assets/service/carousel/img10.svg";
+import img2 from "@/assets/service/carousel/img2.svg";
 import img3 from "@/assets/service/carousel/img3.svg";
 import img4 from "@/assets/service/carousel/img4.svg";
 import img5 from "@/assets/service/carousel/img5.svg";
@@ -19,49 +21,54 @@ import {
   CarouselPrevious,
 } from "@/components/ui/customCarousel";
 
-const slides = [
-  {
-    img: img1,
-    desc: "การไฟฟ้าส่วนภูมิภาค(สำนักงานใหญ่)",
-  },
-  {
-    img: img3,
-    desc: "บริษัท ซูซูโย่ จำกัด",
-  },
-  {
-    img: img4,
-    desc: "บริษัท คีพอินทัช จำกัด",
-  },
-  {
-    img: img5,
-    desc: "บริษัท สโตนวัน จำกัด",
-  },
-  {
-    img: img6,
-    desc: "บริษัท อุตสาหกรรมทำเครื่องแก้วไทยจำกัด (มหาชน)",
-  },
-  {
-    img: img7,
-    desc: "บริษัท เกิดปัญญา จำกัด",
-  },
-  {
-    img: img8,
-    desc: "Marut Residence",
-  },
-  {
-    img: img9,
-    desc: "บ้านเปรมสุข",
-  },
-  {
-    img: img10,
-    desc: " บริษัท เทิร์นคีย์ คอมมูนิเคชั่น เซอร์วิส จำกัด",
-  },
-];
+interface Props {
+  lang: lang;
+}
 
-export default function carousel() {
+export default function carousel({ lang }: Props) {
+  const t = useTranslations(lang);
   const plugin = React.useRef(
     Autoplay({ delay: 3000, stopOnInteraction: true })
   );
+
+  const slides = [
+    {
+      img: img1,
+      desc: t("service.carousel.slide1"),
+    },
+    {
+      img: img2,
+      desc: t("service.carousel.slide2"),
+    },
+    {
+      img: img3,
+      desc: t("service.carousel.slide3"),
+    },
+    {
+      img: img4,
+      desc: t("service.carousel.slide4"),
+    },
+    {
+      img: img5,
+      desc: t("service.carousel.slide5"),
+    },
+    {
+      img: img6,
+      desc: t("service.carousel.slide6"),
+    },
+    {
+      img: img7,
+      desc: t("service.carousel.slide7"),
+    },
+    {
+      img: img8,
+      desc: t("service.carousel.slide8"),
+    },
+    {
+      img: img9,
+      desc: t("service.carousel.slide9"),
+    },
+  ];
 
   return (
     <Carousel plugins={[plugin.current]} className="hidden lg:block">

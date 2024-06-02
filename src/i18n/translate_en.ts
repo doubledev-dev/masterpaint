@@ -60,6 +60,16 @@ export const en = {
   "services.design.list4":
     "Customers interested in our services will receive a detailed quotation for consideration, providing clear information for their decision-making process.",
 
+  "service.carousel.slide1": "Provincial Electricity Authority (Head Office) ",
+  "service.carousel.slide2": "Suzuyo Company Limited",
+  "service.carousel.slide3": "Keep In Touch Company Limited",
+  "service.carousel.slide4": "Stone One Company Limited ",
+  "service.carousel.slide5": "Thai Glassware factory Public Company Limited",
+  "service.carousel.slide6": "Koet Panya Company Limited",
+  "service.carousel.slide7": "Marut Residence",
+  "service.carousel.slide8": "Baan Premsuk",
+  "service.carousel.slide9": "Turnkey Communication Services Company Limited",
+
   "company.p1":
     "NorthTech Co., Ltd. was established on August 18, 2005, with the objective of providing various painting services. Our team comprises experienced and specialized painters.",
   "company.p2":

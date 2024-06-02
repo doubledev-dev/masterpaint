@@ -1,8 +1,11 @@
 ---
 import Carousel from "@/components/servicePage/carouselContainer";
 import Container from "@/components/Container/ContentContainer.astro";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
 ---
 
 <Container>
-  <Carousel client:load />
+  <Carousel lang={lang} client:load />
 </Container>
