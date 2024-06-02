@@ -1,5 +1,5 @@
 ---
-import heroImg from "@/assets/service/hero.svg";
+import heroImg from "@/assets/service/heroService.webp";
 import { Image } from "astro:assets";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 
@@ -9,17 +9,14 @@ const t = useTranslations(lang);
 
 <div class="relative h-[45vh] w-full bg-primary-900">
   <div
-    class="absolute bottom-[10%] left-[10%] z-10 text-5xl uppercase text-white"
+    class="absolute bottom-[10%] left-[10%] z-10 text-5xl uppercase text-white drop-shadow-lg"
   >
     {t("services.title")}
   </div>
-  <div
-    class="absolute left-0 top-0 size-full w-full bg-primary-900 opacity-40 lg:w-1/2"
-  >
-  </div>
+  <div class="absolute left-0 top-0 size-full bg-primary-900 opacity-20"></div>
   <Image
     src={heroImg}
     alt="Hero Image"
-    class="z-0 ml-auto size-full border-0 object-cover font-semibold lg:w-1/2"
+    class="z-0 size-full border-0 object-cover object-top font-semibold"
   />
 </div>

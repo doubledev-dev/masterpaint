@@ -10,7 +10,7 @@ export const th = {
     "รับบริการงานทาสีโดยทีมช่างผู้ชำนาญงานเฉพาะด้านและมีประสบการณ์โดยตรง เชี่ยวชาญด้านงานสีโดยเฉพาะ",
   "hero.contact": "ติดต่อเรา",
 
-  "services.title" : "บริการ",
+  "services.title": "บริการ",
   "services.consult.title": "ให้คำปรึกษาและประเมินราคางานสีทุกชนิด",
   "services.consult.description": "วางแผนตามงบประมาณที่ต้องการ",
   "services.consult.list1":
@@ -78,7 +78,6 @@ export const th = {
   "company.offer1": "ตารางงานที่ยืดหยุ่น",
   "company.offer2": "ให้คำปรึกษาฟรี",
   "company.offer3": "รักษาพื้นที่ทำงานให้สะอาด",
-
 
   "about.title": "เกี่ยวกับเรา",
   "about.history.title": "ประวัติของเรา",
