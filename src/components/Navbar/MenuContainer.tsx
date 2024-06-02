@@ -18,7 +18,7 @@ export default function MenuBar({ lang }: Props) {
       </button>
 
       {isOpen && (
-        <div className="absolute left-0 top-0 z-30 flex size-full flex-col items-end bg-black/50">
+        <div className="fixed left-0 top-0 z-30 flex size-full flex-col items-end bg-black/50">
           <div className="h-full w-64 bg-white ">
             <div className="flex flex-col items-end px-4 py-3">
               <button type="button" onClick={() => setIsOpen(false)}>
