@@ -8,12 +8,12 @@ const { href, ...props } = Astro.props;
 
 const lang = getLangFromUrl(Astro.url);
 const { pathname } = Astro.url;
-const isActive = pathname === `/${lang}` + href;
+const isActive =
+  pathname === `/${lang}` + href + `/` ||
+  pathname === href + `/` ||
+  pathname === href;
 ---
 
-<p class=" p-2">
-  {`click to navigate to ${pathname}`}
-</pn>
 <a
   href={href}
   aria-checked={isActive}
