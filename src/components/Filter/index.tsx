@@ -52,7 +52,7 @@ function Filter({ data, setState, zIndex, lang }: Props) {
                         }}
                         className={text != item.option ? 
                           `list-disc px-8 py-2 text-start hover:bg-primary-600 hover:text-white`
-                        : `list-disc px-8 py-2 text-start bg-primary-600 text-white`}
+                        : `list-disc px-8 py-2 text-start bg-primary-800 text-white`}
                       >
                         <li>{mappingTags(item.option as Tags, lang)}</li>
                       </button>
