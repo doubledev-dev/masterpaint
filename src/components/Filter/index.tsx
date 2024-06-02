@@ -50,7 +50,9 @@ function Filter({ data, setState, zIndex, lang }: Props) {
                           setText(item.option);
                           setState(item.option);
                         }}
-                        className={`list-disc px-8 py-2 text-start hover:bg-primary-600 hover:text-white`}
+                        className={text != item.option ? 
+                          `list-disc px-8 py-2 text-start hover:bg-primary-600 hover:text-white`
+                        : `list-disc px-8 py-2 text-start bg-primary-600 text-white`}
                       >
                         <li>{mappingTags(item.option as Tags, lang)}</li>
                       </button>
@@ -59,7 +61,7 @@ function Filter({ data, setState, zIndex, lang }: Props) {
                           return (
                             <button
                               key={index}
-                              className="bg-white p-2 text-start hover:bg-primary-600 hover:text-white"
+                              className={text != extend ? `bg-white p-2 text-start hover:bg-primary-600 hover:text-white` : `bg-primary-800 p-2 text-start text-white`}
                               onClick={() => {
                                 setOpenMenu(!openMenu);
                                 setText(extend);
@@ -82,7 +84,9 @@ function Filter({ data, setState, zIndex, lang }: Props) {
                         setText(item.option);
                         setState(item.option);
                       }}
-                      className={`list-disc px-8 py-2 text-start hover:bg-primary-600 hover:text-white`}
+                                              className={text != item.option ? 
+                          `list-disc px-8 py-2 text-start hover:bg-primary-600 hover:text-white`
+                        : `list-disc px-8 py-2 text-start bg-primary-800 text-white`}
                     >
                       <li>{mappingTags(item.option as Tags, lang)}</li>
                     </button>
