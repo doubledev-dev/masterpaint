@@ -10,6 +10,7 @@ export const en = {
     "We offer painting services provided by a team of specialized and experienced professionals, who are experts specifically in painting work.",
   "hero.contact": "Contact Us",
 
+  "services.title": "Services",
   "services.consult.title": "Painting consultations and estimations",
   "services.consult.description": "We plan according to your budget.",
   "services.consult.list1":
@@ -79,6 +80,7 @@ export const en = {
   "company.offer2": "Free consultation",
   "company.offer3": "Maintain a clean work area",
 
+  "about.title" : "ABOUT US",
   "about.history.title": "Our History",
   "about.history.description":
     "NorthTech was established in 2005 with the aim of providing services related to renovation, refurbishment, and repair of office buildings, factories, and residential accommodations, as well as machinery within factories, to ensure they meet customers' requirements. With experienced and specialized technicians closely oversee operations, the company consistently delivers high-quality work, resulting in continuous progress and growth of the business.",
