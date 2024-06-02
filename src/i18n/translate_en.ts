@@ -48,7 +48,7 @@ export const en = {
   "services.renovation.list4":
     "Customers interested in our services will receive a detailed quotation for consideration.",
 
-  "services.design.title": "Design and remodeling",
+  "services.design.title": "Design and remodel",
   "services.design.description":
     "We tailor to meet customers' needs at reasonable prices.",
   "services.design.list1":
