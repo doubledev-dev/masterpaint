@@ -76,7 +76,11 @@ export default function carousel({ lang }: Props) {
         {slides.map((slide, index) => (
           <CarouselItem key={index} className="basis-1/4">
             <div className="relative z-0 inline-block size-[217px] bg-black">
-              <img src={slide.img.src} alt={slide.desc} className="z-0 block opacity-70" />
+              <img
+                src={slide.img.src}
+                alt={slide.desc}
+                className="z-0 block opacity-70"
+              />
               <p className="absolute left-0 top-[10%] z-10 mx-[10%] inline-block text-white">
                 {slide.desc}
               </p>

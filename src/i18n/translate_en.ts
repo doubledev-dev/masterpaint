@@ -22,7 +22,7 @@ export const en = {
 
   "services.painting.title": "Paintings",
   "services.painting.description":
-    "We paint buildings, factories, residences, machineries, etc.",
+    "We paint buildings, factories, residences, machinery, and more.",
   "services.painting.list1": "Water paintings, interiors and exteriors",
   "services.painting.list2": "Oil paintings, steels, all types of metal",
   "services.painting.list3": "Epoxies, floors, all types of metal",
@@ -39,7 +39,7 @@ export const en = {
 
   "services.renovation.title": "Repair and renovation",
   "services.renovation.description":
-    "To extend the lifespan and enhance the modern appearance.",
+    "We extend the lifespan and enhance the modern appearance.",
   "services.renovation.list1":
     "Customers interested in repair and renovation can contact us for free consultation.",
   "services.renovation.list2":
@@ -51,7 +51,7 @@ export const en = {
 
   "services.design.title": "Design and remodel",
   "services.design.description":
-    "We tailor to meet customers' needs at reasonable prices.",
+    "We offer tailored solutions to meet customers needs at reasonable prices.",
   "services.design.list1":
     "Customers interested in remodeling can contact us for free consultation.",
   "services.design.list2":

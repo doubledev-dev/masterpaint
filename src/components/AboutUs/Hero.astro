@@ -1,17 +1,22 @@
 ---
 import heroImg from "@/assets/about/heroImg.webp";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import { Image } from "astro:assets";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<article
-  class="flex h-48 items-end justify-start overflow-y-scroll bg-cover bg-bottom bg-no-repeat px-10 py-6 lg:h-[512px] lg:justify-end lg:bg-cover lg:px-24"
-  style={{ backgroundImage: `url(${heroImg.src})` }}
->
-  <div class="flex flex-col gap-y-2 text-white">
-    <p class="text-2xl lg:text-6xl">{t("about.title")}</p>
-    <p class="hidden text-4xl font-light lg:block">MASTER PAINT 2548</p>
+<article class="relative h-48 w-full bg-primary-900 lg:h-[512px]">
+  <div
+    class="absolute bottom-[10%] left-[10%] z-10 text-2xl uppercase text-white drop-shadow-lg lg:text-6xl"
+  >
+    {t("about.title")}
   </div>
+  <div class="absolute left-0 top-0 size-full bg-black opacity-30"></div>
+  <Image
+    src={heroImg}
+    alt="Hero Image"
+    class="z-0 size-full border-0 object-cover object-bottom font-semibold"
+  />
 </article>
