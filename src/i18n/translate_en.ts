@@ -7,7 +7,7 @@ export const en = {
 
   "hero.title": "Master Paint 2548",
   "hero.description":
-    "We offer painting services provided by a team of specialized and experienced professionals, who are experts specifically in painting work.",
+    "We provide painting services carried out by a team of specialized and experienced professionals, who are experts specifically in painting work",
   "hero.contact": "Contact Us",
 
   "services.title": "Services",

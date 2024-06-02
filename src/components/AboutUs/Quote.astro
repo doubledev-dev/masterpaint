@@ -2,7 +2,7 @@
 import { Image } from "astro:assets";
 import Container from "@/components/Container/ContentContainer.astro";
 
-import midImg from "@/assets/about/Img2.svg";
+import midImg from "@/assets/about/quoteImage.webp";
 import bottomImg from "@/assets/about/Img3.svg";
 ---
 
@@ -11,7 +11,7 @@ import bottomImg from "@/assets/about/Img3.svg";
     <Image
       src={midImg}
       alt="Middle Image"
-      class="w-80 rounded-2xl drop-shadow-xl lg:w-full lg:rounded-none"
+      class="w-full h-[132px] lg:h-[440px] object-cover rounded-2xl drop-shadow-xl "
     />
   </section>
   <section
@@ -22,7 +22,7 @@ import bottomImg from "@/assets/about/Img3.svg";
       alt="Bottom Image"
       class="hidden drop-shadow-xl lg:block"
     />
-    <div class="flex flex-col gap-y-3 text-primary-800">
+    <div class="flex flex-col gap-y-3 text-primary-800  max-w-[70%]">
       <div class="text-4xl lg:text-6xl">“</div>
       <div class="text-base italic lg:text-2xl">
         A little progress each day adds up to big results.
