@@ -25,7 +25,7 @@ export default function MenuBar({ lang }: Props) {
                 <X className="size-8" />
               </button>
             </div>
-            <div className="space-y-4 px-8 py-4">
+            <div className="space-y-4 bg-white px-8 py-4">
               <div>
                 <a href={`/${lang}`} className="hover:font-bold">
                   {t("navbar.home")}
