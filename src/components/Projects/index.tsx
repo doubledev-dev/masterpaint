@@ -66,8 +66,8 @@ const Projects = ({
   return (
     <section className="mx-auto max-w-7xl md:px-6">
       {projectsPage && (
-        <div className="px-6 pb-6">
-          <h1 className="pb-8 font-Inter text-[20px] font-bold text-primary-800 md:text-[40px]">
+        <div className="px-6 pb-4">
+          <h1 className="my-4 font-Inter text-[20px] font-bold text-primary-800 md:text-[40px]">
             {t("project.page.title")}
           </h1>
           <div className="flex flex-col md:flex-row md:space-x-8">
