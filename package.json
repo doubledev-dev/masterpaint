@@ -21,7 +21,6 @@
     "@astrojs/tailwind": "^5.1.0",
     "@astrojs/ts-plugin": "^1.8.0",
     "@fontsource/bai-jamjuree": "^5.0.13",
-    "@julian_cataldo/astro-lightbox": "^0.10.11",
     "@radix-ui/react-menubar": "^1.0.4",
     "@radix-ui/react-navigation-menu": "^1.1.4",
     "@radix-ui/react-slot": "^1.0.2",
