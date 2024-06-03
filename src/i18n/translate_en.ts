@@ -72,9 +72,9 @@ export const en = {
   "service.carousel.slide9": "Turnkey Communication Services Company Limited",
 
   "company.p1":
-    "NorthTech Co., Ltd. was established on August 18, 2005, with the objective of providing various painting services. Our team comprises experienced and specialized painters.",
+    "NorthTech Limited Partnership was established on August 18, 2005, with the objective of providing various painting services. Our team consists of experienced and specialized painters.",
   "company.p2":
-    "We are dedicated to ensuring customer satisfaction by offering quality products and services at reasonable prices. Therefore, when you choose us, you're not just receiving a service but initiating a long-lasting relationship built on trust and excellence.",
+    "We dedicate ourselves to ensuring customer satisfaction by offering quality products and services at reasonable prices. By choosing us, you're not merely acquiring a service; you're embarking on a lasting partnership founded on trust and excellence.",
   "company.more": "more about us",
   "company.offer1": "Flexible scheduling options",
   "company.offer2": "Free consultation",
