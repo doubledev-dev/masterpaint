@@ -4,11 +4,10 @@ import { Image } from "astro:assets";
 import logo from "@/assets/navbar/logo.webp";
 
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
-import LanguageSwitcher from "./LanguageSwitcher";
 import MenuContainer from "./MenuContainer";
+import LanguageSwitcher from "./LanguageSwitcher.astro";
 
 const lang = getLangFromUrl(Astro.url);
-const currentPath = Astro.url.pathname.replace(`/${lang}`, "");
 const t = useTranslations(lang);
 ---
 
@@ -48,7 +47,7 @@ const t = useTranslations(lang);
       <div class="lg:hidden">
         <MenuContainer client:load lang={lang} />
       </div>
-      <LanguageSwitcher client:load lang={lang} currentPath={currentPath} />
+      <LanguageSwitcher />
     </div>
   </nav>
 </header>

@@ -1,0 +1,30 @@
+---
+import { getLangFromUrl } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const currentPath = Astro.url.pathname.replace(`/${lang}`, "");
+const isChecked = lang === "en";
+---
+
+<a href={lang === "en" ? `/th${currentPath}` : `/en${currentPath}`}>
+  <label class="relative inline-flex cursor-pointer select-none items-center">
+    <div
+      class="flex h-8 items-center justify-center rounded-md bg-transparent shadow-card"
+    >
+      <span
+        class={`flex size-6 items-center justify-center rounded text-xs md:text-sm ${
+          !isChecked ? "bg-black text-white" : "text-black"
+        }`}
+      >
+        <p>TH</p>
+      </span>
+      <span
+        class={`flex size-6 items-center justify-center rounded text-xs md:text-sm ${
+          isChecked ? "bg-black text-white" : "text-black"
+        }`}
+      >
+        <p>EN</p>
+      </span>
+    </div>
+  </label>
+</a>
